@@ -1,0 +1,152 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --navy: #0c0e11;
+  --blue: #5b87a8;
+  --light-blue: #3c9fe1;
+  --ink: #206949;
+  --muted: #c5d025;
+  --line: #e48a23;
+  --white: #ffffff;
+  --background: #295683;
+}
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url(https://images.pexels.com/photos/1029624/pexels-photo-1029624.jpeg);
+}
+.container {
+  display: flex;
+  width: 1000px;
+  background-color: white;
+  border-radius: 40px;
+  border: 1px solid black;
+  overflow: hidden;
+}
+.left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  background-color: var(--background);
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_0CHEKWmp9DwXRZyUalZL37L5Gna5whDI7FOBuGbdnQ&s=10);
+  padding: 55px;
+  color: rgb(17, 5, 62);
+}
+h1 {
+  font-size: 44px;
+  padding-bottom: 24px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+p {
+  font-size: 20px;
+  padding-bottom: 24px;
+  color: #295683;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  padding: 55px;
+}
+
+h2 {
+  font-size: 36px;
+  padding-bottom: 4px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+p {
+  font-size: 20px;
+  padding-bottom: 24px;
+  color: #295683;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.right > form,
+.login-fill {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.line {
+  display: block;
+  width: 60px;
+  height: 3px;
+  margin: 8px 0 16px;
+  background-color: var(--line);
+}
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.input-field label {
+  font-size: 16px;
+}
+
+.input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--blue);
+  border-radius: 6px;
+}
+
+.box4,
+.remember {
+  display: flex;
+  align-items: center;
+}
+
+.box4 {
+  justify-content: space-between;
+}
+
+.remember {
+  gap: 6px;
+}
+
+a {
+  color: var(--background);
+}
+
+.submit-button {
+  width: 100%;
+  padding: 12px;
+  border: 0;
+  border-radius: 6px;
+  background-color: var(--background);
+  color: var(--white);
+  font-size: 16px;
+}
+
+.otherwise {
+  text-align: center;
+}
+
+.create {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    height: auto;
+    flex-direction: column;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+  }
+}

@@ -1,0 +1,265 @@
+:root {
+  --navy: #102a43;
+  --blue: #1d70b8;
+  --light-blue: #eaf4ff;
+  --ink: #243b53;
+  --muted: #627d98;
+  --line: #d9e2ec;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--ink);
+  background: linear-gradient(125deg, #e9f5ff 0%, #f8fbff 48%, #e1f1ff 100%);
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 28px;
+}
+
+.login-card {
+  display: flex;
+  width: min(930px, 100%);
+  min-height: 560px;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 22px 55px rgba(29, 79, 123, 0.16);
+}
+
+.welcome-panel {
+  position: relative;
+  overflow: hidden;
+  flex: 0 0 42%;
+  padding: 56px 48px;
+  color: #fff;
+  background: linear-gradient(150deg, #0b3865, #1d70b8);
+}
+
+.welcome-panel::before,
+.welcome-panel::after {
+  position: absolute;
+  content: "";
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.welcome-panel::before {
+  width: 260px;
+  height: 260px;
+  right: -105px;
+  bottom: -75px;
+}
+
+.welcome-panel::after {
+  width: 170px;
+  height: 170px;
+  left: -75px;
+  top: 80px;
+}
+
+.brand,
+.welcome-copy {
+  position: relative;
+  z-index: 1;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+}
+
+.brand-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+.welcome-copy {
+  margin-top: 105px;
+}
+
+.welcome-copy h1 {
+  margin: 0 0 16px;
+  font-size: clamp(2rem, 4vw, 3.1rem);
+  line-height: 1.1;
+}
+
+.welcome-copy p {
+  max-width: 310px;
+  margin: 0;
+  color: #d7edff;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.form-panel {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  padding: 56px 72px;
+}
+
+.form-wrap {
+  width: 100%;
+  max-width: 360px;
+  margin: auto;
+}
+
+.form-wrap h2 {
+  margin: 0;
+  color: var(--navy);
+  font-size: 1.85rem;
+}
+
+.intro {
+  margin: 9px 0 32px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.field {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--ink);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+input {
+  width: 100%;
+  padding: 14px 15px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  outline: none;
+  color: var(--ink);
+  font-size: 1rem;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+input:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(29, 112, 184, 0.15);
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  margin: -2px 0 26px;
+  font-size: 0.88rem;
+}
+
+.remember {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.remember input {
+  width: 15px;
+  height: 15px;
+  accent-color: var(--blue);
+}
+
+a {
+  color: var(--blue);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  border: 0;
+  border-radius: 9px;
+  color: #fff;
+  background: var(--blue);
+  box-shadow: 0 7px 15px rgba(29, 112, 184, 0.22);
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+  transition:
+    transform 0.2s,
+    background 0.2s;
+}
+
+button:hover {
+  background: #155c99;
+  transform: translateY(-1px);
+}
+
+.message {
+  min-height: 20px;
+  margin: 16px 0 0;
+  color: #187648;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.signup {
+  margin: 31px 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+@media (max-width: 720px) {
+  main {
+    padding: 16px;
+  }
+
+  .login-card {
+    flex-direction: column;
+    min-height: 0;
+  }
+
+  .welcome-panel {
+    flex: none;
+    padding: 32px;
+  }
+
+  .welcome-copy {
+    margin-top: 45px;
+  }
+
+  .welcome-copy h1 {
+    font-size: 2rem;
+  }
+
+  .form-panel {
+    padding: 40px 30px;
+  }
+}
