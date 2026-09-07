@@ -14,16 +14,19 @@
   --text-main: #333333;
   --text-light: #ffffff;
   --border-main: #dddddd;
+
+  --section-padding: 30px 250px;
 }
-.heading {
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 24px;
-  padding-left: 250px;
-  padding-right: 250px;
+  padding: var(--section-padding);
   background-color: var(--bg-header);
   color: black;
+}
+.menu {
+  display: none;
 }
 .left1 {
   font-size: x-large;
@@ -40,10 +43,11 @@
   gap: 16px;
   justify-content: center;
   align-items: center;
-  padding: 50px 0px;
+  padding: var(--section-padding);
   background-color: var(--bg-hero);
 }
 .hero h1 {
+  text-align: center;
   font-size: xx-large;
   font-weight: 800;
 }
@@ -62,10 +66,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 40px 250px;
+  padding: var(--section-padding);
   gap: 16px;
 }
-.box {
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
   width: 33.33%;
   text-align: left;
   border: 1px solid var(--text-main);
@@ -73,12 +80,16 @@
   border-radius: 12px;
   padding: 24px;
 }
+.icon {
+  width: 24px;
+  height: 24px;
+}
 .testimonial {
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 50px 250px;
+  padding: var(--section-padding);
   background-color: var(--bg-testimonial);
 }
 .testimonial h1 {
@@ -87,8 +98,26 @@
   margin-bottom: 10px;
 }
 .footer {
-  padding: 40px 250px;
+  padding: var(--section-padding);
   background-color: var(--bg-footer);
   color: var(--text-light);
   text-align: center;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --section-padding: 20px 40px;
+  }
+  .right1 {
+    display: none;
+  }
+  .menu {
+    display: block;
+  }
+  .features {
+    flex-direction: column;
+  }
+  .card {
+    width: 100%;
+  }
 }
