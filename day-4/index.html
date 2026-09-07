@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 4</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <main
+      class="flex min-h-screen items-center justify-center bg-[url('https://images.pexels.com/photos/1029624/pexels-photo-1029624.jpeg')]"
+    >
+      <div
+        class="flex w-[90%] max-w-[1000px] flex-col overflow-hidden rounded-[40px] border border-black bg-white md:min-h-[550px] md:w-[1000px] md:flex-row"
+      >
+        <section
+          class="flex w-full items-center bg-[#295683] bg-[url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_0CHEKWmp9DwXRZyUalZL37L5Gna5whDI7FOBuGbdnQ&s=10')] p-[55px] text-[rgb(17,5,62)] md:w-1/2"
+        >
+          <div>
+            <h1
+              class="pb-6 font-[Georgia,'Times_New_Roman',Times,serif] text-[44px] font-bold"
+            >
+              Good to see you again.
+            </h1>
+            <p
+              class="pb-6 font-[Georgia,'Times_New_Roman',Times,serif] text-xl text-[#295683]"
+            >
+              Sign in to pick up right where you left off and keep everything
+              moving forward.
+            </p>
+          </div>
+        </section>
+
+        <section class="flex w-full flex-col justify-center p-[55px] md:w-1/2">
+          <form class="flex flex-col gap-4" action="">
+            <div>
+              <h2
+                class="pb-1 font-[Georgia,'Times_New_Roman',Times,serif] text-4xl font-bold"
+              >
+                Welcome back
+              </h2>
+              <span class="my-2 block h-[3px] w-[60px] bg-[#e48a23]"></span>
+              <p
+                class="pb-6 font-[Georgia,'Times_New_Roman',Times,serif] text-xl text-[#295683]"
+              >
+                Please enter your details to sign in.
+              </p>
+            </div>
+
+            <div class="flex flex-col gap-4">
+              <div class="flex flex-col gap-1.5">
+                <label for="email" class="text-base">Email address</label>
+                <input
+                  class="w-full rounded-md border border-[#5b87a8] p-3"
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Enter email"
+                  autocomplete="off"
+                />
+              </div>
+
+              <div class="flex flex-col gap-1.5">
+                <label for="password" class="text-base">Password</label>
+                <input
+                  class="w-full rounded-md border border-[#5b87a8] p-3"
+                  type="text"
+                  name="password"
+                  id="password"
+                  placeholder="Enter password"
+                />
+              </div>
+
+              <div class="flex items-center justify-between">
+                <label class="flex items-center gap-1.5">
+                  <input type="checkbox" />
+                  <span>Remember me</span>
+                </label>
+                <a class="text-[#295683]" href="#forgot-password"
+                  >Forgot password</a
+                >
+              </div>
+
+              <button
+                class="w-full rounded-md bg-[#295683] p-3 text-base text-white"
+                type="submit"
+              >
+                Sign In
+              </button>
+              <div class="flex items-center gap-3 pb-6">
+                <span class="h-px flex-1 bg-gray-300"></span>
+
+                <p
+                  class="shrink-0 font-[Georgia,'Times_New_Roman',Times,serif] text-l text-[#295683]"
+                >
+                  Don't have an account?
+                </p>
+
+                <span class="h-px flex-1 bg-gray-300"></span>
+              </div>
+              <a class="text-center text-[#295683]" href="create-account.html"
+                >Create a new account</a
+              >
+            </div>
+          </form>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
