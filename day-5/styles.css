@@ -5,7 +5,7 @@
 }
 
 :root {
-  --bg-base: #ffffff;
+  --bg-base: #f2f2f2;
   --bg-header: #d5d6d6;
   --bg-hero: #e0f7f1;
   --bg-testimonial: #fce4ec;
@@ -79,6 +79,18 @@
   background-color: var(--bg-base);
   border-radius: 12px;
   padding: 24px;
+}
+.card {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.18);
+  box-color: 2px solid var(--accent);
 }
 .icon {
   width: 24px;
