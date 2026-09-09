@@ -257,3 +257,17 @@ h5 {
   width: 20px;
   height: 20px;
 }
+@media (max-width: 768px) {
+  :root {
+    --section-padding: 40px 20px;
+  }
+  .header {
+    padding: 14px 20px;
+  }
+  .header .header-right {
+    display: none;
+  }
+  .menu-btn {
+    display: flex;
+  }
+}
