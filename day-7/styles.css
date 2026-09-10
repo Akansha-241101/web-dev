@@ -16,3 +16,49 @@
 
   --section-padding: 60px 150px;
 }
+.hero-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--section-padding);
+  gap: 4px;
+  border-bottom: 1px solid var(--primary-text);
+}
+.hero-section .hero-left {
+  width: 50%;
+  gap: 13px;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+.hero-section .hero-left .eyebrow {
+  color: var(--primary);
+  font-size: 14px;
+  font-weight: 800;
+}
+.hero-section .hero-left .hero-title {
+  font-size: 38px;
+  font-weight: 900;
+}
+.hero-section .hero-left .hero-desc {
+  font-size: 20px;
+}
+.hero-section .hero-left .hero-button {
+  border: none;
+  background-color: var(--primary);
+  color: var(--primary-text);
+  padding: 22px 28px;
+  width: fit-content;
+  font-size: 14px;
+  font-weight: 800;
+  border-radius: 20px;
+}
+.hero-section .hero-right {
+  width: 50%;
+  align-self: stretch;
+}
+.hero-section .hero-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
