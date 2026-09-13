@@ -5,8 +5,9 @@
 // import { name, age } from "./variables.js";
 
 // const greet = () => {
-//   console.log(`Hi ${name} ${age}`);
-// };
+//   console.log(`Hiasdnanfanaknc ${name} ${age}`);
+//   return undefined
+// }
 
 // greet();
 
