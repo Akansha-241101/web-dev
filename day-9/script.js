@@ -8,14 +8,30 @@
 
 // arrow functn//
 
-const login = () => {
-    console.log('loged in');
-}
+// const login = () => {
+//     console.log('loged in');
+// }
 
-login()
+// login()
 
-const sum = (a, b) => {
-    console.log(a + b);
-}
+// const sum = (a, b) => {
+//     console.log(a + b);
+// }
 
-sum(5, 6)
+// sum(5, 6)
+
+// Objects //
+
+let dinnerCompleted = false;
+
+const checkDinnerStatus = () => {
+  if (dinnerCompleted) {
+    return "Come lets play BGMi";
+  } else {
+    return "have your dinner first";
+  }
+};
+
+const dinner = checkDinnerStatus();
+console.log(dinner);
+
