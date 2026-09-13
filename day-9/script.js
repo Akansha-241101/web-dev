@@ -20,17 +20,18 @@
 
 // sum(5, 6)
 
+// let dinnerCompleted = false;
+
+// const checkDinnerStatus = () => {
+//   if (dinnerCompleted) {
+//     return "Come lets play BGMi";
+//   } else {
+//     return "have your dinner first";
+//   }
+// };
+
+// const dinner = checkDinnerStatus();
+// console.log(dinner);
+
 // Objects //
 
-let dinnerCompleted = false;
-
-const checkDinnerStatus = () => {
-  if (dinnerCompleted) {
-    return "Come lets play BGMi";
-  } else {
-    return "have your dinner first";
-  }
-};
-
-const dinner = checkDinnerStatus();
-console.log(dinner);
