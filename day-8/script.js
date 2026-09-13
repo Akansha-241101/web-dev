@@ -4,6 +4,8 @@
 
 // import { name, age } from "./variables.js";
 
+// Arrow function // //{()-parenthesis}//
+
 // const greet = () => {
 //   console.log(`Hiasdnanfanaknc ${name} ${age}`);
 //   return undefined
@@ -139,3 +141,4 @@
 // );
 
 // console.log(filteredProducts);
+console.log('hii');
