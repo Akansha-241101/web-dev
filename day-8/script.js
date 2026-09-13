@@ -10,7 +10,6 @@
 
 // greet();
 
-
 // ========================================
 // 2. OBJECTS
 // ========================================
@@ -22,7 +21,6 @@
 
 // // Mutating an object
 // console.log(personOne.age = 23);
-
 
 // ========================================
 // 3. SPREAD OPERATOR
@@ -38,7 +36,6 @@
 
 // console.log(personCopy);
 
-
 // ========================================
 // 4. ARRAYS & ARRAY METHODS
 // ========================================
@@ -50,7 +47,6 @@
 
 // console.log(filteredNumbers);
 
-
 // ========================================
 // 5. MAP()
 // ========================================
@@ -60,7 +56,6 @@
 // const multipliedByTwo = numbers.map((number) => number * 2);
 
 // console.log(multipliedByTwo);
-
 
 // ========================================
 // 6. OBJECT DESTRUCTURING
@@ -80,7 +75,6 @@
 
 // console.log(name);
 
-
 // ========================================
 // 7. IF / ELSE
 // ========================================
@@ -93,7 +87,6 @@
 //   console.log("not eligible for driving");
 // }
 
-
 // ========================================
 // 8. TERNARY OPERATOR
 // ========================================
@@ -103,7 +96,6 @@
 // age > 18
 //   ? console.log("eligible for driving")
 //   : console.log("not eligible for driving");
-
 
 // ========================================
 // 9. IF / ELSE INSIDE A FUNCTION
@@ -122,3 +114,27 @@
 // const result = checkEligibility();
 
 // console.log(result);
+
+// const products = [
+//   {
+//     title: "Wireless Headphones",
+//     description: "Over-ear Bluetooth headphones with noise cancellation.",
+//     category: "Electronics",
+//   },
+//   {
+//     title: "Running Shoes",
+//     description: "Lightweight shoes built for daily running and comfort.",
+//     category: "Footwear",
+//   },
+//   {
+//     title: "Notebook",
+//     description: "A5 lined notebook for notes, lists, and daily planning.",
+//     category: "Stationery",
+//   },
+// ];
+
+// const filteredProducts = products.filter(
+//   (product) => product.category == "Electronics",
+// );
+
+// console.log(filteredProducts);
