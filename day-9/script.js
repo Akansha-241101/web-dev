@@ -34,4 +34,3 @@ const checkDinnerStatus = () => {
 
 const dinner = checkDinnerStatus();
 console.log(dinner);
-
