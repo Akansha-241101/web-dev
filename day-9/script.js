@@ -136,7 +136,7 @@ console.log(ageAfter5year);
 
 //examp 4 (string used)//
 
-const names = ["akansha", "farhan", "iccha", "kuuchu-puchu"];
+const names = ["Akansha", "Farhan", "Icchaa", "Kuuchu-Puchu"];
 
 const newNames = names.map((name) => "Hello, " + name);
 
