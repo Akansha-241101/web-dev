@@ -98,4 +98,3 @@
 
 // .MAP FUNCTION EXAMPLE //
 
-const subject
