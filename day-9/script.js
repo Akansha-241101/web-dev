@@ -134,4 +134,11 @@ const ageAfter5year = personAge.map((age) => age + 5);
 
 console.log(ageAfter5year);
 
+//examp 4 (string used)//
+
+const names = ["akansha", "farhan", "iccha", "kuuchu-puchu"];
+
+const newNames = names.map((name) => name.charAt(0).toUpperCase()+ name.slice(1));
+
+console.log(newNames);
 //DONE//
