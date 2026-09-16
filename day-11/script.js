@@ -37,7 +37,9 @@ const cars = [
 
 // Using .map() to increase the price of every car by 10000. //
 
-const carsNewPrice = cars.map((car) => (car.price = car.price + 10000));
+const carsNewPrice = cars.map((car) => {
+  return { ...car, price: car.price + 10000 };
+});
 console.log(carsNewPrice);
 
 //Using .filter() to create a new array containing only the cars whose color is "white". //
