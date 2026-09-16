@@ -98,3 +98,16 @@
 
 // .MAP FUNCTION EXAMPLE //
 
+// 10 marks to be added as practical marks for each item;
+
+const marks = [67, 36, 82, 74, 55];
+
+// we have to use marks.map() and make sure we store the final array in a new variable because .map returns a new array
+// const newMarks = marks.map(() => {}) this way
+
+
+// code example
+
+const newMarks = marks.map((number) => number + 10);
+
+console.log(newMarks);
