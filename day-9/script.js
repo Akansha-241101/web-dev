@@ -22,7 +22,6 @@
 
 // FUNCTION EXAMPLE (farhan) //
 
-
 // let dinnerCompleted = false;
 
 // const checkDinnerStatus = () => {
@@ -105,9 +104,26 @@ const marks = [67, 36, 82, 74, 55];
 // we have to use marks.map() and make sure we store the final array in a new variable because .map returns a new array
 // const newMarks = marks.map(() => {}) this way
 
-
 // code example
 
 const newMarks = marks.map((number) => number + 10);
 
 console.log(newMarks);
+
+// example 1//
+
+const prices = [100, 200, 300, 400];
+
+const newPrices = prices.map((price) => price - 10);
+
+console.log(newPrices);
+
+//example 2//
+
+const price = [100, 200, 300];
+
+const newPrice = price.map((price) => price + price * 0.1);
+
+console.log(newPrice);
+
+//DONE//
