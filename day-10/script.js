@@ -1,8 +1,8 @@
-// variable
+// VARIABLES
 // console.log();
-// function
+// FUNCTION
 
-// example for functions.
+// EXAMPLE OF FUNCTION
 
 // const calculatePrice = (price, quantity) => {
 //   return price * quantity;
@@ -20,7 +20,7 @@
 
 // checkFreeDelivery();
 
-// example for objects
+// EXAMPLE OF OBJECTS
 
 // let person = {
 //   name: "Akansha",
@@ -30,7 +30,7 @@
 
 // console.log(person.age);
 
-// example of spread operator
+// EXAMPLE OF SPREAD OPERATOR
 
 // let car = {
 //   brand: "Toyota",
@@ -43,11 +43,14 @@
 
 // console.log(carCopy);
 
-// example for array
+// EXAMPLE OF ARRAY
 
 // const persons = ["chinky", "minky", "pinky", "monkey"];
 
-// example of array methods
+// EXAMPLE OF ARRAY .FILTER
 
 // const filteredPersons = persons.filter((person) => person[0] === "m");
 // console.log(filteredPersons);
+
+// EXAMPLE OF ARRAY .MAPS //
+
