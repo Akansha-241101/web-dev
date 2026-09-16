@@ -138,7 +138,7 @@ console.log(ageAfter5year);
 
 const names = ["akansha", "farhan", "iccha", "kuuchu-puchu"];
 
-const newNames = names.map((name) => name.charAt(0).toUpperCase()+ name.slice(1));
+const newNames = names.map((name) => "Hello, " + name);
 
 console.log(newNames);
 //DONE//
