@@ -106,39 +106,39 @@ const marks = [67, 36, 82, 74, 55];
 
 // code example
 
-const newMarks = marks.map((number) => number + 10);
+// const newMarks = marks.map((number) => number + 10);
 
-console.log(newMarks);
+// console.log(newMarks);
 
 // example 1//
 
-const prices = [100, 200, 300, 400];
+// const prices = [100, 200, 300, 400];
 
-const newPrices = prices.map((price) => price - 10);
+// const newPrices = prices.map((price) => price - 10);
 
-console.log(newPrices);
+// console.log(newPrices);
 
 //example 2//
 
-const price = [100, 200, 300];
+// const price = [100, 200, 300];
 
-const newPrice = price.map((price) => price + price * 0.1);
+// const newPrice = price.map((price) => price + price * 0.1);
 
-console.log(newPrice);
+// console.log(newPrice);
 
 // example 3//
 
-const personAge = [23, 34, 27, 18, 40];
+// const personAge = [23, 34, 27, 18, 40];
 
-const ageAfter5year = personAge.map((age) => age + 5);
+// const ageAfter5year = personAge.map((age) => age + 5);
 
-console.log(ageAfter5year);
+// console.log(ageAfter5year);
 
 //examp 4 (string used)//
 
-const names = ["Akansha", "Farhan", "Icchaa", "Kuuchu-Puchu"];
+// const names = ["Akansha", "Farhan", "Icchaa", "Kuuchu-Puchu"];
 
-const newNames = names.map((name) => "Hello, " + name);
+// const newNames = names.map((name) => "Hello, " + name);
 
-console.log(newNames);
+// console.log(newNames);
 //DONE//
