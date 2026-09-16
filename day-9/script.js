@@ -126,4 +126,12 @@ const newPrice = price.map((price) => price + price * 0.1);
 
 console.log(newPrice);
 
+// example 3//
+
+const personAge = [23, 34, 27, 18, 40];
+
+const ageAfter5year = personAge.map((age) => age + 5);
+
+console.log(ageAfter5year);
+
 //DONE//
