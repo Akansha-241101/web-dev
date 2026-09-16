@@ -87,7 +87,7 @@
 // const remainingBattery = calculateBattery(100, 65);
 
 // const checkBattery = () => {
-//   if (remainingBattery > 80) {
+//   if (remainingBattery <= 80) {
 //     console.log("Battery is low");
 //   } else {
 //     console.log("Battery is sufficient");
