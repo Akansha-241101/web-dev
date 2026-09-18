@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --background: #fafafa; /* Main page background */
-  --text: #18181b; /* Main headings, body text, navigation text */
-  --primary: #6366f1; /* Primary buttons, links, active icons, highlights */
-  --primary-text: #ffffff; /* Text inside primary buttons */
-  --card: #ffffff; /* Cards, header, input fields and white surfaces */
-  --muted: #f4f4f5; /* Secondary sections, secondary buttons and subtle backgrounds */
-  --muted-foreground: #71717a; /* Descriptions, footer text and secondary text */
-  --border: #e4e4e7; /* Card borders, input borders and dividers */
+  --background: #fafafa;         /* Main page background */
+  --text: #18181b;               /* Main headings, body text, navigation text */
+  --primary: #6366f1;            /* Primary buttons, links, active icons, highlights */
+  --primary-text: #ffffff;       /* Text inside primary buttons */
+  --card: #ffffff;               /* Cards, header, input fields and white surfaces */
+  --muted: #f4f4f5;              /* Secondary sections, secondary buttons and subtle backgrounds */
+  --muted-foreground: #71717a;   /* Descriptions, footer text and secondary text */
+  --border: #e4e4e7;             /* Card borders, input borders and dividers */
 }
 
 @theme inline {
