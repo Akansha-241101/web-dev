@@ -1,7 +1,7 @@
 function App() {
   return (
     <main>
-      <h1>Hi Akansha</h1>
+      {/* All your components will go here */}
     </main>
   );
 }
