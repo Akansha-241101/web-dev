@@ -1,4 +1,4 @@
-const websiteContent = [
+export const websiteContent = [
   {
     section: "Header",
     logo: "StudyHub",
