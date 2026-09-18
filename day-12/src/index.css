@@ -1,28 +1,28 @@
 @import "tailwindcss";
 
 :root {
-  --primary: #ff7e21;
-  --foreground: #ffffff;
-  --background: rgb(10, 10, 10);
-  --card: rgb(20, 20, 20);
-  --accent: rgb(30, 30, 30);
-  --border: rgb(40, 40, 40);
-  --muted: rgb(48, 48, 48);
-  --input: rgb(50, 50, 50);
-  --muted-foreground: rgb(150, 150, 150);
-  --accent-foreground: #ffffff;
-  --destructive: #f55;
-  --destructive-foreground: #ffffff;
+  --background: #fafafa;           /* Main page background */
+  --text: #18181b;                 /* Main headings, body text, navigation text */
+  --primary: #6366f1;              /* Primary buttons, links, active icons, highlights */
+  --primary-text: #ffffff;         /* Text inside primary buttons */
+  --card: #ffffff;                 /* Cards, header, input fields and white surfaces */
+  --muted: #f4f4f5;                /* Secondary sections, secondary buttons and subtle backgrounds */
+  --muted-foreground: #71717a;     /* Descriptions, footer text and secondary text */
+  --border: #e4e4e7;               /* Card borders, input borders and dividers */
+}
 
-  /* spacings and border radius */
-  --space-sm: 0.5rem;
-  --space-md: 1rem;
-  --space-lg: 1.5rem;
-  --space-xl: 2rem;
-  --space-2xl: 4rem;
+@theme inline {
+  --color-background: var(--background);
+  --color-text: var(--text);
+  --color-primary: var(--primary);
+  --color-primary-text: var(--primary-text);
+  --color-card: var(--card);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
 }
 
 body {
-  background-color: var(--background);
+  background: var(--background);
   color: var(--foreground);
 }
