@@ -1,7 +1,15 @@
+import Header from "./components/Header";
+import Hero from "./components/Hero";
+import FeaturedCards from "./components/FeaturedCards";
+import Footer from "./components/Footer";
+
 function App() {
   return (
     <main>
-      {/* All your components will go here */}
+      <Header />
+      <Hero />
+      <FeaturedCards />
+      <Footer />
     </main>
   );
 }
