@@ -1,7 +1,7 @@
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import FeaturedCards from "./components/FeaturedCards";
-import Footer from "./components/Footer";
+import Header from "./components/shared/Header";
+import Hero from "./components/home/Hero";
+import FeaturedCards from "./components/home/FeaturedCards";
+import Footer from "./components/shared/Footer";
 
 function App() {
   return (

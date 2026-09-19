@@ -5,11 +5,10 @@ export const websiteContent = [
     navigation: ["Home", "Features", "About", "Contact"],
     button: "Get Started",
   },
-
   {
     section: "Hero",
     badge: "🚀 Learn. Build. Grow.",
-    heading: "A Better Way to Learn and Build",
+    heading: ["A Better Way", "to Learn and Build"],
     description:
       "StudyHub helps you learn modern web development with simple resources, real projects, and a supportive community.",
     buttons: ["Get Started", "Explore Features"],
@@ -106,3 +105,6 @@ export const websiteContent = [
     credit: "Made with ❤️ for learners.",
   },
 ];
+
+export const headerContent = websiteContent[0];
+export const heroContent = websiteContent[1];
