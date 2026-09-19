@@ -26,6 +26,7 @@ function Hero() {
           {heroContent.buttons.map((button) => {
             return (
               <button
+                key={button}
                 className={`py-2 px-6 rounded-md text-sm lg:text-base ${heroContent.buttons[0] === button ? "bg-primary text-primary-text" : "bg-muted text-text"}`}
               >
                 {button}
@@ -36,7 +37,7 @@ function Hero() {
         <div className="flex gap-14">
           {heroContent.stats.map((stat) => {
             return (
-              <div>
+              <div key={stat.label}>
                 <h3 className="font-bold text-[18px]">{stat.value}</h3>
                 <p>{stat.label}</p>
               </div>
