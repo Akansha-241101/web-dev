@@ -1,5 +1,7 @@
 function FeaturedCards() {
-  return <div>{/* Featured Cards UI */}</div>;
+  return <div>
+    
+  </div>;
 }
 
 export default FeaturedCards;
