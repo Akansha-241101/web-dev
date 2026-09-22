@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f0eade;       /* cream color */
+  --text: #54464d;             /* slate color */
+  --primary: #54464d;          /* slate color */
+  --primary-text: #f5f5f0;     /* cotton color */
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-text: var(--text);
+  --color-primary: var(--primary);
+  --color-primary-text: var(--primary-text);
+}
