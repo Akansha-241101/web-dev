@@ -38,16 +38,16 @@ function App() {
         {showMenu ? (
           <div className="w-100 flex flex-col bg-gray-200 border border-text divide-y">
             <a href="" className="p-3">
-              home
+              Home
             </a>
             <a href="" className="p-3">
-              about
+              About
             </a>
             <a href="" className="p-3">
-              services
+              Aervices
             </a>
             <a href="" className="p-3">
-              blog
+              Blog
             </a>
             <a href="" className="p-3">
               contact
