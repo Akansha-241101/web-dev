@@ -17,7 +17,7 @@ function ImageComponent({ image, title, description }) {
   );
 }
 
-function App() {
+function AppOld() {
   return (
     <main className="min-h-screen flex flex-col gap-4 items-center bg-background text-text p-10">
       {
@@ -43,4 +43,4 @@ function App() {
   );
 }
 
-export default App;
+export default AppOld;

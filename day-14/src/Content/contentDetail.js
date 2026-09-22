@@ -12,7 +12,7 @@ import book5 from "../images/book-5.jpg";
 
 //example 1 PET ADOPTION CARDS array//
 
-const pets = [
+export const pets = [
   {
     image: pet1,
     name: "Bruno",
