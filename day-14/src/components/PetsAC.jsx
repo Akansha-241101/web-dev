@@ -1,11 +1,11 @@
 export default function PetsAC({ image, name, type, age, location }) {
   return (
-    <div className="flex justify-center gap-5.5">
-      <div className="flex flex-col justify-center items-center object-cover hover:bg-blue-50 gap-4">
+    <div className="flex justify-center border border-text/30">
+      <div className="flex flex-col justify-center items-center object-cover hover:bg-blue-50">
         {/* Image */}
-        <img className="w-100" src={image} alt={name} />
+        <img className="w-100 h-100 object-cover" src={image} alt={name} />
         {/* Name */}
-        <div className="flex flex-col items-center justify-center gap-2">
+        <div className="flex flex-col items-center justify-center gap-2 p-6">
           <p className="text-text text-4xl font-bold">{name}</p>
           <span className="text-sm text-gray-500">Name</span>
 
@@ -34,10 +34,10 @@ export default function PetsAC({ image, name, type, age, location }) {
               <span className="text-sm text-gray-500">Location</span>
             </div>
           </div>
+          <button className="bg-blue-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded cursor-pointer">
+            ADOPT ME
+          </button>
         </div>
-        <button className="bg-blue-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
-          ADOPT ME
-        </button>
       </div>
     </div>
   );

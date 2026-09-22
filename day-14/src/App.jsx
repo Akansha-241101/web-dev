@@ -5,7 +5,7 @@ import { pets } from "./content/contentDetail";
 function App() {
   return (
     <main>
-      <div className="flex flex-wrap justify-center gap-5">
+      <div className="flex flex-wrap justify-center gap-5 p-10">
         {pets.map((pet) => {
           return (
             <PetsAC

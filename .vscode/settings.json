@@ -1,0 +1,6 @@
+{
+  "tailwindCSS.experimental.configFile": {
+    "day-14/src/index.css": "day-14/src/**",
+    "day-15/src/index.css": "day-15/src/**"
+  }
+}
