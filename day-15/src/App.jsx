@@ -1,73 +1,41 @@
 import { useState } from "react";
-import MenuIcon from "./components/MenuIcon";
 
-function App() {
-
-  // const [var, func] = useState();
+const App = () => {
   const [count, setCount] = useState(0);
-  const [showMenu, setShowMenu] = useState(false);
-
+  const buttonStyles =
+    "px-3 py-2 border rounded-md bg-gray-100 cursor-pointer hover:bg-gray-200";
   return (
-    <main className="p-6">
-      <div className="flex flex-col gap-3">
-
-        {/* -------------------- count increment and reset using useState ---------------- */}
-
-        {/* Count display */}
-        <h1 className="text-3xl">{count}</h1>
-
-        {/* Buttons */}
-        <div className="flex gap-3">
-          <button
-            className="w-fit bg-gray-200 border py-2 px-4 cursor-pointer"
-            onClick={() => setCount((prev) => prev + 1)}
-          >
-            Inc count
-          </button>
-          <button
-            className="w-fit bg-gray-200 border py-2 px-4 cursor-pointer"
-            onClick={() => setCount(0)}
-          >
-            reset count
-          </button>
-        </div>
-
-        {/* -------------------- Menu show and hide using useState ---------------- */}
-
-        {/* Menu toggle button */}
+    <div className="p-6 flex flex-col gap-4">
+      <h1 className="text-3xl font-semibold">{count}</h1>
+      <div className="flex gap-4  ">
         <button
-          className="w-fit bg-gray-200 border py-2 px-4 cursor-pointer"
+          className={buttonStyles}
           onClick={() => {
-            setShowMenu((prev) => !prev);
+            setCount((prev) => {
+              return prev + 1;
+            });
           }}
         >
-          {/*  Menu SVG icon component */}
-          <MenuIcon />
+          INC count
         </button>
-
-        {/* Conditionally display the menu */}
-        {showMenu ? (
-          <div className="w-100 flex flex-col bg-gray-200 border border-text divide-y">
-            <a href="" className="p-3">
-              Home
-            </a>
-            <a href="" className="p-3">
-              About
-            </a>
-            <a href="" className="p-3">
-              Aervices
-            </a>
-            <a href="" className="p-3">
-              Blog
-            </a>
-            <a href="" className="p-3">
-              contact
-            </a>
-          </div>
-        ) : null}
+        <button
+          className={buttonStyles}
+          onClick={() => {
+            setCount(0);
+          }}
+        >
+          RESET count
+        </button>
+        <button
+          className={buttonStyles}
+          onClick={() => {
+            setCount((prev) => (prev > 0 ? prev - 1 : prev));
+          }}
+        >
+          DEC count
+        </button>
       </div>
-    </main>
+    </div>
   );
-}
-
+};
 export default App;
