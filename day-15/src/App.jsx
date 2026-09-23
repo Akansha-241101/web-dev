@@ -7,7 +7,7 @@ const App = () => {
   return (
     <div className="p-6 flex flex-col gap-4">
       <h1 className="text-3xl font-semibold">{count}</h1>
-      <div className="flex gap-4  ">
+      <div className="flex gap-4">
         <button
           className={buttonStyles}
           onClick={() => {
