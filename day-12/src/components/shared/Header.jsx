@@ -1,4 +1,5 @@
 import { headerContent } from "../../constants/websiteContent";
+import { useState } from "react";
 
 const navItems = headerContent.navigation;
 
@@ -21,6 +22,7 @@ function Navbar() {
 }
 
 function Header() {
+  const [showMenu, setShowMenu] = useState(false);
   return (
     <header className="header flex p-6 lg:p-section py-6 justify-between">
       <div className="logo text-[22px] font-semibold">{headerContent.logo}</div>
@@ -28,26 +30,12 @@ function Header() {
       <button className="bg-primary py-2 px-6 text-primary-text rounded-md hidden lg:block">
         {headerContent.button}
       </button>
-      <button className="w-fit bg-black-700">
-
-
-
-
-// <button
-          className="w-fit bg-gray-200 border py-2 px-4 cursor-pointer"
-          onClick={() => {
-            setShowMenu((prev) => !prev);
-          }}
-        >
-          {/*  Menu SVG icon component */}
-          <MenuIcon />
-        </button>
-
-
-
-
-
-
+      <button
+        className="w-fit bg-black-700w-fit bg-gray-200 border py-2 px-4 cursor-pointer lg:hidden block"
+        onClick={() => {
+          setShowMenu((prev) => !prev);
+        }}
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
@@ -65,6 +53,22 @@ function Header() {
           <path d="M4 19h16" />
         </svg>
       </button>
+      {showMenu ? (
+        <div className="w-100 flex flex-col bg-gray-200 border border-text divide-y">
+          <a href="" className="p-8">
+            Home
+          </a>
+          <a href="" className="p-8">
+            Features
+          </a>
+          <a href="" className="p-8">
+            About
+          </a>
+          <a href="" className="p-8">
+            Contact
+          </a>
+        </div>
+      ) : null}
     </header>
   );
 }
