@@ -5,10 +5,10 @@ const navItems = headerContent.navigation;
 
 function Navbar() {
   return (
-    <div className="nav flex gap-10  text-text border-2 ">
+    <div className="nav flex gap-10  text-text ">
       {navItems.map((navItem) => {
         return (
-          <a key={navItem} href="" className="flex p-3 gap-3 text-text">
+          <a key={navItem} href="" className="text-text font-semibold">
             {navItem}
           </a>
         );
@@ -19,12 +19,14 @@ function Navbar() {
 
 function Header() {
   return (
-    <header className="w-fit text-text px-3 py-8 bg-bg-soft">
-      <img src={logo} alt="" className="w-full"></img>
-      <div>
+    <header className="flex justify-between items-center w-full text-text px-60 py-4 bg-bg">
+      <div className="w-44">
+        <img src={logo} alt="" className="w-full object-cover"></img>
+      </div>
+      <div className=" flex gap-3">
         <Navbar />
       </div>
-      <button>Training Schedule</button>
+      <button className="">Training Schedule</button>
     </header>
   );
 }
