@@ -1,5 +1,3 @@
-import {cardsContent} from "../content";
-
 function Cards() {
   return;
 }

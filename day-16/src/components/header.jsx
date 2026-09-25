@@ -17,10 +17,10 @@ function Navbar() {
   );
 }
 
-function Headers() {
+function Header() {
   return (
-    <header className="w-fit text-text px-3 py-8 bg-bg-soft ">
-      <img src={logo} alt="" className=""></img>
+    <header className="w-fit text-text px-3 py-8 bg-bg-soft">
+      <img src={logo} alt="" className="w-full"></img>
       <div>
         <Navbar />
       </div>
@@ -28,4 +28,4 @@ function Headers() {
     </header>
   );
 }
-export default Headers;
+export default Header;

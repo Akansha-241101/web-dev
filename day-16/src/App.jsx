@@ -1,14 +1,10 @@
-import Headers from "./components/header";
-import Hero from "./components/hero";
-import Cards from "./components/cards";
+import Header from "./components/Header";
 
 
 function App() {
   return (
     <>
-      <Headers />
-      <Hero />
-      <Cards />
+      <Header />
     </>
   );
 }

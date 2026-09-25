@@ -1,6 +1,4 @@
-import {heroContent} from "../content";
-
 function Hero() {
-  return
+  return;
 }
 export default Hero;
