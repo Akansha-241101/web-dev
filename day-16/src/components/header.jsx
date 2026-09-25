@@ -1,19 +1,31 @@
-import pageContent from "../content";
-import logo from "../images/logo.png"
+import { headerContent } from "../content";
+import logo from "../images/logo.png";
 
+const navItems = headerContent.navigation;
+
+function Navbar() {
+  return (
+    <div className="nav flex gap-10  text-text border-2 ">
+      {navItems.map((navItem) => {
+        return (
+          <a key={navItem} href="" className="flex p-3 gap-3 text-text">
+            {navItem}
+          </a>
+        );
+      })}
+    </div>
+  );
+}
 
 function Headers() {
   return (
-    <div className="">
+    <header className="w-fit text-text px-3 py-8 bg-bg-soft ">
       <img src={logo} alt="" className=""></img>
       <div>
-        <a href=""></a>
-        <a href=""></a>
-        <a href=""></a>
-        <a href=""></a>
+        <Navbar />
       </div>
-      <button></button>
-    </div>
+      <button>Training Schedule</button>
+    </header>
   );
 }
 export default Headers;

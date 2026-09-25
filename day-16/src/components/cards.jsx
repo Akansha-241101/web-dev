@@ -1,4 +1,4 @@
-import pageContent from "../content";
+import {cardsContent} from "../content";
 
 function Cards() {
   return;

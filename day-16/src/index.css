@@ -6,7 +6,7 @@
   --text: #54464d;
   --bg-soft: #f2efe6;
   --border: #ba9c86;
-  --padding-section: 30px 150px ;
+  --section-padding: 30px 150px;
 }
 
 @theme inline {
@@ -15,7 +15,6 @@
   --color-bg-soft: var(--bg-soft);
   --color-border: var(--border);
 
-  
-
+  --spacing-padding: var(--section);
   --font-cormorant: "Cormorant Garamond", serif;
 }
