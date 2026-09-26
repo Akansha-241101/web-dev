@@ -19,7 +19,7 @@ function Navbar() {
 
 function Header() {
   return (
-    <header className="flex justify-between items-center w-full text-text font-Montserrat font-medium text-l px-40 py-4 bg-bg border-b border-black/25">
+    <header className="flex justify-between items-center w-full text-text font-Montserrat font-medium text-l px-40 py-4 border-b border-black/25">
       <div className="w-44">
         <img src={logo} alt="" className="w-full object-cover"></img>
       </div>

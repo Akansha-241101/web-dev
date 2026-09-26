@@ -1,9 +1,5 @@
 import { cardsContent } from "../content";
 
-function CardsDetail() {
-  return;
-}
-
 function Cards() {
   return (
     <div className="flex gap-4 justify-center w-full">
@@ -17,7 +13,7 @@ function Cards() {
             <p className="flex-1 text-lg font-sans text-text/85">
               {card.description}
             </p>
-            <button className="py-2 border border-border hover:bg-bg-soft text-center text-text mt-10 cursor-pointer">
+            <button className="py-2 border border-border hover:bg-text hover:text-bg text-center text-text mt-10 cursor-pointer duration-200">
               {card.button}
             </button>
           </article>
