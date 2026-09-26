@@ -33,5 +33,4 @@ const pageContent = [
 ];
 
 export const headerContent = pageContent[0];
-export const heroContent = pageContent[1];
 export const cardsContent = pageContent[2];
