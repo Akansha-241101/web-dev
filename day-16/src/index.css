@@ -6,7 +6,13 @@
   --text: #54464d;
   --bg-soft: #f0eee8;
   --border: #ba9c86;
-  --section-padding: 40px 150px;
+  --section-padding: 60px 180px;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --section-padding: 16px 24px;
+  }
 }
 
 @theme inline {

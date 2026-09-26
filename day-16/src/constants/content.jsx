@@ -1,3 +1,5 @@
+import { Home5, Brush3, Palette2 } from "reicon-react";
+
 const pageContent = [
   {
     logo: "Lakshmi Sridhar Artist — Made with Love",
@@ -11,18 +13,21 @@ const pageContent = [
   {
     cards: [
       {
+        icon: <Palette2 />,
         heading: "Explore Recent Work",
         description:
           "Step into my latest series and see what I’ve been creating in the studio this season.",
         button: "View Recent Projects",
       },
       {
+        icon: <Brush3 />,
         heading: "Learn to Paint",
         description:
           "Join one of my training sessions — beginner-friendly, warm, and designed to help you find your own voice with a brush.",
         button: "See Courses Running",
       },
       {
+        icon: <Home5 />,
         heading: "Bring Art Home",
         description:
           "Shop original paintings or archival-quality prints, shipped carefully to your door.",
