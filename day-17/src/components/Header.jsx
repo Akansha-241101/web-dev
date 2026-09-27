@@ -6,11 +6,12 @@ const headerNav = headerContent.navigation;
 export default function Header() {
   const [showMenu, setShowMenu] = useState(false);
   console.log(showMenu);
+
   return (
     <header className="relative flex justify-between items-center px-4 lg:px-40 py-4">
       {showMenu && (
-        <div className="flex flex-col absolute top-full left-0 bg-bg-soft">
-          <nav className="flex flex-col justify-center w-screen border-text/40  border-y divide-text/40 divide-y">
+        <div className="absolute flex lg:hidden flex-col top-full left-0 bg-bg-soft border-text/40  border-y">
+          <nav className="flex flex-col justify-center w-screen divide-text/40 divide-y border-text/40  border-b">
             {headerNav.map((navItem) => {
               return (
                 <a key={navItem} href="" className="px-6 py-3">
