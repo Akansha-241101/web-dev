@@ -1,1 +1,8 @@
-@import "tailwindcss"
+@import "tailwindcss";
+
+@theme inline {
+  --color-bg: var(--color-amber-50);
+  --color-text: var(--color-olive-700);
+  --color-border: var(--color-olive-800);
+  --color-white: #ffffff;
+}
