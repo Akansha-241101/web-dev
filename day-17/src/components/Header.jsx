@@ -5,6 +5,7 @@ import { headerContent } from "../constants/content";
 const headerNav = headerContent.navigation;
 export default function Header() {
   const [showMenu, setShowMenu] = useState(false);
+  const [activeNav, setActiveNav] = useState(headerNav[0]);
   console.log(showMenu);
 
   return (
@@ -28,12 +29,20 @@ export default function Header() {
       <div className="w-45">
         <img src={logo} alt="" className="w-full object-cover" />
       </div>
-      <nav className="gap-4 hidden lg:flex">
+      <nav className="gap-6 hidden lg:flex">
         {headerNav.map((navItem) => {
           return (
-            <a key={navItem} href="">
-              {navItem}
-            </a>
+            <span
+              className="relative cursor-pointer"
+              key={navItem}
+              href=""
+              onClick={() => setActiveNav(navItem)}
+            >
+              <span>{navItem}</span>
+              {activeNav === navItem && (
+                <span className="absolute top-8 left-0 h-[1px] w-full bg-text"></span>
+              )}
+            </span>
           );
         })}
       </nav>
