@@ -6,7 +6,7 @@ function Cards() {
       {cardsContent.cards.map((card) => {
         return (
           <article key={card.heading} className="flex flex-col gap-2 p-6 border border-border/40 hover:border-border hover:bg-bg-soft duration-300 w-full lg:w-1/3">
-            <span>{card.icon}</span>
+            <span className="">{card.icon}</span>
             <p className="font-cormorant font-medium text-[30px]">
               {card.heading}
             </p>
