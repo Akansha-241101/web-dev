@@ -2,7 +2,7 @@
 
 @theme inline {
   --color-bg: var(--color-amber-50);
-  --color-text: var(--color-olive-700);
+  --color-text: var(--color-olive-800);
   --color-border: var(--color-olive-800);
   --color-white: #ffffff;
 }

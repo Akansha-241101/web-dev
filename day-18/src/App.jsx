@@ -1,24 +1,31 @@
+import { useState } from "react";
+import content from "./constants/tabsContent";
+import { courses } from "./constants/tabsContent";
+import Tabs from "./components/Tabs";
+import TabsContent from "./components/TabsContent";
+
 function App() {
+  const [selectedTab, setSelectedTab] = useState(courses[0]);
+  const selectedTabContent = content.filter((c) => c.title === selectedTab);
+
   return (
     <main className="min-h-screen bg-bg text-text">
       <section className="p-40">
         <div className="tabs-container border border-border">
-          <div className="tabs-header flex justify-around w-full text-center border-b">
-            <div className="py-4 w-1/4 border-r border-border">asa</div>
-            <div className="py-4 w-1/4 border-r border-border">asd</div>
-            <div className="py-4 w-1/4 border-r border-border">asd</div>
-            <div className="py-4 w-1/4">asd</div>
+          <div className="tabs-header flex justify-around w-full text-center border-b border-border">
+            {courses.map((c) => {
+              console.log(courses.length);
+              return (
+                <Tabs
+                  key={c}
+                  course={c}
+                  selectedTab={selectedTab}
+                  setSelectedTab={setSelectedTab}
+                />
+              );
+            })}
           </div>
-          <div className="tab-content flex divide-x">
-            <div className="tab-content-left w-1/2 p-8">
-              <h1 className="text-3xl font-semibold">asdasdas</h1>
-              <p>asdasda</p>
-              <button className="bg-text text-white py-2 px-6 rounded-lg">
-                click me
-              </button>
-            </div>
-            <div className="tab-content-right w-1/2 p-8">image</div>
-          </div>
+          <TabsContent selectedTabContent={selectedTabContent} />
         </div>
       </section>
     </main>
