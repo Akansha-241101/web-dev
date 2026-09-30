@@ -1,17 +1,40 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap");
 @import "tailwindcss";
 
-@theme inline {
-  --color-bg: #fbf6f3;
-  --color-text: #4d3540;
-  --color-border: #f0e2e5;
-  --color-white: #fffdfb;
+/* Light theme values */
+:root {
+  --app-bg: #fbf6f3;
+  --app-text: #4d3540;
+  --app-border: #f0e2e5;
+  --app-white: #fffdfb;
+  --app-rose: #a65f7b;
+  --app-rose-light: #f6dce4;
+  --app-rose-pale: #f5e8eb;
+  --app-muted: #806c72;
+}
 
-  --color-rose: #a65f7b;
-  --color-rose-light: #f6dce4;
-  --color-rose-pale: #f5e8eb;
-  --color-muted: #806c72;
+@theme inline {
+  --color-bg: var(--app-bg);
+  --color-text: var(--app-text);
+  --color-border: var(--app-border);
+  --color-white: var(--app-white);
+  --color-rose: var(--app-rose);
+  --color-rose-light: var(--app-rose-light);
+  --color-rose-pale: var(--app-rose-pale);
+  --color-muted: var(--app-muted);
 
   --font-sans: "DM Sans", sans-serif;
   --font-serif: "Playfair Display", Georgia, serif;
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+  --app-bg: #100b10;
+  --app-text: #f7edf2;
+  --app-border: #48303f;
+  --app-white: #211720;
+  --app-rose: #ef9ab9;
+  --app-rose-light: #603348;
+  --app-rose-pale: #2b1c27;
+  --app-muted: #c6aab7;
 }
