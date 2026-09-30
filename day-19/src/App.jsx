@@ -11,7 +11,7 @@ function App() {
     <main className="flex min-h-screen flex-col gap-6 bg-cover bg-center bg-fixed px-4 py-4 sm:px-8 md:px-12 lg:px-20">
       <Header />
       <div className="Hero border border-text rounded-md">
-        <div className="Tab-Section flex justify-center border-b text-sm font-semibold text-rose-800/50 hover:text-rose-800/90 sm:text-base md:text-lg">
+        <div className="Tab-Section flex justify-center border-b text-sm font-semibold text-rose-800/50 sm:text-base md:text-lg">
           {content.map((item) => {
             return (
               <button
@@ -30,7 +30,7 @@ function App() {
             <h3 className="font-sans text-sm font-semibold text-rose-800/50 hover:text-rose-800/70 sm:text-base">
               {selectedContent.eyebrow}
             </h3>
-            <h1 className="font-serif text-4xl font-semibold text-rose-800/80 hover:text-rose-800/90 sm:text-5xl md:text-5xl lg:text-6xl transition-transform duration-300 ease-out hover:scale-105">
+            <h1 className="font-serif text-4xl font-semibold text-rose-800/80 hover:text-rose-800/90 sm:text-5xl md:text-5xl lg:text-6xl">
               {selectedContent.title}
             </h1>
             <h3 className="text-base leading-relaxed text-rose-950/90 sm:text-lg">
