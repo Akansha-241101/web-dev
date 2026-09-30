@@ -4,7 +4,7 @@ function Header({ theme, onToggleTheme }) {
       <button
         type="button"
         onClick={onToggleTheme}
-        className={`self-end rounded-lg border ${theme === "dark" ? "border-rose" : "border-black"} bg-white px-4 py-2 text-text`}
+        className={`self-end rounded-lg border ${theme === "dark" ? "border-rose/40" : "border-black/40"} bg-white px-4 py-2 text-text`}
       >
         {theme === "light" ? (
           <svg

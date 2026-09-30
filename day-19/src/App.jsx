@@ -9,7 +9,7 @@ function App() {
   const [theme, setTheme] = useState(
     () => localStorage.getItem("theme") || "light",
   );
-  const borderColor = theme === "dark" ? "border-rose" : "border-black";
+  const borderColor = theme === "dark" ? "border-rose-100/40" : "border-black/40";
 
   const toggleTheme = () => {
     const nextTheme = theme === "light" ? "dark" : "light";
