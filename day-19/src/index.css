@@ -5,7 +5,7 @@
 :root {
   --app-bg: #fbf6f3;
   --app-text: #4d3540;
-  --app-border: #f0e2e5;
+  --app-border: #d9c4cc;
   --app-white: #fffdfb;
   --app-rose: #a65f7b;
   --app-rose-light: #f6dce4;
@@ -29,12 +29,13 @@
 
 [data-theme="dark"] {
   color-scheme: dark;
-  --app-bg: #100b10;
-  --app-text: #f7edf2;
-  --app-border: #48303f;
-  --app-white: #211720;
-  --app-rose: #ef9ab9;
-  --app-rose-light: #603348;
-  --app-rose-pale: #2b1c27;
-  --app-muted: #c6aab7;
+  --app-bg: #08060a;
+  --app-text: #f8eff4;
+  --app-border: #684457;
+  --app-white: #151018;
+  --app-rose: #e98caf;
+  --app-rose-light: #482438;
+  --app-rose-pale: #1c121b;
+  --app-muted: #c5aab8;
+  --app-black:var(--app-white)
 }

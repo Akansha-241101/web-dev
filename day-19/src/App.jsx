@@ -9,6 +9,7 @@ function App() {
   const [theme, setTheme] = useState(
     () => localStorage.getItem("theme") || "light",
   );
+  const borderColor = theme === "dark" ? "border-rose" : "border-black";
 
   const toggleTheme = () => {
     const nextTheme = theme === "light" ? "dark" : "light";
@@ -22,13 +23,13 @@ function App() {
         theme={theme}
         onToggleTheme={toggleTheme}
       />
-      <div className="Hero border border-text rounded-md">
-        <div className="Tab-Section flex justify-center border-b border-border text-sm font-semibold text-muted sm:text-base md:text-lg">
+      <div className={`Hero border ${borderColor} rounded-md`}>
+        <div className={`Tab-Section flex justify-center border-b ${borderColor} text-sm font-semibold text-rose sm:text-base md:text-lg`}>
           {content.map((item) => {
             return (
               <button
                 type="button"
-                className={`flex-1 border-r border-border px-1 py-3 text-center cursor-pointer last:border-r-0 sm:px-3 sm:py-4 transition-transform duration-300 ease-out hover:scale-105 sm:h-80 md:h-full ${item.title === selectedItem ? "bg-rose text-rose-pale" : ""}`}
+                className={`flex-1 border-r ${borderColor} px-1 py-3 text-center cursor-pointer last:border-r-0 sm:px-3 sm:py-4 transition-transform duration-300 ease-out hover:scale-105 sm:h-80 md:h-full ${item.title === selectedItem ? "bg-rose text-rose-pale" : ""}`}
                 key={item.id}
                 onClick={() => setSelectedItem(item.title)}
               >
@@ -45,7 +46,7 @@ function App() {
             <h1 className="font-serif text-4xl font-semibold text-rose sm:text-5xl md:text-5xl lg:text-6xl">
               {selectedContent.title}
             </h1>
-            <h3 className="text-base leading-relaxed text-text sm:text-lg">
+            <h3 className="leading-relaxed text-3xl text-text sm:text-lg">
               {selectedContent.description}
             </h3>
             <button className="bg-rose text-rose-pale px-6 py-2 rounded-lg items-center cursor-pointer hover:opacity-80 font-sans font-semibold w-fit">
