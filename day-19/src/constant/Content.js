@@ -38,4 +38,6 @@ const content = [
   },
 ];
 
-export default imageContent = content[0];
+export const contentDetail = content.map((item) => item.title);
+export default content;
+
