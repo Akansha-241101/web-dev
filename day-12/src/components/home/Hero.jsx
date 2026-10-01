@@ -27,7 +27,7 @@ function Hero() {
             return (
               <button
                 key={button}
-                className={`py-2 px-6 rounded-md text-sm lg:text-base ${heroContent.buttons[0] === button ? "bg-primary text-primary-text" : "bg-muted text-text"}`}
+                className={`py-2 px-6 rounded-md text-sm hover:bg-primary/95 hover:text-amber-50 lg:text-base ${heroContent.buttons[0] === button ? "bg-primary text-primary-text" : "bg-muted text-text"}`}
               >
                 {button}
               </button>
