@@ -42,7 +42,7 @@ function PostDashBoard() {
           Clear
         </button>
       </div>
-      <button className="refresh-button" onClick={fetchData} disabled={loading}>
+      <button className="refresh-button" onClick={fetchData}>
         Refresh posts
       </button>
       <div className="PostsSection">
