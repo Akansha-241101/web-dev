@@ -1,6 +1,6 @@
 import Count from "./components/CountBtn"
-import PostsDashboard from "./components/PostsDB"
-import Toggle from "./components/ToggleBtn"
+import PostsDashboard from "./components/PostsDashBoard"
+import Toggle from "./components/Toggle"
 
 
 function App() {

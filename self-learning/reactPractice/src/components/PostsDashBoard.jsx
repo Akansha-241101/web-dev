@@ -2,7 +2,7 @@
 
 import { useRef, useState, useEffect } from "react";
 
-function PostDashBoard() {
+function PostsDashBoard() {
   const inputRef = useRef(null);
   const [data, setData] = useState([]);
   const [search, setSearch] = useState("");
@@ -12,9 +12,9 @@ function PostDashBoard() {
     setLoading(true);
     {
       const res = await fetch("https://jsonplaceholder.typicode.com/posts");
-      const cleandata = await res.json();
-      await new Promise((post) => setTimeout(post, 1500));
-      setData(cleandata.slice(0, 15));
+      const data = await res.json();
+      await new Promise((resolve, reject) => setTimeout(resolve, 1500));/* pending resolve rejected*/
+      setData(data.slice(0, 15));
     }
     setLoading(false);
   };
@@ -61,4 +61,4 @@ function PostDashBoard() {
   );
 }
 
-export default PostDashBoard;
+export default PostsDashBoard;

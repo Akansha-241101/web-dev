@@ -5,7 +5,7 @@ import { useState } from "react";
 function Count() {
   const [count, setCount] = useState(0);
 
-  const handlerDecre = () => {
+  const handlerDecrement = () => {
     setCount((prev) => prev - 1);
   };
 
@@ -13,7 +13,7 @@ function Count() {
     setCount(0);
   };
 
-  const handlerIncre = () => {
+  const handlerIncrement = () => {
     setCount((prev) => prev + 1);
   };
 
@@ -22,7 +22,7 @@ function Count() {
       <h1 className="text-3xl font-semibold">{count}</h1>
       <button
         className="decrement border border-black px-2 py-2 bg-gray/50"
-        onClick={handlerDecre}
+        onClick={handlerDecrement}
       >
         -
       </button>
@@ -34,7 +34,7 @@ function Count() {
       </button>
       <button
         className="increment border border-black px-2 py-2 bg-gray/50"
-        onClick={handlerIncre}
+        onClick={handlerIncrement}
       >
         +
       </button>

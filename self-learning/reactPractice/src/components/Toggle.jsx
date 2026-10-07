@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-function App() {
+function Toggle() {
   const [isOn, setIsOn] = useState(false);
 
   const handlerturn = () => {
@@ -22,4 +22,4 @@ function App() {
   );
 }
 
-export default App;
+export default Toggle;
