@@ -1,10 +1,11 @@
+import LearningFetch from "./components/LearningFetch";
 import LearningRef from "./components/LearningRef";
 
 function App() {
   return (
     <main className="main-content">
-      {/* <LearningFetch /> */}
-      <LearningRef />
+     <LearningRef />
+     <LearningFetch />  
     </main>
   );
 }
