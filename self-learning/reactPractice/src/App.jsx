@@ -8,7 +8,7 @@ function App() {
    <main className="app-layout">
       <PostsDashboard />
       <Count />
-      <Toggle />
+      {/* <Toggle /> */}
    </main>
    )
 }
