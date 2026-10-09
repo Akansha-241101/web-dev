@@ -29,8 +29,18 @@
 // Your task: Multiply every number by 2, then calculate the sum of the resulting numbers.
 // Task 4: Combine .map() + .reduce()
 
-const numbers = [1, 2, 3, 4];
+// const numbers = [1, 2, 3, 4];
 
-const array = numbers.map((num) => num * 2);
-const result = array.reduce((acc, num) => acc + num, 0);
+// const array = numbers.map((num) => num * 2);
+// const result = array.reduce((acc, num) => acc + num, 0);
+// console.log(result);
+
+// Your task: Select only numbers greater than 10, then sort them from smallest to largest
+// Combine .filter() + .sort()
+
+const numbers = [15, 4, 20, 8, 12, 3, 18];
+
+const array = numbers.filter((num) => num > 10);
+const result = array.sort((a, b) => a - b);
+
 console.log(result);
