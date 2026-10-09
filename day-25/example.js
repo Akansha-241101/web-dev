@@ -67,9 +67,9 @@
 
 // Your task: From the array below, keep only numbers greater than 5, then multiply each selected number by 10. // Combine .map() + .filter()
 
-const numbers = [2, 6, 4, 8, 3, 10];
+// const numbers = [2, 6, 4, 8, 3, 10];
 
-const array = numbers.filter((num) => num > 5);
-const result = array.map((num) => num * 10);
+// const array = numbers.filter((num) => num > 5);
+// const result = array.map((num) => num * 10);
 
-console.log(result);
+// console.log(result);
