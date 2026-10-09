@@ -38,9 +38,19 @@
 // Your task: Select only numbers greater than 10, then sort them from smallest to largest
 // Combine .filter() + .sort()
 
-const numbers = [15, 4, 20, 8, 12, 3, 18];
+// const numbers = [15, 4, 20, 8, 12, 3, 18];
 
-const array = numbers.filter((num) => num > 10);
-const result = array.sort((a, b) => a - b);
+// const array = numbers.filter((num) => num > 10);
+// const result = array.sort((a, b) => a - b);
+
+// console.log(result);
+
+// Your task: Convert every name to uppercase, then combine the names into one string separated by " | ".
+// Combine .map() + .join()
+
+const names = ["akshu", "rahul", "priya"];
+
+const array = names.map((name) => name.toUpperCase());
+const result = array.join(" | ");
 
 console.log(result);
