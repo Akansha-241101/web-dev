@@ -1,5 +1,4 @@
-// 1.Task: From the array below:
-//     Keep only even numbers. Square each selected number. Calculate the sum of the squared numbers.
+// 1.Task: Keep only even numbers. Square each selected number. Calculate the sum of the squared numbers.
 //      .filter() .map() .reduce()
 
 // const numbers = [1, 2, 3, 4, 5, 6];
@@ -10,14 +9,24 @@
 
 // console.log(result);
 
-// 2.Task: Use three array methods to complete these steps:
-// Keep numbers greater than 100. Sort them from smallest to largest. Select the first three numbers.
+// 2.Task: Keep numbers greater than 100. Sort them from smallest to largest. Select the first three numbers.
+//       .filter() .sort() .slice()
 
+// const numbers = [120, 40, 300, 180, 90, 250, 110];
 
-const numbers = [120, 40, 300, 180, 90, 250, 110];
+// const greaterNumbers = numbers.filter((num) => num > 100);
+// const sorted = greaterNumbers.sort((a, b) => a - b);
+// const result = sorted.slice(0, 3);
 
-const greaterNumbers = numbers.filter((num) => num > 100);
-const sorted = greaterNumbers.sort((a, b) => a - b);
+// console.log(result);
+
+// 3.Task: Multiply every number by 2. Sort the results from largest to smallest. Select the top three numbers.
+//          .map() .sort() .slice()
+
+const numbers = [3, 9, 4, 7, 2, 10];
+
+const greaterNumbers = numbers.map((num) => num *2);
+const sorted = greaterNumbers.sort((a, b) => b - a);
 const result = sorted.slice(0, 3);
 
 console.log(result);
