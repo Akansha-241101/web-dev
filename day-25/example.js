@@ -1,8 +1,18 @@
 //create a new array containing only numbers greater than 5, then multiply each selected number by 2.
+    // Combine .filter() & .map()
 
-  const numbers = [2, 7, 4, 9, 3, 8];
+//   const numbers = [2, 7, 4, 9, 3, 8];
 
-const arr = numbers.filter((num) => num > 5)
-const result = arr.map((a) => a * 2)
-  console.log(result);
+// const arr = numbers.filter((num) => num > 5)
+// const result = arr.map((a) => a * 2)
+//   console.log(result);
 
+//Take the first three fruits from the array and combine them into a single string separated by " - "
+    // Combine .slice() and .join()
+
+const fruits = ["Apple", "Mango", "Banana", "Orange", "Grapes"];
+
+const selectedFruits = fruits.slice(0, 3);
+const result = selectedFruits.join(" - ");
+
+console.log(result);
