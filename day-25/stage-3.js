@@ -23,10 +23,22 @@
 // 3.Task: Multiply every number by 2. Sort the results from largest to smallest. Select the top three numbers.
 //          .map() .sort() .slice()
 
-const numbers = [3, 9, 4, 7, 2, 10];
+// const numbers = [3, 9, 4, 7, 2, 10];
 
-const greaterNumbers = numbers.map((num) => num *2);
-const sorted = greaterNumbers.sort((a, b) => b - a);
-const result = sorted.slice(0, 3);
+// const greaterNumbers = numbers.map((num) => num *2);
+// const sorted = greaterNumbers.sort((a, b) => b - a);
+// const result = sorted.slice(0, 3);
+
+// console.log(result);
+
+// 4.Task: To keep only words with more than 3 characters, convert the remaining words to uppercase, and join them into a single string separated by spaces.
+//      .filter() .map() .join()
+
+const sentence = "I love coding and building apps";
+
+ const array = sentence.split(" ");
+const words = array.filter((word) => word.length > 3);
+const wordarray = words.map((word) => word.toUpperCase());
+const result = wordarray.join(" ");
 
 console.log(result);
