@@ -78,11 +78,22 @@
 // 8.Task: Keep numbers greater than or equal to 10. Multiply each selected number by 2. Sort the results from highest to lowest. Select the first three numbers.
 //      .filter() .map() .sort() .slice()
 
-const numbers = [6, 12, 15, 4, 20, 9, 17];
+// const numbers = [6, 12, 15, 4, 20, 9, 17];
 
-const filtered = numbers.filter((num) => num >= 10);
-const selected = filtered.map((num) => num * 2);
-const sorted = selected.sort((a, b) => b - a);
-const result = sorted.slice(0, 3);
+// const filtered = numbers.filter((num) => num >= 10);
+// const selected = filtered.map((num) => num * 2);
+// const sorted = selected.sort((a, b) => b - a);
+// const result = sorted.slice(0, 3);
 
-console.log(result);
+// console.log(result);
+
+//9.Task: Select only the dogs. Calculate each dog's inventory value (price × quantity). Calculate the total inventory value of the dogs.
+//      .filter() .map() .reduce()
+
+const pets = [
+  { name: "Bruno", type: "Dog", price: 500, quantity: 2 },
+  { name: "Milo", type: "Cat", price: 300, quantity: 3 },
+  { name: "Bunny", type: "Rabbit", price: 150, quantity: 4 },
+  { name: "Rocky", type: "Dog", price: 700, quantity: 1 },
+];
+
