@@ -58,9 +58,18 @@
 // Your task: Split the sentence into words, then keep only words with more than 4 characters.
 // Combine .split() + .filter()
 
-const sentence = "javascript makes learning fun and practical";
+// const sentence = "javascript makes learning fun and practical";
 
-const words = sentence.split(" ");
-const result = words.filter((word) => word.length > 4);
+// const words = sentence.split(" ");
+// const result = words.filter((word) => word.length > 4);
+
+// console.log(result);
+
+// Your task: From the array below, keep only numbers greater than 5, then multiply each selected number by 10. // Combine .map() + .filter()
+
+const numbers = [2, 6, 4, 8, 3, 10];
+
+const array = numbers.filter((num) => num > 5);
+const result = array.map((num) => num * 10);
 
 console.log(result);
