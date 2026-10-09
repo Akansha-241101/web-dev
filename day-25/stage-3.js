@@ -67,10 +67,22 @@
 
 //7.Task: Use .filter(), .map(), and .reduce() to keep numbers less than 10, multiply each selected number by 5, and calculate their sum.
 
-const numbers = [4, 12, 6, 2, 15, 8];
+// const numbers = [4, 12, 6, 2, 15, 8];
 
-const selected = numbers.filter((num) => num < 10);
-const value = selected.map((num) => num * 5);
-const result = value.reduce((acc, num) => acc + num, 0);
+// const selected = numbers.filter((num) => num < 10);
+// const value = selected.map((num) => num * 5);
+// const result = value.reduce((acc, num) => acc + num, 0);
+
+// console.log(result);
+
+// 8.Task: Keep numbers greater than or equal to 10. Multiply each selected number by 2. Sort the results from highest to lowest. Select the first three numbers.
+//      .filter() .map() .sort() .slice()
+
+const numbers = [6, 12, 15, 4, 20, 9, 17];
+
+const filtered = numbers.filter((num) => num >= 10);
+const selected = filtered.map((num) => num * 2);
+const sorted = selected.sort((a, b) => b - a);
+const result = sorted.slice(0, 3);
 
 console.log(result);
