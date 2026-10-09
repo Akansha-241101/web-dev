@@ -48,9 +48,19 @@
 // Your task: Convert every name to uppercase, then combine the names into one string separated by " | ".
 // Combine .map() + .join()
 
-const names = ["akshu", "rahul", "priya"];
+// const names = ["akshu", "rahul", "priya"];
 
-const array = names.map((name) => name.toUpperCase());
-const result = array.join(" | ");
+// const array = names.map((name) => name.toUpperCase());
+// const result = array.join(" | ");
+
+// console.log(result);
+
+// Your task: Split the sentence into words, then keep only words with more than 4 characters.
+// Combine .split() + .filter()
+
+const sentence = "javascript makes learning fun and practical";
+
+const words = sentence.split(" ");
+const result = words.filter((word) => word.length > 4);
 
 console.log(result);
