@@ -34,11 +34,22 @@
 // 4.Task: To keep only words with more than 3 characters, convert the remaining words to uppercase, and join them into a single string separated by spaces.
 //      .filter() .map() .join()
 
-const sentence = "I love coding and building apps";
+// const sentence = "I love coding and building apps";
 
- const array = sentence.split(" ");
-const words = array.filter((word) => word.length > 3);
-const wordarray = words.map((word) => word.toUpperCase());
-const result = wordarray.join(" ");
+//  const array = sentence.split(" ");
+// const words = array.filter((word) => word.length > 3);
+// const wordarray = words.map((word) => word.toUpperCase());
+// const result = wordarray.join(" ");
+
+// console.log(result);
+
+// 5.Task: Keep prices that are ₹200 or more. Apply a 10% discount to each selected price. Calculate the total of the discounted prices.
+//      .filter() .map() .reduce()
+
+const prices = [100, 250, 400, 150, 300];
+
+const selectedPrices = prices.filter((price) => price > 200);
+const discountPrices = selectedPrices.map((price) => price * 0.9);
+const result = discountPrices.reduce((acc, num) => acc + num, 0);
 
 console.log(result);
