@@ -55,12 +55,22 @@
 // console.log(result);
 
 // 6.Task: Keep marks greater than or equal to 50. Add 10 bonus marks to each passing score. Sort the final scores from highest to lowest.
-//         .map() .filter() .sort()
+//          .filter() .map() .sort()
 
-const marks = [35, 80, 45, 60, 90, 25, 70];
+// const marks = [35, 80, 45, 60, 90, 25, 70];
 
-const array = marks.map((mark) => mark + 10);
-const changedArray = array.filter((mark) => mark >= 50);
-const result = changedArray.sort((a, b) => b - a);
+// const passed = marks.filter((mark) => mark >= 50);
+// const bonusMark = passed.map((mark) => mark + 10);
+// const result = bonusMark.sort((a, b) => b - a);
+
+// console.log(result);
+
+//7.Task: Use .filter(), .map(), and .reduce() to keep numbers less than 10, multiply each selected number by 5, and calculate their sum.
+
+const numbers = [4, 12, 6, 2, 15, 8];
+
+const selected = numbers.filter((num) => num < 10);
+const value = selected.map((num) => num * 5);
+const result = value.reduce((acc, num) => acc + num, 0);
 
 console.log(result);
