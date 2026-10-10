@@ -3,11 +3,11 @@
 
 // const numbers = [1, 2, 3, 4, 5, 6];
 
-// const array = numbers.filter((num) => num % 2 === 0);
+// const evenNumbers = numbers.filter((num) => num % 2 === 0);
 // const squared = array.map((num) => num * num);
-// const result = squared.reduce((acc, num) => acc + num, 0);
+// const sum = squared.reduce((acc, num) => acc + num, 0);
 
-// console.log(result);
+// console.log(sum);
 
 // 2.Task: Keep numbers greater than 100. Sort them from smallest to largest. Select the first three numbers.
 //       .filter() .sort() .slice()
@@ -15,7 +15,7 @@
 // const numbers = [120, 40, 300, 180, 90, 250, 110];
 
 // const greaterNumbers = numbers.filter((num) => num > 100);
-// const sorted = greaterNumbers.sort((a, b) => a - b);
+// const ascSort = greaterNumbers.sort((a, b) => a - b);
 // const result = sorted.slice(0, 3);
 
 // console.log(result);
@@ -26,7 +26,7 @@
 // const numbers = [3, 9, 4, 7, 2, 10];
 
 // const greaterNumbers = numbers.map((num) => num *2);
-// const sorted = greaterNumbers.sort((a, b) => b - a);
+// const descSort = greaterNumbers.sort((a, b) => b - a);
 // const result = sorted.slice(0, 3);
 
 // console.log(result);
@@ -36,7 +36,9 @@
 
 // const sentence = "I love coding and building apps";
 
-//  const array = sentence.split(" ");
+// const array = sentence.split(" ");
+// const wordarray = []
+// array.forEach((word) => word.length > 3 && wordarray.push(word.toUpperCase()))
 // const words = array.filter((word) => word.length > 3);
 // const wordarray = words.map((word) => word.toUpperCase());
 // const result = wordarray.join(" ");

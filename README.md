@@ -6,7 +6,7 @@ Each `day-*` folder is a standalone lesson or mini project. Extra practice lives
 ## How to run
 
 - **Days 1–11 (mostly static):** open `index.html` in the browser (or use Live Server).
-- **Days 12+ (Vite/React):**
+- **Vite/React days (12–19, 21–22, 26):**
 
 ```bash
 cd day-XX
@@ -14,7 +14,7 @@ bun install   # or npm install
 bun run dev   # or npm run dev
 ```
 
-- **Day 20 / self-learning (plain JS):** run with Node/Bun, e.g. `bun day-20/getPosts.js`.
+- **Plain JS days (8–10, 20, 23–25) / self-learning:** run with Node/Bun, e.g. `bun day-23/practice.js`.
 
 ---
 
@@ -108,12 +108,28 @@ Covers state for active slide, CSS transitions, and `useEffect` timing for the b
 Includes `LearningFetch` (fetch posts with `useEffect`/`useState`, loading UI, `slice`) and `LearningRef` (`useRef` to focus an input).  
 App currently mounts the `useRef` demo; switch comments in `App.jsx` to practice fetch again.
 
+### Day 23 — String practice
+Plain JS drills for capitalizing the first letter of a string.  
+Uses indexing/`slice` and also a `split` → `map` → `join` approach.
+
+### Day 24 — Array methods deep dive
+Practice notes for `.map()`, `.forEach()`, `.reduce()`, and `.sort()`.  
+Includes sum/product reducers and a cart total / sort-by-line-total example.
+
+### Day 25 — Combining array methods
+Builds on day 24: practice each method, then chain them (`filter`+`map`, `slice`+`join`, etc.).  
+`stage-3.js` has multi-step tasks like filter → map → reduce and filter → sort → slice.
+
+### Day 26 — React Context API (theme)
+Vite React demo for sharing theme state with Context (`ThemeProvider` + `useTheme`).  
+A button toggles light/dark without prop drilling; child components practice the component tree.
+
 ---
 
 ## Extra
 
 ### `self-learning/` — Extra practice
-Personal drills outside the day folders: `hero-code.html` for layout/hero practice, and `script.js` for object/array destructuring.  
+Personal drills outside the day folders: `hero-code.html` for layout/hero practice, `script.js` for destructuring, and `reactPractice/` for extra React work.  
 Use this folder for free practice without changing a specific day project.
 
 ---
@@ -121,5 +137,5 @@ Use this folder for free practice without changing a specific day project.
 ## Suggested path
 
 1. HTML/CSS foundations → **days 1–7, 11** (+ `self-learning/hero-code.html`)  
-2. JavaScript basics → **days 8–10, 20** (+ `self-learning/script.js`)  
-3. React + Vite → **days 12–19, 21–22**
+2. JavaScript basics → **days 8–10, 20, 23–25** (+ `self-learning/script.js`)  
+3. React + Vite → **days 12–19, 21–22, 26** (+ `self-learning/reactPractice`)
