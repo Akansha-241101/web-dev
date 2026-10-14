@@ -1,0 +1,870 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Roadmap — Web Dev Akshu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Outfit:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #ffffed;
+        --bg-deep: #e8e7d5;
+        --ink: #1a242c;
+        --muted: #5a6b76;
+        --card: rgba(255, 255, 255, 0.72);
+        --card-border: rgba(26, 36, 44, 0.1);
+        --accent: #0f766e;
+        --accent-soft: #ccfbf1;
+        --done: #0f766e;
+        --next: #b45309;
+        --next-soft: #ffedd5;
+        --sheet: #f7fafc;
+        --overlay: rgba(15, 23, 28, 0.45);
+        --shadow: 0 18px 50px rgba(26, 36, 44, 0.12);
+        --radius: 18px;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html,
+      body {
+        overscroll-behavior: none;
+      }
+
+      body {
+        min-height: 100vh;
+        font-family: "Outfit", system-ui, sans-serif;
+        color: var(--ink);
+        background: linear-gradient(165deg, var(--bg) 0%, var(--bg-deep) 100%);
+        line-height: 1.5;
+      }
+
+      .bg-scene {
+        position: fixed;
+        inset: 0;
+        z-index: 0;
+        pointer-events: none;
+        overflow: hidden;
+      }
+
+      .bg-blob {
+        position: absolute;
+        border-radius: 50%;
+      }
+
+      .bg-blob-1 {
+        width: min(52vw, 34rem);
+        height: min(52vw, 34rem);
+        top: -12%;
+        left: -8%;
+        background: radial-gradient(
+          circle,
+          rgba(45, 212, 191, 0.34) 0%,
+          rgba(45, 212, 191, 0.12) 42%,
+          rgba(45, 212, 191, 0) 70%
+        );
+      }
+
+      .bg-blob-2 {
+        width: min(48vw, 30rem);
+        height: min(48vw, 30rem);
+        top: 18%;
+        right: -10%;
+        background: radial-gradient(
+          circle,
+          rgba(125, 184, 214, 0.32) 0%,
+          rgba(125, 184, 214, 0.1) 45%,
+          rgba(125, 184, 214, 0) 72%
+        );
+      }
+
+      .bg-blob-3 {
+        width: min(44vw, 28rem);
+        height: min(44vw, 28rem);
+        bottom: 8%;
+        left: 8%;
+        background: radial-gradient(
+          circle,
+          rgba(251, 146, 60, 0.22) 0%,
+          rgba(251, 146, 60, 0.08) 40%,
+          rgba(251, 146, 60, 0) 70%
+        );
+      }
+
+      .bg-blob-4 {
+        width: min(40vw, 24rem);
+        height: min(40vw, 24rem);
+        bottom: -6%;
+        right: 18%;
+        background: radial-gradient(
+          circle,
+          rgba(94, 164, 148, 0.26) 0%,
+          rgba(94, 164, 148, 0.09) 44%,
+          rgba(94, 164, 148, 0) 72%
+        );
+      }
+
+      .page {
+        position: relative;
+        z-index: 1;
+        width: min(920px, calc(100% - 2rem));
+        margin: 0 auto;
+        padding: 3.5rem 0 5rem;
+      }
+
+      .hero {
+        margin-bottom: 2.75rem;
+      }
+
+      .eyebrow {
+        display: inline-block;
+        font-size: 0.8rem;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 0.75rem;
+      }
+
+      h1 {
+        font-family: "Fraunces", Georgia, serif;
+        font-size: clamp(2.4rem, 5vw, 3.6rem);
+        font-weight: 700;
+        letter-spacing: -0.03em;
+        line-height: 1.1;
+        margin-bottom: 0.75rem;
+      }
+
+      .hero p {
+        max-width: 36rem;
+        color: var(--muted);
+        font-size: 1.05rem;
+      }
+
+      .legend {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem 1.25rem;
+        margin-top: 1.5rem;
+        font-size: 0.9rem;
+        color: var(--muted);
+      }
+
+      .legend span {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.45rem;
+      }
+
+      .dot {
+        width: 0.65rem;
+        height: 0.65rem;
+        border-radius: 50%;
+      }
+
+      .dot.done {
+        background: var(--done);
+      }
+
+      .dot.next {
+        background: var(--next);
+      }
+
+      .timeline {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 0.9rem;
+      }
+
+      .timeline::before {
+        content: "";
+        position: absolute;
+        left: 1.35rem;
+        top: 0.5rem;
+        bottom: 0.5rem;
+        width: 2px;
+        background: linear-gradient(
+          180deg,
+          var(--accent) 0%,
+          rgba(180, 83, 9, 0.55) 55%,
+          rgba(26, 36, 44, 0.15) 100%
+        );
+      }
+
+      .step {
+        position: relative;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 1rem;
+        align-items: stretch;
+        border: 0;
+        background: transparent;
+        text-align: left;
+        cursor: pointer;
+        font: inherit;
+        color: inherit;
+        width: 100%;
+      }
+
+      .step:focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 4px;
+        border-radius: 12px;
+      }
+
+      .marker {
+        position: relative;
+        z-index: 1;
+        width: 2.75rem;
+        height: 2.75rem;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        font-weight: 600;
+        font-size: 0.85rem;
+        flex-shrink: 0;
+        border: 2px solid transparent;
+        transition: transform 0.25s ease;
+      }
+
+      .step:hover .marker {
+        transform: scale(1.06);
+      }
+
+      .step[data-status="done"] .marker {
+        background: var(--accent-soft);
+        color: var(--accent);
+        border-color: rgba(15, 118, 110, 0.25);
+      }
+
+      .step[data-status="upcoming"] .marker {
+        background: var(--next-soft);
+        color: var(--next);
+        border-color: rgba(180, 83, 9, 0.28);
+      }
+
+      .card {
+        position: relative;
+        overflow: hidden;
+        isolation: isolate;
+        border-radius: var(--radius);
+        padding: 1.15rem 1.35rem;
+        box-shadow: var(--shadow);
+        transition:
+          transform 0.25s ease,
+          border-color 0.25s ease,
+          background 0.25s ease;
+      }
+
+      .step[data-status="done"] .card {
+        background: #ecfdf5;
+        border: 1px solid rgba(15, 118, 110, 0.28);
+      }
+
+      .step[data-status="upcoming"] .card {
+        background: #fff7ed;
+        border: 1px solid rgba(180, 83, 9, 0.28);
+      }
+
+      .step:hover .card {
+        transform: translateY(-2px);
+      }
+
+      .step[data-status="done"]:hover .card {
+        border-color: rgba(15, 118, 110, 0.45);
+      }
+
+      .step[data-status="upcoming"]:hover .card {
+        border-color: rgba(180, 83, 9, 0.45);
+      }
+
+      .card-blob {
+        position: absolute;
+        width: 12rem;
+        height: 12rem;
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: 0;
+        top: -3.5rem;
+        right: -2.5rem;
+      }
+
+      .step[data-status="done"] .card-blob {
+        background: radial-gradient(
+          circle,
+          rgba(45, 212, 191, 0.35) 0%,
+          rgba(45, 212, 191, 0.14) 40%,
+          rgba(45, 212, 191, 0) 72%
+        );
+      }
+
+      .step[data-status="upcoming"] .card-blob {
+        background: radial-gradient(
+          circle,
+          rgba(251, 146, 60, 0.35) 0%,
+          rgba(251, 146, 60, 0.14) 40%,
+          rgba(251, 146, 60, 0) 72%
+        );
+      }
+
+      .card-number {
+        position: absolute;
+        right: 0.65rem;
+        bottom: -0.55rem;
+        font-family: "Fraunces", Georgia, serif;
+        font-size: clamp(4.5rem, 10vw, 6.5rem);
+        font-weight: 700;
+        line-height: 1;
+        letter-spacing: -0.04em;
+        pointer-events: none;
+        user-select: none;
+        z-index: 0;
+        opacity: 0.08;
+      }
+
+      .step[data-status="done"] .card-number {
+        color: #0f766e;
+      }
+
+      .step[data-status="upcoming"] .card-number {
+        color: #b45309;
+      }
+
+      .card-content {
+        position: relative;
+        z-index: 1;
+      }
+
+      .card-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0.75rem;
+        margin-bottom: 0.35rem;
+      }
+
+      .badge {
+        font-size: 0.72rem;
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        padding: 0.25rem 0.55rem;
+        border-radius: 999px;
+      }
+
+      .step[data-status="done"] .badge {
+        background: var(--accent-soft);
+        color: var(--accent);
+      }
+
+      .step[data-status="upcoming"] .badge {
+        background: var(--next-soft);
+        color: var(--next);
+      }
+
+      .card h2 {
+        font-family: "Fraunces", Georgia, serif;
+        font-size: 1.35rem;
+        font-weight: 600;
+        letter-spacing: -0.02em;
+      }
+
+      .card p {
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      .hint {
+        margin-top: 0.55rem;
+        font-size: 0.82rem;
+        color: var(--ink);
+        opacity: 0.65;
+      }
+
+      /* Overlay + sheet */
+      .overlay {
+        position: fixed;
+        inset: 0;
+        background: var(--overlay);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+        z-index: 40;
+      }
+
+      .overlay.is-open {
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      .sheet {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: min(440px, 100%);
+        background: var(--sheet);
+        box-shadow: -20px 0 60px rgba(0, 0, 0, 0.18);
+        z-index: 50;
+        transform: translateX(100%);
+        transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+        display: flex;
+        flex-direction: column;
+        padding: 1.5rem 1.5rem 2rem;
+      }
+
+      .sheet.is-open {
+        transform: translateX(0);
+      }
+
+      .sheet-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+        padding-bottom: 1.25rem;
+        border-bottom: 1px solid rgba(26, 36, 44, 0.1);
+      }
+
+      .sheet-header h2 {
+        font-family: "Fraunces", Georgia, serif;
+        font-size: 1.7rem;
+        line-height: 1.15;
+        letter-spacing: -0.02em;
+      }
+
+      .sheet-meta {
+        margin-top: 0.45rem;
+        font-size: 0.85rem;
+        color: var(--muted);
+      }
+
+      .close-btn {
+        border: 1px solid rgba(26, 36, 44, 0.15);
+        background: white;
+        width: 2.4rem;
+        height: 2.4rem;
+        border-radius: 50%;
+        cursor: pointer;
+        font-size: 1.2rem;
+        line-height: 1;
+        color: var(--ink);
+        flex-shrink: 0;
+      }
+
+      .close-btn:hover {
+        background: var(--bg);
+      }
+
+      .sheet-body {
+        overflow-y: auto;
+        overscroll-behavior: contain;
+        padding-right: 0.25rem;
+      }
+
+      .sheet-body h3 {
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.07em;
+        color: var(--muted);
+        margin: 1.25rem 0 0.55rem;
+      }
+
+      .sheet-body h3:first-child {
+        margin-top: 0;
+      }
+
+      .sheet-body p,
+      .sheet-body li {
+        color: var(--ink);
+        font-size: 0.98rem;
+      }
+
+      .sheet-body ul {
+        padding-left: 1.15rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.45rem;
+      }
+
+      .sheet-body .days {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+        margin-top: 0.35rem;
+      }
+
+      .chip {
+        font-size: 0.78rem;
+        padding: 0.28rem 0.55rem;
+        border-radius: 999px;
+        background: var(--bg);
+        border: 1px solid rgba(26, 36, 44, 0.08);
+      }
+
+      body.sheet-open {
+        overflow: hidden;
+      }
+
+      @media (max-width: 560px) {
+        .page {
+          padding-top: 2.25rem;
+        }
+
+        .timeline::before {
+          left: 1.2rem;
+        }
+
+        .card h2 {
+          font-size: 1.2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg-scene" aria-hidden="true">
+      <div class="bg-blob bg-blob-1"></div>
+      <div class="bg-blob bg-blob-2"></div>
+      <div class="bg-blob bg-blob-3"></div>
+      <div class="bg-blob bg-blob-4"></div>
+    </div>
+
+    <main class="page">
+      <header class="hero">
+        <p class="eyebrow">Web Dev Akshu</p>
+        <h1>Frontend roadmap</h1>
+        <p>
+          A clear path from what you’ve already built through the next skills —
+          using AI to build projects, ready-made libraries, and your own custom
+          UI pieces.
+        </p>
+        <div class="legend">
+          <span><i class="dot done"></i> Completed</span>
+          <span><i class="dot next"></i> Upcoming</span>
+          <span>Click any step for details</span>
+        </div>
+      </header>
+
+      <section class="timeline" id="timeline" aria-label="Learning roadmap"></section>
+    </main>
+
+    <div class="overlay" id="overlay" hidden></div>
+    <aside
+      class="sheet"
+      id="sheet"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="sheet-title"
+      hidden
+    >
+      <div class="sheet-header">
+        <div>
+          <h2 id="sheet-title"></h2>
+          <p class="sheet-meta" id="sheet-meta"></p>
+        </div>
+        <button class="close-btn" id="close-btn" aria-label="Close details">
+          ×
+        </button>
+      </div>
+      <div class="sheet-body" id="sheet-body"></div>
+    </aside>
+
+    <script>
+      const steps = [
+        {
+          id: 1,
+          status: "done",
+          title: "HTML & CSS foundations",
+          summary:
+            "Build page layouts, login screens, landing pages, and learn Tailwind CSS basics.",
+          meta: "Completed · Days 1–7, 11",
+          details: {
+            about:
+              "You built real webpages from scratch — headers, hero sections, forms, and multi-section landing pages.",
+            focus: [
+              "HTML structure for real pages",
+              "CSS layout and screens that work on phone and desktop",
+              "Tailwind CSS utility classes for faster styling",
+              "SkillBuilder-style landing page and hero practice",
+            ],
+            days: ["day-1", "day-2", "day-3", "day-4", "day-5", "day-6", "day-7", "day-11"],
+          },
+        },
+        {
+          id: 2,
+          status: "done",
+          title: "JavaScript fundamentals",
+          summary:
+            "Learn functions, objects, arrays, and how to chain array methods together.",
+          meta: "Completed · Days 8–10, 23–25",
+          details: {
+            about:
+              "These are the JavaScript basics you will use again and again in React — from small functions to working with lists of data.",
+            focus: [
+              "Import / export, objects, spread operator, and destructuring",
+              "Arrow functions and small logic problems",
+              "Array methods: map, filter, reduce, sort, slice, join",
+              "Combine array methods to change and calculate data",
+            ],
+            days: ["day-8", "day-9", "day-10", "day-23", "day-24", "day-25"],
+          },
+        },
+        {
+          id: 3,
+          status: "done",
+          title: "React components & props",
+          summary:
+            "Start React with Vite, build reusable components, and show lists on screen.",
+          meta: "Completed · Days 12–14, 16–17",
+          details: {
+            about:
+              "You moved from plain HTML pages into React — splitting the UI into components and passing data with props.",
+            focus: [
+              "Create a React project with Vite",
+              "Build components like Header, Hero, Cards, and Footer",
+              "Pass data with props (for example Button and Card)",
+              "Use .map() to show lists like pet cards or book cards",
+            ],
+            days: ["day-12", "day-13", "day-14", "day-16", "day-17"],
+          },
+        },
+        {
+          id: 4,
+          status: "done",
+          title: "useState hook & interactive UI",
+          summary:
+            "useState hook for counters, tabs, light/dark theme, carousel, and progress bar.",
+          meta: "Completed · Days 15, 18–19, 21",
+          details: {
+            about:
+              "You learned how the screen updates when the user clicks — using the useState hook to store values that can change.",
+            focus: [
+              "useState hook for a counter (increase, decrease, reset)",
+              "Tabs that change content with the useState hook",
+              "Light/dark theme toggle saved in localStorage",
+              "Carousel (image slider) and animated progress bar",
+            ],
+            days: ["day-15", "day-18", "day-19", "day-21"],
+          },
+        },
+        {
+          id: 5,
+          status: "done",
+          title: "Fetch, useEffect hook, useRef hook & Context API",
+          summary:
+            "Get data from an API, run code with useEffect hook, focus inputs with useRef hook, and share theme with Context API.",
+          meta: "Completed · Days 20, 22, 26",
+          details: {
+            about:
+              "You connected the app to online data and shared values (like theme) across many components without passing props through every level.",
+            focus: [
+              "fetch and async/await in plain JavaScript",
+              "useEffect hook to fetch posts when the page loads",
+              "useRef hook to focus an input when a button is clicked",
+              "Context API with ThemeProvider and useTheme (day 26)",
+            ],
+            days: ["day-20", "day-22", "day-26"],
+          },
+        },
+        {
+          id: 6,
+          status: "upcoming",
+          title: "Project 1",
+          summary:
+            "Learn how to use AI (like Cursor) to help you build real frontend projects.",
+          meta: "Upcoming · Project milestone",
+          details: {
+            about:
+              "Practice using AI as a helper — plan the feature, ask clearly, check the code, and finish one small real project.",
+            focus: [
+              "Write clear prompts for UI, logic, and code cleanup",
+              "Break one feature into small steps for the AI to follow",
+              "Read AI code carefully: keep what is good, fix what is wrong",
+              "Finish one complete mini project from start to end",
+            ],
+            days: ["Project 1"],
+          },
+        },
+        {
+          id: 7,
+          status: "upcoming",
+          title: "App-wide state libraries (Redux & Zustand)",
+          summary:
+            "Learn Redux and Zustand to share data across the whole app (bigger than useState hook or Context API alone).",
+          meta: "Upcoming",
+          details: {
+            about:
+              "When useState hook and Context API become hard to manage in a big app, these libraries help you store and update shared data in one clear place.",
+            focus: [
+              "Zustand: a simple way to store shared app data",
+              "Redux Toolkit: structured updates for larger apps",
+              "When to use Context API vs Redux or Zustand",
+              "Connect the store to your React components",
+            ],
+            days: ["Redux", "Zustand"],
+          },
+        },
+        {
+          id: 8,
+          status: "upcoming",
+          title: "Ready-made component libraries",
+          summary:
+            "Use ready-made UI kits so you do not rebuild every button, dialog, and menu yourself.",
+          meta: "Upcoming",
+          details: {
+            about:
+              "Learn popular component libraries so you can build screens faster with pieces that already work well and are accessible.",
+            focus: [
+              "Install a component library and set its colors/theme",
+              "Use ready-made pieces to build your product screens",
+              "Learn accessibility basics that these libraries include",
+              "Know when to use a library piece vs build your own",
+            ],
+            days: ["e.g. shadcn/ui", "Radix", "MUI / others"],
+          },
+        },
+        {
+          id: 9,
+          status: "upcoming",
+          title: "Data fetching libraries",
+          summary:
+            "Fetch API data the smart way — loading UI, errors, caching, and auto refresh.",
+          meta: "Upcoming",
+          details: {
+            about:
+              "Go beyond basic fetch — show loading and error messages, save fetched data for reuse, and keep the screen in sync with the server.",
+            focus: [
+              "TanStack Query (React Query) basics",
+              "Caching (save data) and background refresh",
+              "Loading, error, and empty-screen UI",
+              "Send updates to the server and refresh the UI",
+            ],
+            days: ["TanStack Query", "SWR (optional)"],
+          },
+        },
+        {
+          id: 10,
+          status: "upcoming",
+          title: "Building your own custom components",
+          summary:
+            "Build your own accordion, carousel (image slider), multi-step form, and more.",
+          meta: "Final step",
+          details: {
+            about:
+              "Final skill: build reusable components yourself so you fully understand how they work and can change them any way you want.",
+            focus: [
+              "Accordion component (open and close sections)",
+              "Carousel component (slides, next/prev buttons, motion)",
+              "Multi-step form component (steps, checks, progress)",
+              "Reusable patterns you can copy into future projects",
+            ],
+            days: ["Accordion", "Carousel", "Multi-step form", "More as needed"],
+          },
+        },
+      ];
+
+      const timeline = document.getElementById("timeline");
+      const overlay = document.getElementById("overlay");
+      const sheet = document.getElementById("sheet");
+      const sheetTitle = document.getElementById("sheet-title");
+      const sheetMeta = document.getElementById("sheet-meta");
+      const sheetBody = document.getElementById("sheet-body");
+      const closeBtn = document.getElementById("close-btn");
+
+      function renderTimeline() {
+        timeline.innerHTML = steps
+          .map(
+            (step) => `
+          <button
+            class="step"
+            type="button"
+            data-status="${step.status}"
+            data-id="${step.id}"
+            aria-haspopup="dialog"
+          >
+            <span class="marker">${step.id}</span>
+            <span class="card">
+              <span class="card-blob" aria-hidden="true"></span>
+              <span class="card-number" aria-hidden="true">${step.id}</span>
+              <span class="card-content">
+                <span class="card-top">
+                  <h2>${step.title}</h2>
+                  <span class="badge">${step.status === "done" ? "Done" : "Next"}</span>
+                </span>
+                <p>${step.summary}</p>
+                <p class="hint">Open details →</p>
+              </span>
+            </span>
+          </button>
+        `,
+          )
+          .join("");
+      }
+
+      function openSheet(step) {
+        sheetTitle.textContent = step.title;
+        sheetMeta.textContent = step.meta;
+        sheetBody.innerHTML = `
+          <h3>About</h3>
+          <p>${step.details.about}</p>
+          <h3>What you’ll cover</h3>
+          <ul>
+            ${step.details.focus.map((item) => `<li>${item}</li>`).join("")}
+          </ul>
+          <h3>${step.status === "done" ? "Related days" : "Includes"}</h3>
+          <div class="days">
+            ${step.details.days.map((d) => `<span class="chip">${d}</span>`).join("")}
+          </div>
+        `;
+
+        overlay.hidden = false;
+        sheet.hidden = false;
+        document.body.classList.add("sheet-open");
+
+        requestAnimationFrame(() => {
+          overlay.classList.add("is-open");
+          sheet.classList.add("is-open");
+        });
+      }
+
+      function closeSheet() {
+        overlay.classList.remove("is-open");
+        sheet.classList.remove("is-open");
+        document.body.classList.remove("sheet-open");
+
+        window.setTimeout(() => {
+          overlay.hidden = true;
+          sheet.hidden = true;
+        }, 350);
+      }
+
+      timeline.addEventListener("click", (e) => {
+        const btn = e.target.closest(".step");
+        if (!btn) return;
+        const step = steps.find((s) => s.id === Number(btn.dataset.id));
+        if (step) openSheet(step);
+      });
+
+      overlay.addEventListener("click", closeSheet);
+      closeBtn.addEventListener("click", closeSheet);
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && sheet.classList.contains("is-open")) {
+          closeSheet();
+        }
+      });
+
+      renderTimeline();
+    </script>
+  </body>
+</html>
