@@ -4,24 +4,30 @@ Conventions for anyone (human or agent) working in this repo.
 
 ## 1. Source of truth
 
-| Topic | Document |
-| --- | --- |
-| Product scope | `docs/prd.md` |
-| Structure & stack | `docs/architecture.md` |
-| Visual system | `docs/design.md` |
-| Security | `docs/security.md` |
-| Decisions / status | `docs/memory.md` |
+
+| Topic              | Document               |
+| ------------------ | ---------------------- |
+| Product scope      | `docs/prd.md`          |
+| Structure & stack  | `docs/architecture.md` |
+| Visual system      | `docs/design.md`       |
+| Security           | `docs/security.md`     |
+| Decisions / status | `docs/memory.md`       |
+
 
 Update `memory.md` when you make a lasting decision or finish a milestone.
 
 ## 2. Code style
 
-- Match existing patterns in `src/` (imports, naming, component shape).
+- Match existing patterns in `src/` (imports, naming, component shape). Follow the same patterns everywhere; repeating a simple pattern is OK — do not over-abstract and do not add unnecessary layers in the code.
 - TypeScript for new UI modules; keep `shared/products.js` as-is unless migrating the catalog deliberately.
 - Prefer `@/` path alias over deep relative imports.
 - Use `cn` from `@/lib/utils` (or existing `cn` import style in shadcn files) for class merging.
 - Do not add comments that only narrate the code; comment only non-obvious intent.
 - No drive-by refactors unrelated to the task.
+- **Max ~120 lines per file.** If larger, split and extract sub-components into their own files.
+- Naming: `PascalCase` components, `camelCase` functions/variables; clear names like `ProductCard`, `cartItems`, `handleAddToCart`. Keep naming consistent.
+- Keep logic simple and beginner-friendly: **no nested logic**, **no nested loops**. Prefer early returns and small steps.
+- Prefer taught concepts: `map` / `filter` / `find` / `slice` / simple `reduce`, plus `useState` hook, `useEffect` hook, props, and simple event handlers. No advanced tricks unless docs ask for them.
 
 ## 3. UI & design
 
@@ -69,3 +75,4 @@ Update `memory.md` when you make a lasting decision or finish a milestone.
 - Load fonts/icons from random CDNs beyond the approved Google Fonts import.
 - Collect real payment card data.
 - Replace Convergence or Lucide without updating design docs and stakeholder agreement.
+
