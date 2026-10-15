@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Philosopher&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Philosopher", serif;
+}
+
+:root {
+  --bg: oklch(20.274% 0.0096 107.271);
+  --text: oklch(98.7% 0.022 95.277);
+  --border: oklch(98.688% 0.02129 95.306 / 0.199);
+
+  --space--sm: 0.5rem;
+  --space--md: 1rem;
+  --space--lg: 2rem;
+  --space--xl: 4rem;
+  --space--xxl: 8rem;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+}
