@@ -3,7 +3,7 @@ interface Person {
 }
 
 const person: Person = {
-  name: 23,
+  name: "Akshu",
 };
 
 type MyName = string;
