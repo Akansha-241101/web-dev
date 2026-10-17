@@ -1,20 +1,20 @@
-# Day 29 — Zustand Cart Practice
+# Day 29 — Context API Cart Practice
 
-Start the project:
+Same ShopNow product list and cart UI as Day 27, but cart state uses **React Context** instead of Zustand.
+
+## Start
 
 ```bash
-npm install
-npm run dev
+bun install
+bun run dev
 ```
 
-The product list uses the existing `data.json` and images in `public/images/products`. The buttons and cart display are intentionally not connected yet so you can practice each step.
+## What to compare with Day 27
 
-## My Zustand practice checklist
+| | Day 27 | Day 29 |
+| --- | --- | --- |
+| Cart state | Zustand store | `CartProvider` + `useState` |
+| Read cart | `useCartStore((s) => s.cartItems)` | `const { cartItems } = useCart()` |
+| Setup | Import the store anywhere | Wrap the app with `<CartProvider>` in `main.tsx` |
 
-- [ ] Install Zustand and make an empty store (`npm install zustand`)
-- [ ] Make only Add to Cart work
-- [ ] Check the cart in the console
-- [ ] Make the Remove button work
-- [ ] Add plus and minus buttons
-- [ ] Show cart items in the UI
-- [ ] Calculate the total price
+Cart logic lives in `src/context/CartContext.tsx`. Types are in `src/types/home/types.ts`.

@@ -45,4 +45,23 @@ export const useCartStore = create((set) => ({
       );
       return { cartItems: newCartItems };
     }),
+
+  toggleWishlist: (product) =>
+    set((state) => {
+      const alreadyLiked = state.wishListItems.find(
+        (item) => item.id === product.id,
+      );
+
+      if (alreadyLiked) {
+        return {
+          wishListItems: state.wishListItems.filter(
+            (item) => item.id !== product.id,
+          ),
+        };
+      }
+
+      return {
+        wishListItems: [...state.wishListItems, product],
+      };
+    }),
 }));

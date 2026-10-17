@@ -27,5 +27,19 @@ export const homeCopy = {
     description:
       "Rules we'll follow when building pages. Say if any should change before we continue.",
   },
-  footer: "Toggle theme above, then confirm palette + principles to move into product UI.",
-} as const
+  footer:
+    "Toggle theme above, then confirm palette + principles to move into product UI.",
+} as const;
+
+export const shopCopy = {
+  logoAlt: "ShopNow",
+  eyebrow: "ShopNow collection",
+  title: "Find your next favorite pair",
+  searchPlaceholder: "Search...",
+  addToCart: "Add to Cart",
+  cartTitle: "Cart",
+  cartEmpty: "Your cart is empty",
+  wishlistTitle: "Wishlist",
+  wishlistEmpty: "Your wishlist is empty",
+  remove: "Remove",
+} as const;

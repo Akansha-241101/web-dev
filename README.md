@@ -1,6 +1,6 @@
 # Web Dev Akshu
 
-This repository contains small projects and exercises for learning web development. Each `day-*` folder is a separate lesson or mini project, so you can open or run it on its own. The projects cover HTML, CSS, JavaScript, React, and beginner TypeScript. The numbered learning path currently goes through **Day 28**; the guide below includes the work added after Day 24.
+This repository contains small projects and exercises for learning web development. Each `day-*` folder is a separate lesson or mini project, so you can open or run it on its own. The projects cover HTML, CSS, JavaScript, React, and beginner TypeScript. The numbered learning path currently goes through **Day 29**; the guide below includes the work added after Day 24.
 
 ## Getting started
 
@@ -18,7 +18,7 @@ npm install
 npm run dev
 ```
 
-Open the local address shown in the terminal. With Bun, use `bun install` and `bun run dev`. Replace `day-12` with the folder you want to run. The numbered React/Vite projects are days 12–19, 21–22, and 26–28. There are also React projects under `self-learning/`.
+Open the local address shown in the terminal. With Bun, use `bun install` and `bun run dev`. Replace `day-12` with the folder you want to run. The numbered React/Vite projects are days 12–19, 21–22, and 26–29. There are also React projects under `self-learning/`.
 
 For example, start the YouTube learning project with:
 
@@ -75,12 +75,13 @@ Other files are examples to read and try in a browser or developer console. Chec
 - **Day 21 — Carousel:** A slide carousel with previous and next buttons and a progress bar.
 - **Day 22 — Fetch and input focus:** Includes a post-fetching example and a `useRef` example that focuses an input. The app currently shows the input-focus example; `src/App.jsx` shows how to switch to the fetch example.
 - **Day 26 — React Context and theme state:** A `ThemeProvider` shares the current theme and its update function with components. A child button changes the theme, and the app responds to the shared value without passing it through every component as a prop.
-- **Day 27 — ShopNow design system preview:** A React, TypeScript, and Tailwind project for a footwear storefront. The current screen lets you switch between light and dark themes and review the color palette, typography, icons, button styles, and design principles. Product data and images are prepared, but browsing products and using a cart are not part of the current screen. Project requirements and design notes are in `day-27/docs/`.
-- **Day 28 — TypeScript with React:** A small React page that declares a `Person` interface, uses it to check an object's shape, and creates a string type alias. It is an introductory TypeScript exercise rather than a full application.
+- **Day 27 — ShopNow with Zustand cart:** A React, TypeScript, Tailwind, and shadcn/ui storefront. Browse products, search by name, toggle light/dark theme, and manage a cart with Zustand (`add`, `+`/`-`, `remove`, and total). Product data lives in `src/constants/shared/products.js`. Project notes are in `day-27/docs/`.
+- **Day 28 — TypeScript with React:** A small React page for learning TypeScript basics: interfaces for object shapes, type aliases for strings/arrays, and how generics (`<>`) work on custom functions and hooks.
+- **Day 29 — ShopNow with Context API cart:** Same shop UI idea as Day 27, but the cart uses React Context (`CartProvider` + `useCart`) instead of Zustand. Useful for comparing Context vs Zustand side by side. Includes shadcn/ui setup and light TypeScript types for the cart.
 
 ### Progress after Day 24
 
-After practicing individual JavaScript array methods in Day 24, Day 25 combines those methods to solve longer data problems. Days 26–28 then move into sharing state between React components, planning a storefront's design system, and writing basic TypeScript types in a React app.
+After practicing individual JavaScript array methods in Day 24, Day 25 combines those methods to solve longer data problems. Days 26–29 then cover theme Context, a Zustand cart shop with search, beginner TypeScript, and the same cart rebuilt with Context API for comparison.
 
 ## Extra practice
 
@@ -96,5 +97,5 @@ The `self-learning/` folder contains exercises and projects outside the numbered
 
 1. Learn HTML and CSS with days 1–7 and 11.
 2. Practice JavaScript with days 8–10, then days 20 and 23–25.
-3. Learn React and TypeScript with days 12–19, 21–22, and 26–28.
+3. Learn React and TypeScript with days 12–19, 21–22, and 26–29. Compare Day 27 (Zustand) with Day 29 (Context) for cart state.
 4. Try the projects and exercises in `self-learning/` for extra practice.
