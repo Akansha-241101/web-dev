@@ -1,7 +1,7 @@
-import { Outlet } from "react-router-dom";
+import CartItemsSection from "@/components/home/CartItemsSection";
 
 function CartPage() {
-  return <Outlet />;
+  return <CartItemsSection />;
 }
 
 export default CartPage;
