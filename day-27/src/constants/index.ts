@@ -1,2 +1,2 @@
 export * from "./home"
-export * from "./shared"
+export { products } from "./shared"
