@@ -1,7 +1,7 @@
 export type Product = {
   id: number;
   name: string;
-  prices: { INR: number };
+  prices: { INR: number; USD: number };
 };
 
 export type CartItem = Product & { quantity: number };
