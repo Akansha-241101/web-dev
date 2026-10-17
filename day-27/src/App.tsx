@@ -13,6 +13,7 @@ type CartItem = {
 
 function App() {
   const [isDark, setIsDark] = useState(true);
+  const [inputValue, setInputValue] = useState("");
   const cartItems = useCartStore((state) => state.cartItems);
   const addToCart = useCartStore((state) => state.addToCart);
   const increaseQuantity = useCartStore((state) => state.increaseQuantity);
@@ -23,13 +24,13 @@ function App() {
     0,
   );
 
+  const filteredProducts = products.filter((product) =>
+    product.name.toLowerCase().includes(inputValue),
+  );
+
   useEffect(() => {
     document.documentElement.classList.toggle("dark", isDark);
   }, [isDark]);
-
-  useEffect(() => {
-    console.log("Cart:", cartItems);
-  }, [cartItems]);
 
   return (
     <main className="min-h-svh bg-background text-foreground">
@@ -55,14 +56,27 @@ function App() {
         </header>
 
         <section className="space-y-6">
-          <div>
-            <p className="text-sm text-muted-foreground">ShopNow collection</p>
-            <h1 className="text-3xl tracking-tight">
-              Find your next favorite pair
-            </h1>
+          <div className="sticky top-0 flex flex-col lg:flex-row gap-6 justify-between lg:items-end bg-background p-4 border-b border-border">
+            <div>
+              <p className="text-sm text-muted-foreground">
+                ShopNow collection
+              </p>
+              <h1 className="text-3xl tracking-tight">
+                Find your next favorite pair
+              </h1>
+            </div>
+            <div>
+              <input
+                value={inputValue}
+                onChange={(e) => setInputValue(e.target.value)}
+                type="text"
+                placeholder="Search..."
+                className="border py-1.5 px-4 w-full lg:w-96 focus:outline-none focus:ring-primary focus:ring-1 rounded-md"
+              />
+            </div>
           </div>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            {products.map((product) => (
+            {filteredProducts.map((product) => (
               <article
                 key={product.id}
                 className="flex flex-col overflow-hidden rounded-xl border border-border bg-card"
