@@ -8,7 +8,7 @@ type ProductsHeaderProps = {
 
 function ProductsHeader({ inputValue, onSearchChange }: ProductsHeaderProps) {
   return (
-    <div className="sticky top-0 flex flex-col justify-between gap-6 border-b border-border bg-background p-4 lg:flex-row lg:items-end">
+    <div className="sticky top-0 z-1 flex flex-col justify-between gap-6 border-b border-border bg-background p-4 lg:flex-row lg:items-end">
       <div>
         <p className="text-sm text-muted-foreground">{shopCopy.eyebrow}</p>
         <h1 className="text-3xl tracking-tight">{shopCopy.title}</h1>
