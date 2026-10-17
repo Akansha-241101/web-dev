@@ -5,9 +5,12 @@ interface Person {
 const person: Person = {
   name: "Akshu",
 };
+console.log(person);
 
 type MyName = string;
 const myName: MyName = "Akshu";
+
+console.log(myName);
 
 function App() {
   return (
