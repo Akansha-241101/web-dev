@@ -545,9 +545,8 @@
         <p class="eyebrow">Web Dev Akshu</p>
         <h1>Frontend roadmap</h1>
         <p>
-          A clear path from what you’ve already built through the next skills —
-          using AI to build projects, ready-made libraries, and your own custom
-          UI pieces.
+          A clear path from foundations through React, Zustand, shadcn/ui,
+          TanStack Query, and Axios — with a few milestones still ahead.
         </p>
         <div class="legend">
           <span><i class="dot done"></i> Completed</span>
@@ -664,29 +663,124 @@
           title: "Fetch, useEffect hook, useRef hook & Context API",
           summary:
             "Get data from an API, run code with useEffect hook, focus inputs with useRef hook, and share theme with Context API.",
-          meta: "Completed · Days 20, 22, 26",
+          meta: "Completed · Days 20, 22, 26, 29",
           details: {
             about:
-              "You connected the app to online data and shared values (like theme) across many components without passing props through every level.",
+              "You connected the app to online data and shared values (like theme and cart) across many components without passing props through every level.",
             focus: [
               "fetch and async/await in plain JavaScript",
               "useEffect hook to fetch posts when the page loads",
               "useRef hook to focus an input when a button is clicked",
-              "Context API with ThemeProvider and useTheme (day 26)",
+              "Context API with ThemeProvider and CartProvider",
             ],
-            days: ["day-20", "day-22", "day-26"],
+            days: ["day-20", "day-22", "day-26", "day-29"],
           },
         },
         {
           id: 6,
+          status: "done",
+          title: "TypeScript & React Router",
+          summary:
+            "Type objects and hooks with TypeScript, then add multi-page navigation with React Router.",
+          meta: "Completed · Days 27–29",
+          details: {
+            about:
+              "You learned interfaces, type aliases, and generics, then split the shop into home, cart, and wishlist routes.",
+            focus: [
+              "Interfaces and type aliases for product and cart shapes",
+              "Generics on hooks and custom functions",
+              "createBrowserRouter + RouterProvider",
+              "Nested routes, Link, and Outlet",
+            ],
+            days: ["day-27", "day-28", "day-29"],
+          },
+        },
+        {
+          id: 7,
+          status: "done",
+          title: "App-wide state with Zustand",
+          summary:
+            "Share cart and wishlist data across the app with a simple Zustand store.",
+          meta: "Completed · Day 27",
+          details: {
+            about:
+              "You used Zustand for cart and wishlist — add, update quantity, remove, and toggle likes — and compared it with Context API.",
+            focus: [
+              "Create a Zustand store with cart and wishlist state",
+              "Connect store actions to product and cart UI",
+              "Compare Zustand vs Context API for the same cart flow",
+              "Keep store logic simple and beginner-friendly",
+            ],
+            days: ["day-27", "Zustand"],
+          },
+        },
+        {
+          id: 8,
+          status: "done",
+          title: "Ready-made component libraries (shadcn/ui)",
+          summary:
+            "Use shadcn/ui with Tailwind tokens so you do not rebuild every button and input yourself.",
+          meta: "Completed · Days 27, 29–30",
+          details: {
+            about:
+              "You set up shadcn/ui, design tokens, and Convergence typography, then used Button, Input, and other pieces in real screens.",
+            focus: [
+              "Install and configure shadcn/ui with Vite + Tailwind",
+              "Use CSS variables for light/dark themes",
+              "Build screens with Button, Input, and related components",
+              "Know when to use a library piece vs build your own",
+            ],
+            days: ["day-27", "day-29", "day-30", "shadcn/ui"],
+          },
+        },
+        {
+          id: 9,
+          status: "done",
+          title: "Data fetching with Axios & TanStack Query",
+          summary:
+            "Call APIs with Axios and manage loading, caching, and server state with TanStack Query.",
+          meta: "Completed",
+          details: {
+            about:
+              "You moved past basic fetch — Axios for HTTP requests and TanStack Query for caching, loading, and keeping UI in sync with the server.",
+            focus: [
+              "Axios for GET/POST requests to your API",
+              "TanStack Query basics (queries and mutations)",
+              "Loading, error, and empty-screen UI",
+              "Caching and refreshing server data",
+            ],
+            days: ["Axios", "TanStack Query", "day-30 API"],
+          },
+        },
+        {
+          id: 10,
+          status: "done",
+          title: "Full-stack foundations (Express + Postgres)",
+          summary:
+            "Build a simple Express + TypeScript API with signup, login, products, and a Postgres pool.",
+          meta: "Completed · Day 30",
+          details: {
+            about:
+              "You scaffolded client and server, connected Postgres, created users/products tables, and wired auth and products endpoints.",
+            focus: [
+              "Express routes and controllers",
+              "Postgres pool from .env",
+              "Signup / login / products APIs",
+              "SQL schema and product seeding",
+            ],
+            days: ["day-30"],
+          },
+        },
+        {
+          id: 11,
           status: "upcoming",
           title: "Project 1",
           summary:
-            "Learn how to use AI (like Cursor) to help you build real frontend projects.",
+            "Learn how to use AI (like Cursor) to help you build one complete real frontend project.",
           meta: "Upcoming · Project milestone",
           details: {
             about:
-              "Practice using AI as a helper — plan the feature, ask clearly, check the code, and finish one small real project.",
+              "Practice using AI as a helper — plan the feature, ask clearly, check the code, and finish one small real project end to end.",
             focus: [
               "Write clear prompts for UI, logic, and code cleanup",
               "Break one feature into small steps for the AI to follow",
@@ -697,72 +791,15 @@
           },
         },
         {
-          id: 7,
-          status: "upcoming",
-          title: "App-wide state libraries (Redux & Zustand)",
-          summary:
-            "Learn Redux and Zustand to share data across the whole app (bigger than useState hook or Context API alone).",
-          meta: "Upcoming",
-          details: {
-            about:
-              "When useState hook and Context API become hard to manage in a big app, these libraries help you store and update shared data in one clear place.",
-            focus: [
-              "Zustand: a simple way to store shared app data",
-              "Redux Toolkit: structured updates for larger apps",
-              "When to use Context API vs Redux or Zustand",
-              "Connect the store to your React components",
-            ],
-            days: ["Redux", "Zustand"],
-          },
-        },
-        {
-          id: 8,
-          status: "upcoming",
-          title: "Ready-made component libraries",
-          summary:
-            "Use ready-made UI kits so you do not rebuild every button, dialog, and menu yourself.",
-          meta: "Upcoming",
-          details: {
-            about:
-              "Learn popular component libraries so you can build screens faster with pieces that already work well and are accessible.",
-            focus: [
-              "Install a component library and set its colors/theme",
-              "Use ready-made pieces to build your product screens",
-              "Learn accessibility basics that these libraries include",
-              "Know when to use a library piece vs build your own",
-            ],
-            days: ["e.g. shadcn/ui", "Radix", "MUI / others"],
-          },
-        },
-        {
-          id: 9,
-          status: "upcoming",
-          title: "Data fetching libraries",
-          summary:
-            "Fetch API data the smart way — loading UI, errors, caching, and auto refresh.",
-          meta: "Upcoming",
-          details: {
-            about:
-              "Go beyond basic fetch — show loading and error messages, save fetched data for reuse, and keep the screen in sync with the server.",
-            focus: [
-              "TanStack Query (React Query) basics",
-              "Caching (save data) and background refresh",
-              "Loading, error, and empty-screen UI",
-              "Send updates to the server and refresh the UI",
-            ],
-            days: ["TanStack Query", "SWR (optional)"],
-          },
-        },
-        {
-          id: 10,
+          id: 12,
           status: "upcoming",
           title: "Building your own custom components",
           summary:
             "Build your own accordion, carousel (image slider), multi-step form, and more.",
-          meta: "Final step",
+          meta: "Upcoming",
           details: {
             about:
-              "Final skill: build reusable components yourself so you fully understand how they work and can change them any way you want.",
+              "Build reusable components yourself so you fully understand how they work and can change them any way you want.",
             focus: [
               "Accordion component (open and close sections)",
               "Carousel component (slides, next/prev buttons, motion)",
@@ -770,6 +807,30 @@
               "Reusable patterns you can copy into future projects",
             ],
             days: ["Accordion", "Carousel", "Multi-step form", "More as needed"],
+          },
+        },
+        {
+          id: 13,
+          status: "upcoming",
+          title: "Performance optimisation",
+          summary:
+            "Make React apps feel faster — fewer wasted renders, lighter pages, and smoother UI.",
+          meta: "Upcoming",
+          details: {
+            about:
+              "Learn practical ways to speed up React apps: measure first, then reduce unnecessary work and improve load time.",
+            focus: [
+              "Find slow spots with React Scan and React DevTools",
+              "Avoid unnecessary re-renders (memo, list keys, state placement)",
+              "Code splitting and lazy loading routes/components",
+              "Images, bundle size, and basic Core Web Vitals awareness",
+            ],
+            days: [
+              "React Scan",
+              "memo / useMemo",
+              "lazy + Suspense",
+              "bundle analysis",
+            ],
           },
         },
       ];
