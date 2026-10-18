@@ -12,13 +12,11 @@ type ProductCardProps = {
 function ProductCard({ product, onAddToCart }: ProductCardProps) {
   const wishListItems = useCartStore((state) => state.wishListItems);
   const toggleWishlist = useCartStore((state) => state.toggleWishlist);
-  const isLiked = wishListItems.some(
-    (item: Product) => item.id === product.id,
-  );
+  const isLiked = wishListItems.some((item: Product) => item.id === product.id);
 
   return (
     <article className="flex flex-col overflow-hidden rounded-xl border border-border bg-card">
-      <div className="relative flex aspect-[4/3] items-center justify-center bg-background p-5">
+      <div className="relative flex aspect-4/3 items-center justify-center bg-background p-5">
         <Button
           variant="outline"
           size="icon-sm"
