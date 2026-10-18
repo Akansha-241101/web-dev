@@ -32,7 +32,7 @@ function Header() {
           </Link>
         </Button>
         <Button variant="outline" size="icon" asChild>
-          <Link to="/carts" aria-label="Cart">
+          <Link to="/cart" aria-label="Cart">
             <ShoppingCart />
           </Link>
         </Button>

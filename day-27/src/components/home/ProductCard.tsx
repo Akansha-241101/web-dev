@@ -1,7 +1,7 @@
 import { Heart, ShoppingCart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { shopCopy } from "@/constants/home/copy";
-import { useCartStore } from "@/store/useCartStore";
+import { useCartStore } from "@/store/useCartStorePractice";
 import type { Product } from "@/types/home/types";
 
 type ProductCardProps = {
