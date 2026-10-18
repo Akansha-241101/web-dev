@@ -1,6 +1,6 @@
 import ProductCard from "@/components/home/ProductCard";
 import { shopCopy } from "@/constants/home/copy";
-import { useCartStore } from "@/store/useCartStore";
+import { useCartStore } from "@/store/useCartStorePractice";
 import type { Product } from "@/types/home/types";
 
 function WishlistPage() {

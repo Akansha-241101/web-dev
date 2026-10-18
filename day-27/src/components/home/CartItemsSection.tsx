@@ -1,6 +1,6 @@
 import CartItem from "@/components/home/CartItem";
 import { shopCopy } from "@/constants/home/copy";
-import { useCartStore } from "@/store/useCartStore";
+import { useCartStore } from "@/store/useCartStorePractice";
 import type { CartItem as CartItemType } from "@/types/home/types";
 
 function CartItemsSection() {
