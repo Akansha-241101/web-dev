@@ -2,7 +2,7 @@ import { useState } from "react";
 import ProductsHeader from "@/components/home/ProductsHeader";
 import ProductsListing from "@/components/home/ProductsListing";
 import { products } from "@/constants/shared/products";
-import { useCartStore } from "@/store/useCartStorePractice";
+import { useCartStore } from "@/store/useCartStore";
 
 function ProductsSection() {
   const [inputValue, setInputValue] = useState("");

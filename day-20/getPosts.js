@@ -7,3 +7,5 @@ async function getPosts() {
 getPosts();
 
 console.log("hi");
+
+// fetch() returns promise
