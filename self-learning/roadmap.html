@@ -730,49 +730,30 @@
               "Build screens with Button, Input, and related components",
               "Know when to use a library piece vs build your own",
             ],
-            days: ["day-27", "day-29", "day-30", "shadcn/ui"],
+            days: ["day-27", "day-29", "shadcn/ui"],
           },
         },
         {
           id: 9,
           status: "done",
-          title: "Data fetching with Axios & TanStack Query",
+          title: "TanStack Query — useQuery basics (Day 30)",
           summary:
-            "Call APIs with Axios and manage loading, caching, and server state with TanStack Query.",
-          meta: "Completed",
+            "Fetch products with useQuery: isPending for loading UI, staleTime for cache freshness, and refetch on demand.",
+          meta: "Completed · Day 30",
           details: {
             about:
-              "You moved past basic fetch — Axios for HTTP requests and TanStack Query for caching, loading, and keeping UI in sync with the server.",
+              "Day 30 focused on TanStack Query on the client — useQuery with Axios to load products, show pending state, keep data fresh with staleTime, and manually refetch.",
             focus: [
-              "Axios for GET/POST requests to your API",
-              "TanStack Query basics (queries and mutations)",
-              "Loading, error, and empty-screen UI",
-              "Caching and refreshing server data",
+              "useQuery with queryKey and queryFn",
+              "isPending for first-load loading UI",
+              "staleTime (e.g. 5 minutes) so data stays fresh",
+              "refetch() to fetch again from a button",
             ],
-            days: ["Axios", "TanStack Query", "day-30 API"],
+            days: ["day-30", "useQuery", "staleTime", "isPending", "refetch"],
           },
         },
         {
           id: 10,
-          status: "done",
-          title: "Full-stack foundations (Express + Postgres)",
-          summary:
-            "Build a simple Express + TypeScript API with signup, login, products, and a Postgres pool.",
-          meta: "Completed · Day 30",
-          details: {
-            about:
-              "You scaffolded client and server, connected Postgres, created users/products tables, and wired auth and products endpoints.",
-            focus: [
-              "Express routes and controllers",
-              "Postgres pool from .env",
-              "Signup / login / products APIs",
-              "SQL schema and product seeding",
-            ],
-            days: ["day-30"],
-          },
-        },
-        {
-          id: 11,
           status: "upcoming",
           title: "Project 1",
           summary:
@@ -791,7 +772,7 @@
           },
         },
         {
-          id: 12,
+          id: 11,
           status: "upcoming",
           title: "Building your own custom components",
           summary:
@@ -810,7 +791,7 @@
           },
         },
         {
-          id: 13,
+          id: 12,
           status: "upcoming",
           title: "Performance optimisation",
           summary:

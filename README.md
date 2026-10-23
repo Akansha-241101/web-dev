@@ -1,6 +1,6 @@
 # Web Dev Akshu
 
-This repository contains small projects and exercises for learning web development. Each `day-*` folder is a separate lesson or mini project, so you can open or run it on its own. The projects cover HTML, CSS, JavaScript, React, TypeScript, and a beginner full-stack setup. The numbered learning path currently goes through **Day 30**.
+This repository contains small projects and exercises for learning web development. Each `day-*` folder is a separate lesson or mini project, so you can open or run it on its own. The projects cover HTML, CSS, JavaScript, React, TypeScript, and data-fetching with TanStack Query. The numbered learning path currently goes through **Day 30**.
 
 ## Getting started
 
@@ -28,21 +28,15 @@ bun install
 bun run dev
 ```
 
-### Run Day 30 (full-stack)
+### Run Day 30 (TanStack Query)
 
 ```bash
-# API
-cd day-30/server
-bun install
-bun run dev
-
-# UI
 cd day-30/client
 bun install
 bun run dev
 ```
 
-See `day-30/README.md` for Postgres env setup, schema, and seed commands.
+Day 30 focuses on `useQuery`, `staleTime`, `isPending`, and `refetch`. See `day-30/README.md`.
 
 ### Run a JavaScript exercise
 
@@ -53,9 +47,9 @@ node practice.js
 
 ## Learning progress
 
-Open `self-learning/roadmap.html` for the visual roadmap.
+Open `self-learning/roadmap.html` for the visual roadmap. Repo-level agent docs live in `docs/` (`PRD`, `ARCHITECTURE`, `DESIGN`, `MEMORY`, `RULES`, `TASKS`, `SECURITY`).
 
-**Completed:** HTML/CSS, JavaScript, React basics, hooks, Context API, TypeScript, React Router, Zustand, shadcn/ui, Axios, TanStack Query, Express + Postgres foundations (Day 30).
+**Completed:** HTML/CSS, JavaScript, React basics, hooks, Context API, TypeScript, React Router, Zustand, shadcn/ui, Axios, TanStack Query (`useQuery`, `staleTime`, `isPending`, `refetch` on Day 30).
 
 **Still upcoming:**
 
@@ -102,10 +96,7 @@ Open `self-learning/roadmap.html` for the visual roadmap.
 - **Day 27 — ShopNow with Zustand:** Product grid, search, theme toggle, cart + wishlist with Zustand, React Router, and shadcn/ui.
 - **Day 28 — TypeScript basics:** Interfaces, type aliases, and generics in React.
 - **Day 29 — ShopNow with Context API cart:** Same shop idea as Day 27, cart via Context for comparison with Zustand.
-
-### Full-stack
-
-- **Day 30 — Shop foundations:** Express + TypeScript API (signup, login, products) with a Postgres pool, plus a Vite React client with Tailwind/shadcn welcome UI. Docs live in `day-30/docs/`.
+- **Day 30 — TanStack Query:** Practice `useQuery` on a React + Vite client — `isPending` for loading UI, `staleTime` for cache freshness, and `refetch` to reload products on demand (with Axios).
 
 ## Extra practice
 
@@ -121,6 +112,5 @@ The `self-learning/` folder contains exercises and projects outside the numbered
 
 1. HTML and CSS — days 1–7 and 11.
 2. JavaScript — days 8–10, then 20 and 23–25.
-3. React, TypeScript, Router, Zustand, shadcn — days 12–19, 21–22, and 26–29.
-4. Full-stack foundations — day 30.
-5. Next: **Project 1**, then **custom components**, then **performance optimisation**.
+3. React and TypeScript — days 12–19, 21–22, and 26–30 (includes Router, Zustand, shadcn, and TanStack Query on day 30).
+4. Next: **Project 1**, then **custom components**, then **performance optimisation**.

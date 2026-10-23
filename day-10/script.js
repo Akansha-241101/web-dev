@@ -20,6 +20,20 @@
 
 // checkFreeDelivery();
 
+// EXAMPLE OF CALLBACK FUNCTION
+
+// function funcOne(callback) {
+//   callback()
+// }
+
+// function funcTwo() {
+//   console.log("function 2 executed");
+// }
+
+// funcOne(funcTwo);
+
+// a callback function is a function which is passed to another function as an argument
+
 // EXAMPLE OF OBJECTS
 
 // let person = {
