@@ -6,6 +6,15 @@
 
 // 2. Print even numbers from 2 to 20
 
-for (let i = 2; i <= 20 ; i += 2) {
+// for (let i = 2; i <= 20 ; i += 2) {
+//   console.log(i);
+// }
+
+// 3. Countdown from 10 to 1
+
+let i = 10;
+
+while (i >= 1) {
   console.log(i);
+  i--;
 }
