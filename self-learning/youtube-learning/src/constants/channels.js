@@ -5,10 +5,10 @@ export const channels = [
     name: "theavocoder",
     handle: "@theavocoder",
     url: "https://www.youtube.com/@theavocoder",
-    focus: "Visual JS",
+    focus: "JS with drawings",
     overview:
-      "Revise JavaScript visually — perfect when array methods, hooks, or async concepts feel abstract.",
-    tags: ["Visual Learning", "Javascript", "Revision"],
+      "Open this when map, promises, or “how does JS run?” feels fuzzy. Short visual videos that draw the idea so it finally clicks.",
+    tags: ["JavaScript", "Internals", "Visual Learning"],
   },
   {
     id: "manuarora",
@@ -16,10 +16,10 @@ export const channels = [
     name: "Manu Arora",
     handle: "@manuarora",
     url: "https://www.youtube.com/@manuarora",
-    focus: "Design taste",
+    focus: "Make UI prettier",
     overview:
-      "Improve UI/UX taste for your React screens — layout, spacing, and modern frontend design sense.",
-    tags: ["Indian", "frontend", "Design", "Ui-Ux"],
+      "For when your React app works but looks plain. Manu shows spacing, layout, and modern UI taste so screens like ShopNow start looking nicer.",
+    tags: ["UI Design", "Frontend", "React"],
   },
   {
     id: "roadsidecoder",
@@ -27,10 +27,10 @@ export const channels = [
     name: "RoadsideCoder",
     handle: "@RoadsideCoder",
     url: "https://www.youtube.com/@RoadsideCoder",
-    focus: "Interview prep",
+    focus: "Crack interviews",
     overview:
-      "Turn your frontend + JS learning into interview-ready practice: projects, revision, and common questions.",
-    tags: ["frontend", "projects", "interview prep", "javascript"],
+      "Interview-style practice for React and JavaScript — common questions and small coding tasks. Use this when you want to revise what you already know out loud.",
+    tags: ["Interview Prep", "Frontend", "JavaScript", "React"],
   },
   {
     id: "pedrotechnologies",
@@ -38,10 +38,10 @@ export const channels = [
     name: "PedroTech",
     handle: "@PedroTechnologies",
     url: "https://www.youtube.com/@PedroTechnologies",
-    focus: "React builds",
+    focus: "Build React apps",
     overview:
-      "Practice the React components, props, and project structure you learned in days 12–17 with guided tutorials.",
-    tags: ["tutorials", "projects", "frontend"],
+      "Follow-along React tutorials (components, hooks, small apps). Nice after days 12–22 when you want another project to build beside the video.",
+    tags: ["React", "Tutorials", "Projects"],
   },
   {
     id: "sheryians",
@@ -49,10 +49,10 @@ export const channels = [
     name: "Sheryians Coding School",
     handle: "@sheryians",
     url: "https://www.youtube.com/@sheryians",
-    focus: "Dev craft",
+    focus: "Practice by building",
     overview:
-      "Keep building JavaScript and development habits on top of your foundation — practical coding, not just theory.",
-    tags: ["development", "javascript"],
+      "Hands-on JavaScript and frontend coding, explained simply. Pick this when you want to practice building, not sit through heavy theory.",
+    tags: ["JavaScript", "Frontend", "Projects"],
   },
   {
     id: "webdevsimplified",
@@ -60,10 +60,10 @@ export const channels = [
     name: "Web Dev Simplified",
     handle: "@WebDevSimplified",
     url: "https://www.youtube.com/@WebDevSimplified",
-    focus: "Cleaner code",
+    focus: "Neater React & JS",
     overview:
-      "Level up how you write React and JS after useState, fetch, and Context — clearer patterns, less messy code.",
-    tags: ["senior development", "tech updates"],
+      "Short, clear React and JS tips that make your code neater. Great after useState, fetch, and Context when you want fewer messy patterns.",
+    tags: ["JavaScript", "React", "Clean Code", "Tutorials"],
   },
   {
     id: "akshaymarch7",
@@ -71,10 +71,10 @@ export const channels = [
     name: "Akshay Saini",
     handle: "@akshaymarch7",
     url: "https://www.youtube.com/@akshaymarch7",
-    focus: "JS depth",
+    focus: "How JS really works",
     overview:
-      "Strengthen the JavaScript you started in days 8–10 and 23–25 — closures, execution context, and how JS really works under the hood.",
-    tags: ["Javascript mastery"],
+      "Namaste JavaScript — closures, promises, and how JS works under the hood, taught slowly. Best revision after your day 8–10 and 23–25 practice.",
+    tags: ["JavaScript", "Internals", "Interview Prep"],
   },
   {
     id: "greatstackdev",
@@ -82,10 +82,10 @@ export const channels = [
     name: "GreatStack",
     handle: "@GreatStackDev",
     url: "https://www.youtube.com/@GreatStackDev",
-    focus: "Full projects",
+    focus: "Big project builds",
     overview:
-      "Build longer end-to-end projects using the HTML, CSS, JS, and React skills you already have.",
-    tags: ["Project Ideas", "Tutorials", "Long Videos"],
+      "Long React / full-app builds with source code to follow. Perfect when you’re ready for Project 1 and want one big project from start to finish.",
+    tags: ["Projects", "React", "Full Stack", "Tutorials"],
   },
   {
     id: "codegrid",
@@ -93,10 +93,10 @@ export const channels = [
     name: "Codegrid",
     handle: "@codegrid",
     url: "https://www.youtube.com/@codegrid",
-    focus: "UI motion",
+    focus: "Cool UI animations",
     overview:
-      "Take your day-21 carousel, hover, and transition work further with GSAP and polished animation patterns.",
-    tags: ["Animations", "GSAP"],
+      "Website animations with GSAP (smooth motion, cool hover and scroll effects). Level up after your day-21 carousel when you want prettier UI movement.",
+    tags: ["Animation", "GSAP", "Frontend"],
   },
   {
     id: "fireship",
@@ -104,10 +104,10 @@ export const channels = [
     name: "Fireship",
     handle: "@Fireship",
     url: "https://www.youtube.com/@Fireship",
-    focus: "Quick briefs",
+    focus: "Fast tool explainers",
     overview:
-      "Short videos to understand new tools fast — useful after Context and fetch when you wonder “what else exists?”",
-    tags: ["Short Videos", "Tech updates"],
+      "Super short videos that explain a new tool or idea fast. Watch when you’re curious “what else exists?” but don’t want a long tutorial.",
+    tags: ["Tech News", "Shorts", "Frontend"],
   },
   {
     id: "varunmayya",
@@ -115,10 +115,10 @@ export const channels = [
     name: "Varun Mayya",
     handle: "@VarunMayya",
     url: "https://www.youtube.com/@VarunMayya",
-    focus: "Tech radar",
+    focus: "AI & tech trends",
     overview:
-      "Stay aware of new tools and trends after your React basics, so you know what to explore next without getting lost.",
-    tags: ["tech updates", "explore", "learn"],
+      "Talks about AI, startups, and what’s changing in tech — not a coding class. Light watch so trends don’t feel scary or confusing.",
+    tags: ["Tech News", "AI", "Career"],
   },
   {
     id: "ezcommit",
@@ -126,10 +126,10 @@ export const channels = [
     name: "ezcommit",
     handle: "@ezcommit",
     url: "https://www.youtube.com/@ezcommit",
-    focus: "Stay motivated",
+    focus: "Motivation boost",
     overview:
-      "Light motivation and tech updates for days when you need energy to keep going after long practice sessions.",
-    tags: ["tech updates", "motivation", "explore"],
+      "Short clips on motivation, jobs, and discipline. Open on tired days when you need a push — not for learning a new React topic.",
+    tags: ["Motivation", "Career", "Shorts"],
   },
   {
     id: "shadeofcode",
@@ -137,10 +137,21 @@ export const channels = [
     name: "Shade of Code",
     handle: "@Shadeofcode",
     url: "https://www.youtube.com/@Shadeofcode",
-    focus: "Fun revision",
+    focus: "Fun coding shorts",
     overview:
-      "Light, meme-style shorts for easy revision of things you already studied — low pressure, high recall.",
-    tags: ["Meme Learning", "Fun", "Short Videos"],
+      "Meme-style shorts about coding habits and mindset. Fun, low-pressure watch when you want a break but still feel like a developer.",
+    tags: ["Shorts", "Motivation", "Career"],
+  },
+  {
+    id: "codevolution",
+    priority: 14,
+    name: "Codevolution",
+    handle: "@codevolution",
+    url: "https://www.youtube.com/@codevolution",
+    focus: "Revise React slowly",
+    overview:
+      "Clear step-by-step React and JS playlists. Use this to revise hooks, Router, or any topic you already touched but want explained again slowly.",
+    tags: ["React", "Tutorials", "JavaScript"],
   },
 ];
 

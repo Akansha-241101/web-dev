@@ -108,6 +108,7 @@ function App() {
               tags={allTags}
               selectedTags={selectedTags}
               onAddTag={addTag}
+              onRemoveTag={removeTag}
             />
           </div>
         </div>

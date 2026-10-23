@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-function FilterDropdown({ tags, selectedTags, onAddTag }) {
+function FilterDropdown({ tags, selectedTags, onAddTag, onRemoveTag }) {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
 
@@ -39,8 +39,11 @@ function FilterDropdown({ tags, selectedTags, onAddTag }) {
                 type="button"
                 className={`dropdown-option${isSelected ? " is-active" : ""}`}
                 onClick={() => {
-                  if (isSelected) return;
-                  onAddTag(tag);
+                  if (isSelected) {
+                    onRemoveTag(tag);
+                  } else {
+                    onAddTag(tag);
+                  }
                   setIsOpen(false);
                 }}
               >
