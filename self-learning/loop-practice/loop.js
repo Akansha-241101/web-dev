@@ -12,9 +12,18 @@
 
 // 3. Countdown from 10 to 1
 
-let i = 10;
+// let i = 10;
 
-while (i >= 1) {
+// while (i >= 1) {
+//   console.log(i);
+//   i--;
+// }
+
+// 4. Multiplication table of 7
+
+let i = 7;
+
+while (i <= 70) {
   console.log(i);
-  i--;
+  i += 7;
 }
