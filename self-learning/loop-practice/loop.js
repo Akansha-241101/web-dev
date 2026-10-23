@@ -21,9 +21,10 @@
 
 // 4. Multiplication table of 7
 
-let i = 7;
+// let i = 7;
 
-while (i <= 70) {
-  console.log(i);
-  i += 7;
-}
+// while (i <= 70) {
+//   console.log(i);
+//   i += 7;
+// }
+
