@@ -1,16 +1,17 @@
 # Web Dev Akshu
 
-This repository contains small projects and exercises for learning web development. Each `day-*` folder is a separate lesson or mini project, so you can open or run it on its own. The projects cover HTML, CSS, JavaScript, React, TypeScript, and data-fetching with TanStack Query. The numbered learning path currently goes through **Day 30**.
+A personal collection of web development lessons and practice projects. Each `day-*` folder is a separate exercise, ranging from plain HTML/CSS and JavaScript to React, TypeScript, and a small client/server example. This is a learning monorepo; there is no single root application to install or run.
 
 ## Getting started
 
-### Open an HTML project
+For a plain HTML/CSS lesson, open its `index.html` in a browser (or use VS Code Live Server). For a JavaScript exercise, open a terminal in its folder and run the script with Node.js, for example:
 
-For the early HTML and CSS projects, open the folder's `index.html` file in a browser. You can also open the folder in VS Code and use the Live Server extension.
+```bash
+cd day-23
+node practice.js
+```
 
-### Start a React project
-
-Install [Node.js](https://nodejs.org/) or [Bun](https://bun.sh/). Then open a terminal in the project folder, install its packages, and start the development server:
+For a Vite project, install [Bun](https://bun.sh/) or Node.js, change into that project's folder, install dependencies, and start the development server:
 
 ```bash
 cd day-12
@@ -18,17 +19,11 @@ bun install
 bun run dev
 ```
 
-Open the local address shown in the terminal. The numbered React/Vite projects are days 12–19, 21–22, and 26–30. There are also React projects under `self-learning/`.
+Use the local URL printed by Vite. Projects are independent; install dependencies in the project you want to run. React projects are in days 12–19, 21–22, and 26–30, plus `day-31/client` and the projects under `self-learning/`.
 
-For example, start the YouTube learning project with:
+### Day 30 — TanStack Query
 
-```bash
-cd self-learning/youtube-learning
-bun install
-bun run dev
-```
-
-### Run Day 30 (TanStack Query)
+Start the React client:
 
 ```bash
 cd day-30/client
@@ -36,81 +31,63 @@ bun install
 bun run dev
 ```
 
-Day 30 focuses on `useQuery`, `staleTime`, `isPending`, and `refetch`. See `day-30/README.md`.
+Day 30 includes a separate server as well as the Vite client. See [day-30/README.md](day-30/README.md) for the client exercise; server files and database setup are under `day-30/server/`.
 
-### Run a JavaScript exercise
+### Day 31 — Express and React starter
+
+Run the Express API and Vite client in separate terminals:
 
 ```bash
-cd day-23
-node practice.js
+cd day-31/server
+npm install
+npm start
 ```
 
-## Learning progress
+The server listens on port 5000 and has `/cars` and `/tukuuu` routes. In another terminal:
 
-Open `self-learning/roadmap.html` for the visual roadmap. Repo-level agent docs live in `docs/` (`PRD`, `ARCHITECTURE`, `DESIGN`, `MEMORY`, `RULES`, `TASKS`, `SECURITY`).
+```bash
+cd day-31/client
+bun install
+bun run dev
+```
 
-**Completed:** HTML/CSS, JavaScript, React basics, hooks, Context API, TypeScript, React Router, Zustand, shadcn/ui, Axios, TanStack Query (`useQuery`, `staleTime`, `isPending`, `refetch` on Day 30).
+The client is currently a minimal React + TypeScript starter.
 
-**Still upcoming:**
-
-1. Project 1
-2. Custom components
-3. Performance optimisation
-
-## Projects by day
+## Learning path
 
 ### HTML and CSS
 
-- **Day 1 — Login page:** A two-panel login screen with a welcome message and sign-in form.
-- **Day 2 — Login page practice:** Another login layout with two CSS files.
-- **Day 3 — Tailwind basics:** Small boxes for practicing Tailwind classes from a CDN.
-- **Day 4 — Responsive login page:** A Tailwind login card for mobile and desktop.
-- **Day 5 — SkillBuilder landing page:** Header, introduction, and content sections.
-- **Day 6 — SkillBuilder multi-section page:** Fuller landing page with a hero image.
-- **Day 7 — Hero section:** Text, button, and image layout.
-- **Day 11 — Layout revision:** Header, hero, cards, footer, plus a small JavaScript file.
+- **Days 1–7:** Login pages, Tailwind practice, landing pages, and hero layouts.
+- **Day 11:** Layout revision with a header, hero, cards, footer, and JavaScript.
 
 ### JavaScript
 
-- **Day 8 — JavaScript basics:** Variables, imports/exports, objects, arrays, spread, conditions.
-- **Day 9 — JavaScript practice:** Functions, arrow functions, objects, and logic.
-- **Day 10 — Functions and objects:** Short exercises and delivery-style calculations.
-- **Day 20 — Fetching data:** `async` / `await` with JSONPlaceholder posts.
-- **Day 23 — Strings:** Capitalizing words and phrases.
-- **Day 24 — Array methods:** `map`, `forEach`, `reduce`, and `sort`.
-- **Day 25 — Array method practice:** Combine methods to solve longer data tasks.
+- **Days 8–10:** Variables, modules, objects, arrays, functions, and logic.
+- **Day 20:** Fetch data with `async`/`await` and JSONPlaceholder.
+- **Days 23–25:** Strings and array methods (`map`, `forEach`, `reduce`, and `sort`).
 
 ### React and TypeScript
 
-- **Day 12 — StudyHub:** First React page from header, hero, card, and footer components.
-- **Day 13 — Components and props:** Reusable buttons and cards.
-- **Day 14 — Pets and books:** Lists rendered as cards.
-- **Day 15 — Counter:** `useState` for increase, decrease, and reset.
-- **Day 16 — Artist page:** Header, hero, and card components.
-- **Day 17 — Page structure:** Continues the artist page with clearer layout and styling.
-- **Day 18 — Tabs:** Switch content panels with state.
-- **Day 19 — Tabs and themes:** Light/dark theme saved in the browser.
-- **Day 21 — Carousel:** Slides, previous/next, and a progress bar.
-- **Day 22 — Fetch and input focus:** Posts fetch example and `useRef` focus example.
-- **Day 26 — React Context and theme:** `ThemeProvider` shares theme without prop drilling.
-- **Day 27 — ShopNow with Zustand:** Product grid, search, theme toggle, cart + wishlist with Zustand, React Router, and shadcn/ui.
-- **Day 28 — TypeScript basics:** Interfaces, type aliases, and generics in React.
-- **Day 29 — ShopNow with Context API cart:** Same shop idea as Day 27, cart via Context for comparison with Zustand.
-- **Day 30 — TanStack Query:** Practice `useQuery` on a React + Vite client — `isPending` for loading UI, `staleTime` for cache freshness, and `refetch` to reload products on demand (with Axios).
+- **Days 12–19:** Components, props, lists, state, tabs, and themes.
+- **Days 21–22:** Carousel, fetching data, and `useRef` input focus.
+- **Day 26:** Context API for shared theme state.
+- **Day 27:** ShopNow with Zustand, React Router, search, cart, wishlist, and shadcn/ui.
+- **Day 28:** TypeScript interfaces, aliases, and generics in React.
+- **Day 29:** ShopNow cart state with Context API.
+- **Day 30:** TanStack Query and Axios practice; the folder also contains a separate Express/PostgreSQL server project.
+- **Day 31:** Express route practice alongside a minimal React + TypeScript client starter.
 
 ## Extra practice
 
-The `self-learning/` folder contains exercises and projects outside the numbered days:
+The `self-learning/` folder contains work outside the numbered lessons:
 
-- **`hero-code.html`** — HTML and CSS practice for a hero section.
-- **`roadmap.html`** — Learning roadmap (completed vs upcoming).
-- **`script.js`** — JavaScript practice with destructuring.
-- **`reactPractice/`** — React sandbox (counter, toggle, posts dashboard).
-- **`youtube-learning/`** — Channel browser with tags, sheet details, theme, and URL filters.
+- `roadmap.html` — visual learning roadmap.
+- `hero-code.html` and `script.js` — HTML/CSS and JavaScript exercises.
+- `reactPractice/` — React sandbox.
+- `youtube-learning/` — channel browser practice project.
 
-## Suggested learning order
+Project-specific notes are available in the README files inside individual project folders. Repository planning and architecture notes live in [`docs/`](docs/).
 
-1. HTML and CSS — days 1–7 and 11.
-2. JavaScript — days 8–10, then 20 and 23–25.
-3. React and TypeScript — days 12–19, 21–22, and 26–30 (includes Router, Zustand, shadcn, and TanStack Query on day 30).
-4. Next: **Project 1**, then **custom components**, then **performance optimisation**.
+## Next learning goals
+
+The roadmap lists these upcoming milestones: **Project 1**, **custom components**, and **performance optimisation**.
