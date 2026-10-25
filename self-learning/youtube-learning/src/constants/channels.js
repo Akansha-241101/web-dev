@@ -163,7 +163,7 @@ export const channels = [
     overview:
       "Talks about AI, and what’s changing in tech — not a coding class. Light watch so trends don’t feel scary or confusing. Also shows how to get free AI models.",
     tags: ["Tech News", "AI", "Career"],
-  }
+  },
 ];
 
 export const allTags = [
