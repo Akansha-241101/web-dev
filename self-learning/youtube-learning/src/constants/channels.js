@@ -153,6 +153,17 @@ export const channels = [
       "Clear step-by-step React and JS playlists. Use this to revise hooks, Router, or any topic you already touched but want explained again slowly.",
     tags: ["React", "Tutorials", "JavaScript"],
   },
+  {
+    id: "compilefuture",
+    priority: 15,
+    name: "Compile Future",
+    handle: "@CompileFuture",
+    url: "https://www.youtube.com/@CompileFuture",
+    focus: "AI & tech trends",
+    overview:
+      "Talks about AI, and what’s changing in tech — not a coding class. Light watch so trends don’t feel scary or confusing. Also shows how to get free AI models.",
+    tags: ["Tech News", "AI", "Career"],
+  }
 ];
 
 export const allTags = [
