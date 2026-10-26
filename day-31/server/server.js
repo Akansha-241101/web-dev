@@ -1,6 +1,13 @@
 import express from "express";
+import cors from "cors";
 
 const app = express();
+
+app.use(
+  cors({
+    origin: "http://localhost:5174",
+  }),
+);
 
 app.get("/cars", (req, res) => {
   const cars = [
@@ -30,12 +37,7 @@ app.get("/cars", (req, res) => {
       color: "Blue",
     },
   ];
-  console.log(JSON.stringify(cars));
   res.json(cars);
-});
-
-app.get("/tukuuu", (req, res) => {
-  res.send("<p>Hi Tuku</p>");
 });
 
 app.listen(5000, () => {
