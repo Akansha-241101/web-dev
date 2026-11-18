@@ -2,21 +2,33 @@
 
 ## System structure
 
-This repo is a **monorepo of learning projects**, not a single deployed app.
+This repo is a **monorepo of learning projects**, not a single deployed app. Days are grouped by lesson type:
 
 ```
-web-dev-akshu/
+web-dev/
 ├── docs/                 # Repo-level agent & product docs
 ├── README.md
-├── day-1 … day-30/       # Standalone lessons
-├── self-learning/        # Extra practice + roadmap
-└── digi-carotene/        # Separate practice app (when present)
+├── frontend/             # Days 1–29 — frontend-only lessons
+│   └── day-1 … day-29/
+├── backend/              # Backend-only days (when added)
+├── fullstack/            # Day 30+ — client + server lessons
+│   ├── day-30/
+│   └── day-31/
+└── self-learning/        # Extra practice + roadmap
 ```
 
-Each React day is typically:
+### Placement rules
+
+| Folder | When to put a day here |
+| --- | --- |
+| `frontend/` | HTML/CSS, JS, or React-only lesson |
+| `backend/` | API / server-only lesson (no client app) |
+| `fullstack/` | Lesson with both `client/` and `server/` (or equivalent) |
+
+Each React day in `frontend/` is typically:
 
 ```
-day-N/
+frontend/day-N/
 ├── package.json
 ├── vite.config.ts
 ├── index.html
@@ -32,23 +44,24 @@ day-N/
     └── index.css
 ```
 
-Day 30 layout (client-focused learning):
+Fullstack day layout (client + server):
 
 ```
-day-30/
+fullstack/day-30/
 ├── client/               # Vite React — TanStack Query practice
-└── server/               # Optional local API support (not the lesson focus)
+└── server/               # Local API support (not the Day 30 lesson focus)
 ```
 
 ## Key app patterns by day
 
-| Day | Pattern |
-| --- | --- |
-| 26 | Context API (`ThemeProvider`) |
-| 27 | Zustand cart/wishlist, React Router, shadcn, product search |
-| 28 | TypeScript interfaces / aliases / generics |
-| 29 | Same shop UI idea with Context cart for comparison |
-| 30 | `useQuery` + Axios: `isPending`, `staleTime`, `refetch` |
+| Day | Location | Pattern |
+| --- | --- | --- |
+| 26 | `frontend/` | Context API (`ThemeProvider`) |
+| 27 | `frontend/` | Zustand cart/wishlist, React Router, shadcn, product search |
+| 28 | `frontend/` | TypeScript interfaces / aliases / generics |
+| 29 | `frontend/` | Same shop UI idea with Context cart for comparison |
+| 30 | `fullstack/` | `useQuery` + Axios: `isPending`, `staleTime`, `refetch` |
+| 31 | `fullstack/` | Express routes + minimal React client |
 
 ## Data flow (Day 27 ShopNow)
 

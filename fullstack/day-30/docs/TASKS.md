@@ -2,7 +2,7 @@
 
 ## Foundation (done)
 
-- [x] Create `day-30` with `client/` and `server/`
+- [x] Create `fullstack/day-30` with `client/` and `server/`
 - [x] Add root + package gitignores
 - [x] Write docs (`PRD`, `ARCHITECTURE`, `DESIGN`, `MEMORY`, `RULES`, `TASKS`, `SECURITY`)
 - [x] Write root `README.md`

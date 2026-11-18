@@ -10,8 +10,9 @@
 - [x] ShopNow with Zustand, Router, shadcn, search, wishlist (day 27)
 - [x] ShopNow Context cart comparison (day 29)
 - [x] TanStack Query practice: `useQuery`, `staleTime`, `isPending`, `refetch` (day 30)
-- [x] Root README + roadmap updated through day 30
+- [x] Root README + roadmap updated through day 31
 - [x] Repo-root `docs/` created (PRD, ARCHITECTURE, DESIGN, MEMORY, RULES, TASKS, SECURITY)
+- [x] Days grouped: `frontend/` (1–29), `fullstack/` (30–31), `backend/` ready for backend-only days
 
 ## In progress / next
 

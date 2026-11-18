@@ -3,7 +3,7 @@
 ## System structure
 
 ```
-day-30/
+fullstack/day-30/
   client/   React + Vite + Tailwind + shadcn
   server/   Express + TypeScript + pg
   docs/     Project documentation

@@ -44,7 +44,13 @@ Follow consistent naming throughout the project.
 
 ## 4. Architecture & Folder Structure
 
-Organize by day project. Typical Vite React + TS layout:
+Organize by lesson type, then by day project:
+
+- `frontend/day-N/` — HTML/CSS, JS, or React-only lessons (days 1–29)
+- `backend/day-N/` — backend-only lessons when added
+- `fullstack/day-N/` — client + server lessons (day 30+)
+
+Typical Vite React + TS layout inside a day folder:
 
 - `src/components/` — UI components (often by feature, e.g. `home/`)
 - `src/pages/` — Route page components when using React Router
@@ -62,6 +68,7 @@ Additional folders are acceptable when they provide a clear organizational benef
 - Prefer the simplest architecture that satisfies the current day’s lesson.
 - Do not introduce unnecessary design patterns, dependencies, or layers.
 - Do not merge unrelated days into one app unless the user asks.
+- Place new days in the correct top-level folder (`frontend/`, `backend/`, or `fullstack/`).
 
 ## 5. Centralized Configuration & Consistency
 

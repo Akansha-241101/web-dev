@@ -8,7 +8,7 @@ Goal: a clean client/server split learners can grow into real auth and products.
 
 ## Decisions
 
-1. Monorepo-style folder: `client/` + `server/` under `day-30`
+1. Monorepo-style folder: `client/` + `server/` under `fullstack/day-30`
 2. Express + TypeScript + `pg` Pool for backend
 3. Vite React + Tailwind v4 + shadcn for frontend
 4. Welcome UI only — no API integration yet

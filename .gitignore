@@ -2,7 +2,7 @@
 .idea
 .DS_Store
 
-# Dependencies & build output (all day-* Vite apps)
+# Dependencies & build output (frontend/, fullstack/, backend/ day apps)
 node_modules/
 dist/
 dist-ssr/
