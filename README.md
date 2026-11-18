@@ -115,12 +115,24 @@ bun run dev
 
 See [fullstack/day-1-tanstack-query/README.md](fullstack/day-1-tanstack-query/README.md).
 
+## Docs
+
+Index: [`docs/README.md`](docs/README.md)
+
+| Doc | What it covers |
+| --- | --- |
+| [PRD](docs/PRD.md) | Goals and scope |
+| [ARCHITECTURE](docs/ARCHITECTURE.md) | Folder structure |
+| [DESIGN](docs/DESIGN.md) | ShopNow look |
+| [RULES](docs/RULES.md) | Coding rules |
+| [MEMORY](docs/MEMORY.md) | Locked decisions |
+| [TASKS](docs/TASKS.md) | Done / next |
+| [SECURITY](docs/SECURITY.md) | Secrets & safe habits |
+
 ## Extra practice
 
 `self-learning/` is outside the numbered path (roadmap, sandboxes, youtube-learning).
 
-Repo planning notes live in [`docs/`](docs/).
-
 ## Next learning goals
 
-**Project 1**, **custom components**, and **performance optimisation**.
+**Project 1**, **custom components**, and **performance optimisation** — see [docs/TASKS.md](docs/TASKS.md).

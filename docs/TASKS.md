@@ -1,26 +1,20 @@
-# Tasks — Web Dev Akshu
+# Tasks
 
-## Completed
+Day list: [`../README.md`](../README.md). Goals: [PRD.md](PRD.md).
 
-- [x] HTML/CSS foundations (frontend days 1–7)
-- [x] JavaScript fundamentals & array methods (frontend days 8–13)
-- [x] React components, props, useState, tabs, carousel (frontend days 14–21)
-- [x] useEffect, useRef, Context theme (frontend days 22–23)
-- [x] TypeScript basics (frontend day 24)
-- [x] ShopNow with Zustand, Router, shadcn (frontend day 25)
-- [x] Plain Node HTTP server — 2 routes (backend day 1)
-- [x] Express intro, :id routes, structure — kept minimal (backend days 2–4)
-- [x] TanStack Query practice (fullstack day 1)
-- [x] Section-local day numbering (`frontend/`, `backend/`, `fullstack/`)
-- [x] Repo-root `docs/` aligned to current path
+## Done
 
-## In progress / next
+- [x] Frontend 1–25 (HTML → JS → React → TS → ShopNow)
+- [x] Backend 1–4 (Node → Express, minimal routes)
+- [x] Fullstack 1 (TanStack Query)
+- [x] Section-local day folders + root docs
 
-- [ ] **Project 1** — one complete mini project end to end (roadmap)
-- [ ] **Custom components** — accordion, carousel patterns, multi-step form, etc.
-- [ ] **Performance optimisation** — React Scan, fewer wasted renders, lazy loading, bundle awareness
+## Next
 
-## Fullstack Day 1 polish (optional)
+- [ ] Project 1
+- [ ] Custom components
+- [ ] Performance (React Scan, lazy loading)
 
-- [ ] Cleaner product list UI with shadcn while keeping Query concepts clear
-- [ ] Extract query into a small hook if `App.tsx` grows past 120 lines
+Optional polish on Fullstack Day 1: cleaner product UI; extract a query hook if `App.tsx` grows.
+
+Visual roadmap: [`../self-learning/roadmap.html`](../self-learning/roadmap.html).
