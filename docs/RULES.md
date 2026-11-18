@@ -44,11 +44,12 @@ Follow consistent naming throughout the project.
 
 ## 4. Architecture & Folder Structure
 
-Organize by lesson type, then by day project:
+Organize by lesson type, then by descriptive day folder (`day-N-<topic-slug>`):
 
-- `frontend/day-N/` — HTML/CSS, JS, or React-only lessons (days 1–29)
-- `backend/day-N/` — backend-only lessons when added
-- `fullstack/day-N/` — client + server lessons (day 30+)
+- `frontend/day-N-<topic>/` — Frontend days 1–25 (HTML/CSS, JS, React, TypeScript, ShopNow)
+- `backend/day-N-<topic>/` — Backend days 1–4 (plain Node, then Express)
+- `fullstack/day-N-<topic>/` — Fullstack day 1 (client + server)
+- Day numbers restart in each section folder.
 
 Typical Vite React + TS layout inside a day folder:
 
@@ -68,7 +69,8 @@ Additional folders are acceptable when they provide a clear organizational benef
 - Prefer the simplest architecture that satisfies the current day’s lesson.
 - Do not introduce unnecessary design patterns, dependencies, or layers.
 - Do not merge unrelated days into one app unless the user asks.
-- Place new days in the correct top-level folder (`frontend/`, `backend/`, or `fullstack/`).
+- Place new days in the correct top-level folder with a descriptive `day-N-<topic>` name.
+- Use the next free number **inside that section** (not a global counter).
 
 ## 5. Centralized Configuration & Consistency
 
@@ -90,7 +92,7 @@ Additional folders are acceptable when they provide a clear organizational benef
 - Use `shadcn/ui` and Lucide consistently on days that already include them.
 - Keep components small, focused, and readable.
 - Avoid deeply nested JSX, unnecessary prop drilling, complicated conditionals, and redundant wrappers.
-- Handle loading, empty, error, and disabled states wherever relevant (e.g. Day 30 `isPending`).
+- Handle loading, empty, error, and disabled states wherever relevant (e.g. Fullstack Day 1 `isPending`).
 
 ## 7. Functions, State & Error Handling
 
@@ -109,7 +111,7 @@ Additional folders are acceptable when they provide a clear organizational benef
 
 ## 8. TypeScript & Code Quality
 
-- Use TypeScript on days that already use it (27+).
+- Use TypeScript on days that already use it (ShopNow, Frontend Day 24+, Fullstack Day 1 client).
 - Define types for props, API-shaped data, and store shapes when useful.
 - Avoid `any` and unnecessary assertions.
 - Keep shared types in `types/` and feature-local types nearby when small.
@@ -122,7 +124,7 @@ Additional folders are acceptable when they provide a clear organizational benef
 - Do not collect real user PII beyond simple learning demos.
 - Understand impact before destructive git or database actions.
 - Never claim a feature works unless it has been implemented and verified.
-- Day 30’s documented learning goal is TanStack Query — do not reframe it as a backend curriculum in root docs unless the user asks.
+- Fullstack Day 1’s documented learning goal is TanStack Query — do not reframe it as a backend curriculum in root docs unless the user asks.
 
 ## 10. Documentation & Development Workflow
 

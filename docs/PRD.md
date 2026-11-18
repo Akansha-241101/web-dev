@@ -2,22 +2,23 @@
 
 ## Product goals
 
-Web Dev Akshu is a **personal learning repository**: small, day-based projects that build frontend (and related) skills step by step. Each `day-*` folder is a standalone lesson learners can open and run alone. Days live under `frontend/`, `backend/`, or `fullstack/` by lesson type.
+Web Dev Akshu is a **personal learning repository**: small day-based projects that build fullstack skills step by step. Each `day-N-<topic>` folder is a standalone lesson. Day numbers restart inside `frontend/`, `backend/`, and `fullstack/`.
 
 ## Requirements
 
-### Learning path (through Day 31)
+### Learning path
 
-| Area | Days / topics | Location |
+| Area | Days | Location |
 | --- | --- | --- |
-| HTML & CSS + Tailwind | Days 1–7, 11 | `frontend/` |
-| JavaScript | Days 8–10, 20, 23–25 | `frontend/` |
-| React basics & hooks | Days 12–19, 21–22, 26 | `frontend/` |
-| TypeScript, Router, Zustand, Context, shadcn | Days 27–29 | `frontend/` |
-| TanStack Query (`useQuery`) | Day 30 | `fullstack/` |
-| Express + React starter | Day 31 | `fullstack/` |
+| HTML & CSS + Tailwind | Frontend 1–7 | `frontend/` |
+| JavaScript | Frontend 8–13 | `frontend/` |
+| React basics & hooks | Frontend 14–22 | `frontend/` |
+| Context, TypeScript, ShopNow | Frontend 23–25 | `frontend/` |
+| Plain Node HTTP server | Backend 1 | `backend/day-1-node-server` |
+| Express | Backend 2–4 | `backend/` |
+| TanStack Query + Axios + Express | Fullstack 1 | `fullstack/day-1-tanstack-query` |
 
-### Day 30 focus (current)
+### Fullstack Day 1 focus
 
 - Practice `useQuery` with Axios
 - Use `isPending` for loading UI
@@ -32,31 +33,32 @@ Web Dev Akshu is a **personal learning repository**: small, day-based projects t
 
 ## User stories
 
-1. As a learner, I can open any `day-*` folder under `frontend/`, `backend/`, or `fullstack/` and run that lesson independently.
-2. As a learner, I can follow the README and roadmap to see what is done vs next.
-3. As a learner, I can practice ShopNow patterns (cart, wishlist, search, theme) on Days 27–29 in `frontend/`.
-4. As a learner, I can practice TanStack Query loading/cache/refetch on Day 30 in `fullstack/`.
+1. As a learner, I can open any `day-N-<topic>` folder and run that lesson independently.
+2. As a learner, I can follow the README and roadmap for the section-based sequence.
+3. As a learner, I can practice ShopNow on Frontend Day 25.
+4. As a learner, I can practice plain Node on Backend Day 1, minimal Express on Backend Days 2–4, then Query on Fullstack Day 1.
 
 ## Scope
 
 ### In scope
 
-- Day-based lessons grouped by type (`frontend/`, `backend/`, `fullstack/`)
-- Clear docs at repo root and per-project docs where needed (e.g. `frontend/day-27`)
+- Section-local day numbering with descriptive folder names
+- Clear docs at repo root and per-project docs where needed (e.g. ShopNow)
 - Beginner-friendly, runnable examples
 
 ### Out of scope (until Project 1 / roadmap says otherwise)
 
 - Production deploy
 - Real payments / checkout
-- Treating Day 30 as a production full-stack product lesson
+- Treating Fullstack Day 1 as a production full-stack product lesson
 
 ## Acceptance criteria
 
-- [x] Numbered days through 31 exist and are documented in root `README.md`
-- [x] Days grouped under `frontend/`, `backend/`, and `fullstack/` by lesson type
-- [x] Roadmap shows completed skills and upcoming: Project 1, custom components, performance
-- [x] Day 30 documents `useQuery`, `staleTime`, `isPending`, `refetch`
+- [x] Days documented in root `README.md` with section-local numbering
+- [x] Days under `frontend/`, `backend/`, `fullstack/`
+- [x] ShopNow kept with Router, Zustand, shadcn
+- [x] Plain Node day before Express
+- [x] Fullstack Day 1 documents `useQuery`, `staleTime`, `isPending`, `refetch`
 - [ ] Project 1 completed
 - [ ] Custom components milestone completed
 - [ ] Performance optimisation (incl. React Scan) completed

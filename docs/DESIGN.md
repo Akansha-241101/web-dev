@@ -1,6 +1,6 @@
 # Design — Web Dev Akshu
 
-Newer UI work (especially Days 27–30) follows the **ShopNow** visual base.
+Newer UI work (especially Frontend Day 25 and Fullstack Day 1) follows the **ShopNow** visual base.
 
 ## Brand direction
 
@@ -36,7 +36,7 @@ Light mode inverts surfaces; brand hues stay fixed.
 
 ## Components
 
-- **shadcn/ui** (Radix Nova style) on Days 27+
+- **shadcn/ui** (Radix Nova style) on ShopNow (Frontend Day 25) and Fullstack Day 1 client
 - Lucide icons
 - Prefer shared primitives (`Button`, `Input`) over one-off native controls when the day already uses shadcn
 
@@ -44,7 +44,7 @@ Light mode inverts surfaces; brand hues stay fixed.
 
 - Content width often `max-w-6xl` centered
 - Shop pages: header → products section → cart/wishlist routes
-- Day 30: simple header + product list / pending / refetch
+- Fullstack Day 1: simple header + product list / pending / refetch
 
 ## Responsiveness
 
@@ -56,10 +56,10 @@ Light mode inverts surfaces; brand hues stay fixed.
 - Subtle transitions via Tailwind / tw-animate where present
 - Theme toggle on shop headers
 - Heart toggle for wishlist; cart +/- / remove
-- Query refetch button on Day 30 practice UI
+- Query refetch button on Fullstack Day 1 practice UI
 
 ## Interaction patterns
 
 - Controlled search input filters product names
 - Empty cart / empty wishlist copy from constants
-- Loading via `isPending` on Day 30
+- Loading via `isPending` on Fullstack Day 1

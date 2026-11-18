@@ -1,107 +1,126 @@
 # Web Dev Akshu
 
-A personal collection of web development lessons and practice projects. Days are grouped by type: frontend-only lessons, backend-only lessons, and fullstack client/server projects. This is a learning monorepo; there is no single root application to install or run.
+A beginner fullstack learning path. Days are numbered **per section** (`frontend/`, `backend/`, `fullstack/`), each with a descriptive folder name.
 
 ## Repo layout
 
 ```
 web-dev/
-├── frontend/      # Days 1–29 — HTML/CSS, JS, React, TypeScript
-├── backend/       # Backend-only days (when added)
-├── fullstack/     # Day 30+ — client + server lessons
-├── docs/          # Repo-level planning & agent docs
-└── self-learning/ # Extra practice + roadmap
+├── frontend/     # Days 1–25 — HTML, CSS, JS, React, TypeScript, ShopNow
+├── backend/      # Days 1–4 — Node.js, then Express
+├── fullstack/    # Day 1 — React + TanStack Query + Axios + Express
+├── docs/         # Repo-level planning & agent docs
+└── self-learning/
 ```
+
+## Learning path
+
+### Frontend (Days 1–25)
+
+| Day | Folder | Focus |
+| --- | --- | --- |
+| 1 | `frontend/day-1-html-css` | HTML/CSS login form |
+| 2 | `frontend/day-2-tailwind-basics` | Tailwind basics |
+| 3 | `frontend/day-3-tailwind-layout` | Tailwind login layout |
+| 4 | `frontend/day-4-skillbuilder-nav` | Header and nav |
+| 5 | `frontend/day-5-landing-page` | Landing page |
+| 6 | `frontend/day-6-hero-section` | Hero section |
+| 7 | `frontend/day-7-layout-revision` | Layout revision |
+| 8 | `frontend/day-8-js-fundamentals` | Variables, objects, import/export |
+| 9 | `frontend/day-9-js-functions` | Functions and logic |
+| 10 | `frontend/day-10-strings-arrays` | Strings and arrays |
+| 11 | `frontend/day-11-array-methods` | `map`, `filter`, `forEach` |
+| 12 | `frontend/day-12-array-advanced` | `reduce`, `sort`, chaining |
+| 13 | `frontend/day-13-fetch-async` | `fetch` + async/await |
+| 14 | `frontend/day-14-react-vite` | React + Vite |
+| 15 | `frontend/day-15-components-props` | Components and props |
+| 16 | `frontend/day-16-lists-map` | Lists with `.map()` |
+| 17 | `frontend/day-17-usestate` | `useState` |
+| 18 | `frontend/day-18-multi-component` | Multi-component page |
+| 19 | `frontend/day-19-interactive-header` | Interactive header |
+| 20 | `frontend/day-20-tabs-theme` | Tabs and theme |
+| 21 | `frontend/day-21-carousel` | Carousel |
+| 22 | `frontend/day-22-useeffect-useref` | `useEffect` + `useRef` |
+| 23 | `frontend/day-23-context-api` | Context API |
+| 24 | `frontend/day-24-typescript` | TypeScript basics |
+| 25 | `frontend/day-25-shopnow` | ShopNow (Router, Zustand, shadcn) |
+
+### Backend (Days 1–4)
+
+| Day | Folder | Focus |
+| --- | --- | --- |
+| 1 | `backend/day-1-node-server` | Plain Node server — 2 routes |
+| 2 | `backend/day-2-express-intro` | Same 2 routes with Express |
+| 3 | `backend/day-3-express-routes` | 2 routes + `:id` param |
+| 4 | `backend/day-4-express-structure` | Same 2 routes, split into folders |
+
+### Fullstack (Day 1)
+
+| Day | Folder | Focus |
+| --- | --- | --- |
+| 1 | `fullstack/day-1-tanstack-query` | TanStack Query, Axios, Express API |
 
 ## Getting started
 
-For a plain HTML/CSS lesson, open its `index.html` in a browser (or use VS Code Live Server). For a JavaScript exercise, open a terminal in its folder and run the script with Node.js, for example:
+Plain HTML/CSS lesson:
 
 ```bash
-cd frontend/day-23
+# open in browser or Live Server
+frontend/day-1-html-css/index.html
+```
+
+JavaScript exercise:
+
+```bash
+cd frontend/day-11-array-methods
 node practice.js
 ```
 
-For a Vite project, install [Bun](https://bun.sh/) or Node.js, change into that project's folder, install dependencies, and start the development server:
+Vite React project:
 
 ```bash
-cd frontend/day-12
+cd frontend/day-14-react-vite
 bun install
 bun run dev
 ```
 
-Use the local URL printed by Vite. Projects are independent; install dependencies in the project you want to run. React projects are in `frontend/` days 12–19, 21–22, and 26–29, plus `fullstack/day-30/client`, `fullstack/day-31/client`, and the projects under `self-learning/`.
-
-### Day 30 — TanStack Query
-
-Start the React client:
+Plain Node server:
 
 ```bash
-cd fullstack/day-30/client
-bun install
-bun run dev
+cd backend/day-1-node-server
+npm start
 ```
 
-Day 30 includes a separate server as well as the Vite client. See [fullstack/day-30/README.md](fullstack/day-30/README.md) for the client exercise; server files and database setup are under `fullstack/day-30/server/`.
-
-### Day 31 — Express and React starter
-
-Run the Express API and Vite client in separate terminals:
+Express backend:
 
 ```bash
-cd fullstack/day-31/server
+cd backend/day-2-express-intro
 npm install
 npm start
 ```
 
-The server listens on port 5000 and has `/cars` and `/tukuuu` routes. In another terminal:
+### Fullstack Day 1 — TanStack Query
 
 ```bash
-cd fullstack/day-31/client
+cd fullstack/day-1-tanstack-query/server
+npm install
+npm start
+```
+
+```bash
+cd fullstack/day-1-tanstack-query/client
 bun install
 bun run dev
 ```
 
-The client is currently a minimal React + TypeScript starter.
-
-## Learning path
-
-### HTML and CSS (`frontend/`)
-
-- **Days 1–7:** Login pages, Tailwind practice, landing pages, and hero layouts.
-- **Day 11:** Layout revision with a header, hero, cards, footer, and JavaScript.
-
-### JavaScript (`frontend/`)
-
-- **Days 8–10:** Variables, modules, objects, arrays, functions, and logic.
-- **Day 20:** Fetch data with `async`/`await` and JSONPlaceholder.
-- **Days 23–25:** Strings and array methods (`map`, `forEach`, `reduce`, and `sort`).
-
-### React and TypeScript (`frontend/`)
-
-- **Days 12–19:** Components, props, lists, state, tabs, and themes.
-- **Days 21–22:** Carousel, fetching data, and `useRef` input focus.
-- **Day 26:** Context API for shared theme state.
-- **Day 27:** ShopNow with Zustand, React Router, search, cart, wishlist, and shadcn/ui.
-- **Day 28:** TypeScript interfaces, aliases, and generics in React.
-- **Day 29:** ShopNow cart state with Context API.
-
-### Fullstack (`fullstack/`)
-
-- **Day 30:** TanStack Query and Axios practice; the folder also contains a separate Express/PostgreSQL server project.
-- **Day 31:** Express route practice alongside a minimal React + TypeScript client starter.
+See [fullstack/day-1-tanstack-query/README.md](fullstack/day-1-tanstack-query/README.md).
 
 ## Extra practice
 
-The `self-learning/` folder contains work outside the numbered lessons:
+`self-learning/` is outside the numbered path (roadmap, sandboxes, youtube-learning).
 
-- `roadmap.html` — visual learning roadmap.
-- `hero-code.html` and `script.js` — HTML/CSS and JavaScript exercises.
-- `reactPractice/` — React sandbox.
-- `youtube-learning/` — channel browser practice project.
-
-Project-specific notes are available in the README files inside individual project folders. Repository planning and architecture notes live in [`docs/`](docs/).
+Repo planning notes live in [`docs/`](docs/).
 
 ## Next learning goals
 
-The roadmap lists these upcoming milestones: **Project 1**, **custom components**, and **performance optimisation**.
+**Project 1**, **custom components**, and **performance optimisation**.

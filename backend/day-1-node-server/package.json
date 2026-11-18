@@ -1,0 +1,7 @@
+{
+  "name": "day-1-node-server",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  }
+}

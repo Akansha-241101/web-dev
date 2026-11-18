@@ -2,33 +2,42 @@
 
 ## System structure
 
-This repo is a **monorepo of learning projects**, not a single deployed app. Days are grouped by lesson type:
+This repo is a **learning monorepo**, not a single deployed app. Day numbers restart in each section:
 
 ```
 web-dev/
-├── docs/                 # Repo-level agent & product docs
+├── docs/
 ├── README.md
-├── frontend/             # Days 1–29 — frontend-only lessons
-│   └── day-1 … day-29/
-├── backend/              # Backend-only days (when added)
-├── fullstack/            # Day 30+ — client + server lessons
-│   ├── day-30/
-│   └── day-31/
-└── self-learning/        # Extra practice + roadmap
+├── frontend/                 # Days 1–25
+│   ├── day-1-html-css
+│   ├── …
+│   └── day-25-shopnow
+├── backend/                  # Days 1–4
+│   ├── day-1-node-server
+│   ├── day-2-express-intro
+│   ├── day-3-express-routes
+│   └── day-4-express-structure
+├── fullstack/                # Day 1
+│   └── day-1-tanstack-query
+└── self-learning/
 ```
 
 ### Placement rules
 
-| Folder | When to put a day here |
-| --- | --- |
-| `frontend/` | HTML/CSS, JS, or React-only lesson |
-| `backend/` | API / server-only lesson (no client app) |
-| `fullstack/` | Lesson with both `client/` and `server/` (or equivalent) |
+| Folder | Days | When |
+| --- | --- | --- |
+| `frontend/` | 1–25 | HTML/CSS, JS, React, TypeScript, ShopNow |
+| `backend/` | 1–4 | Plain Node, then Express lessons |
+| `fullstack/` | 1 | Client + server together |
 
-Each React day in `frontend/` is typically:
+### Naming
+
+Folders are `day-N-<topic-slug>` **within each section** (e.g. `backend/day-1-node-server`), not a single global day counter.
+
+## Typical React day (`frontend/`)
 
 ```
-frontend/day-N/
+frontend/day-N-<topic>/
 ├── package.json
 ├── vite.config.ts
 ├── index.html
@@ -37,56 +46,42 @@ frontend/day-N/
     ├── App.tsx / App.jsx
     ├── components/
     ├── constants/
-    ├── types/            # TS days
-    ├── store/            # Zustand (day-27)
-    ├── context/          # Context (day-26, day-29)
-    ├── pages/ + router   # Router days (day-27)
+    ├── types/
+    ├── store/            # Zustand (`day-25-shopnow`)
+    ├── context/          # Context (`day-23-context-api`)
+    ├── pages/ + router   # Router (`day-25-shopnow`)
     └── index.css
 ```
 
-Fullstack day layout (client + server):
+## Fullstack day
 
 ```
-fullstack/day-30/
-├── client/               # Vite React — TanStack Query practice
-└── server/               # Local API support (not the Day 30 lesson focus)
+fullstack/day-1-tanstack-query/
+├── client/               # Vite React — TanStack Query
+└── server/               # Express API
 ```
 
-## Key app patterns by day
+## Key patterns by day
 
-| Day | Location | Pattern |
+| Section day | Folder | Pattern |
 | --- | --- | --- |
-| 26 | `frontend/` | Context API (`ThemeProvider`) |
-| 27 | `frontend/` | Zustand cart/wishlist, React Router, shadcn, product search |
-| 28 | `frontend/` | TypeScript interfaces / aliases / generics |
-| 29 | `frontend/` | Same shop UI idea with Context cart for comparison |
-| 30 | `fullstack/` | `useQuery` + Axios: `isPending`, `staleTime`, `refetch` |
-| 31 | `fullstack/` | Express routes + minimal React client |
-
-## Data flow (Day 27 ShopNow)
-
-1. Products from `constants/shared/products`
-2. UI reads/writes cart & wishlist via Zustand store
-3. Routes: `/`, `/cart`, `/wishlist` via `createBrowserRouter`
-
-## Data flow (Day 30 Query practice)
-
-1. Client `useQuery({ queryKey, queryFn, staleTime })`
-2. `queryFn` uses Axios GET for products
-3. UI shows `isPending` or mapped product names; button calls `refetch()`
+| Frontend 23 | `day-23-context-api` | Context theme |
+| Frontend 24 | `day-24-typescript` | TS interfaces / aliases |
+| Frontend 25 | `day-25-shopnow` | Zustand, Router, shadcn |
+| Backend 1 | `day-1-node-server` | Plain Node `http` server |
+| Backend 2–4 | `day-2…4` | Express intro → routes → structure |
+| Fullstack 1 | `day-1-tanstack-query` | `useQuery` + Axios + Express |
 
 ## Technical decisions
 
-- **Bun** preferred for install/run (`bun install`, `bun run dev`)
+- **Bun** preferred for Vite clients; **npm** fine for Node/Express lessons
 - **Vite** for React apps
-- **Tailwind v4** + **shadcn/ui** on newer days (27+)
-- **@/** path alias on TS Vite projects
+- **Tailwind** + **shadcn/ui** on ShopNow and Query client
 - One lesson per folder — no required shared package workspace
-- Prefer simple files over shared libraries across days
+- Beginner-friendly files; ~120 lines max when adding code
 
 ## Integrations
 
-- Lucide icons
-- shadcn/ui (Button, Input, etc.)
-- TanStack Query + Axios (Day 30)
+- Lucide icons, shadcn/ui (ShopNow / Fullstack Day 1 client)
+- TanStack Query + Axios (Fullstack Day 1)
 - JSONPlaceholder / fetch practice (earlier days)

@@ -2,17 +2,17 @@
 
 ## Completed
 
-- [x] HTML/CSS foundations (days 1–7, 11)
-- [x] JavaScript fundamentals & array methods (days 8–10, 20, 23–25)
-- [x] React components, props, useState, tabs, carousel (days 12–19, 21)
-- [x] Fetch, useEffect, useRef, Context theme (days 20, 22, 26)
-- [x] TypeScript basics (day 28)
-- [x] ShopNow with Zustand, Router, shadcn, search, wishlist (day 27)
-- [x] ShopNow Context cart comparison (day 29)
-- [x] TanStack Query practice: `useQuery`, `staleTime`, `isPending`, `refetch` (day 30)
-- [x] Root README + roadmap updated through day 31
-- [x] Repo-root `docs/` created (PRD, ARCHITECTURE, DESIGN, MEMORY, RULES, TASKS, SECURITY)
-- [x] Days grouped: `frontend/` (1–29), `fullstack/` (30–31), `backend/` ready for backend-only days
+- [x] HTML/CSS foundations (frontend days 1–7)
+- [x] JavaScript fundamentals & array methods (frontend days 8–13)
+- [x] React components, props, useState, tabs, carousel (frontend days 14–21)
+- [x] useEffect, useRef, Context theme (frontend days 22–23)
+- [x] TypeScript basics (frontend day 24)
+- [x] ShopNow with Zustand, Router, shadcn (frontend day 25)
+- [x] Plain Node HTTP server — 2 routes (backend day 1)
+- [x] Express intro, :id routes, structure — kept minimal (backend days 2–4)
+- [x] TanStack Query practice (fullstack day 1)
+- [x] Section-local day numbering (`frontend/`, `backend/`, `fullstack/`)
+- [x] Repo-root `docs/` aligned to current path
 
 ## In progress / next
 
@@ -20,7 +20,7 @@
 - [ ] **Custom components** — accordion, carousel patterns, multi-step form, etc.
 - [ ] **Performance optimisation** — React Scan, fewer wasted renders, lazy loading, bundle awareness
 
-## Day 30 polish (optional)
+## Fullstack Day 1 polish (optional)
 
 - [ ] Cleaner product list UI with shadcn while keeping Query concepts clear
 - [ ] Extract query into a small hook if `App.tsx` grows past 120 lines

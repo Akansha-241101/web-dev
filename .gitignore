@@ -2,7 +2,7 @@
 .idea
 .DS_Store
 
-# Dependencies & build output (frontend/, fullstack/, backend/ day apps)
+# Dependencies & build output (frontend/, backend/, fullstack/ day apps)
 node_modules/
 dist/
 dist-ssr/

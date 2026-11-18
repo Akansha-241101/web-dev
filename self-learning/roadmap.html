@@ -587,7 +587,7 @@
           title: "HTML & CSS foundations",
           summary:
             "Build page layouts, login screens, landing pages, and learn Tailwind CSS basics.",
-          meta: "Completed · Days 1–7, 11",
+          meta: "Completed · Days 1–7",
           details: {
             about:
               "You built real webpages from scratch — headers, hero sections, forms, and multi-section landing pages.",
@@ -597,7 +597,15 @@
               "Tailwind CSS utility classes for faster styling",
               "SkillBuilder-style landing page and hero practice",
             ],
-            days: ["day-1", "day-2", "day-3", "day-4", "day-5", "day-6", "day-7", "day-11"],
+            days: [
+              "day-1-html-css",
+              "day-2-tailwind-basics",
+              "day-3-tailwind-layout",
+              "day-4-skillbuilder-nav",
+              "day-5-landing-page",
+              "day-6-hero-section",
+              "day-7-layout-revision",
+            ],
           },
         },
         {
@@ -605,8 +613,8 @@
           status: "done",
           title: "JavaScript fundamentals",
           summary:
-            "Learn functions, objects, arrays, and how to chain array methods together.",
-          meta: "Completed · Days 8–10, 23–25",
+            "Learn functions, objects, arrays, fetch, and how to chain array methods together.",
+          meta: "Completed · Days 8–13",
           details: {
             about:
               "These are the JavaScript basics you will use again and again in React — from small functions to working with lists of data.",
@@ -614,9 +622,16 @@
               "Import / export, objects, spread operator, and destructuring",
               "Arrow functions and small logic problems",
               "Array methods: map, filter, reduce, sort, slice, join",
-              "Combine array methods to change and calculate data",
+              "fetch with async/await before React",
             ],
-            days: ["day-8", "day-9", "day-10", "day-23", "day-24", "day-25"],
+            days: [
+              "day-8-js-fundamentals",
+              "day-9-js-functions",
+              "day-10-strings-arrays",
+              "day-11-array-methods",
+              "day-12-array-advanced",
+              "day-13-fetch-async",
+            ],
           },
         },
         {
@@ -625,7 +640,7 @@
           title: "React components & props",
           summary:
             "Start React with Vite, build reusable components, and show lists on screen.",
-          meta: "Completed · Days 12–14, 16–17",
+          meta: "Completed · Days 14–16",
           details: {
             about:
               "You moved from plain HTML pages into React — splitting the UI into components and passing data with props.",
@@ -635,7 +650,11 @@
               "Pass data with props (for example Button and Card)",
               "Use .map() to show lists like pet cards or book cards",
             ],
-            days: ["day-12", "day-13", "day-14", "day-16", "day-17"],
+            days: [
+              "day-14-react-vite",
+              "day-15-components-props",
+              "day-16-lists-map",
+            ],
           },
         },
         {
@@ -644,117 +663,115 @@
           title: "useState hook & interactive UI",
           summary:
             "useState hook for counters, tabs, light/dark theme, carousel, and progress bar.",
-          meta: "Completed · Days 15, 18–19, 21",
+          meta: "Completed · Days 17–21",
           details: {
             about:
               "You learned how the screen updates when the user clicks — using the useState hook to store values that can change.",
             focus: [
               "useState hook for a counter (increase, decrease, reset)",
-              "Tabs that change content with the useState hook",
-              "Light/dark theme toggle saved in localStorage",
+              "Multi-component pages and interactive headers",
+              "Tabs and light/dark theme toggle",
               "Carousel (image slider) and animated progress bar",
             ],
-            days: ["day-15", "day-18", "day-19", "day-21"],
+            days: [
+              "day-17-usestate",
+              "day-18-multi-component",
+              "day-19-interactive-header",
+              "day-20-tabs-theme",
+              "day-21-carousel",
+            ],
           },
         },
         {
           id: 5,
           status: "done",
-          title: "Fetch, useEffect hook, useRef hook & Context API",
+          title: "useEffect, useRef & Context API",
           summary:
-            "Get data from an API, run code with useEffect hook, focus inputs with useRef hook, and share theme with Context API.",
-          meta: "Completed · Days 20, 22, 26, 29",
+            "Fetch in React with useEffect, focus inputs with useRef, and share theme with Context API.",
+          meta: "Completed · Days 22–23",
           details: {
             about:
-              "You connected the app to online data and shared values (like theme and cart) across many components without passing props through every level.",
+              "You connected the app to online data and shared theme across components without prop drilling.",
             focus: [
-              "fetch and async/await in plain JavaScript",
               "useEffect hook to fetch posts when the page loads",
               "useRef hook to focus an input when a button is clicked",
-              "Context API with ThemeProvider and CartProvider",
+              "Context API with ThemeProvider",
             ],
-            days: ["day-20", "day-22", "day-26", "day-29"],
+            days: ["day-22-useeffect-useref", "day-23-context-api"],
           },
         },
         {
           id: 6,
           status: "done",
-          title: "TypeScript & React Router",
+          title: "TypeScript, Router, Zustand & shadcn",
           summary:
-            "Type objects and hooks with TypeScript, then add multi-page navigation with React Router.",
-          meta: "Completed · Days 27–29",
+            "Type objects with TypeScript, then build ShopNow with React Router, Zustand, and shadcn/ui.",
+          meta: "Completed · Days 24–25",
           details: {
             about:
-              "You learned interfaces, type aliases, and generics, then split the shop into home, cart, and wishlist routes.",
+              "You learned TypeScript basics, then built ShopNow with routes, cart/wishlist store, and UI primitives.",
             focus: [
-              "Interfaces and type aliases for product and cart shapes",
-              "Generics on hooks and custom functions",
+              "Interfaces and type aliases",
               "createBrowserRouter + RouterProvider",
-              "Nested routes, Link, and Outlet",
+              "Zustand cart and wishlist store",
+              "shadcn/ui with Tailwind tokens",
             ],
-            days: ["day-27", "day-28", "day-29"],
+            days: ["day-24-typescript", "day-25-shopnow", "Zustand", "shadcn/ui"],
           },
         },
         {
           id: 7,
           status: "done",
-          title: "App-wide state with Zustand",
+          title: "Node.js & Express backend",
           summary:
-            "Share cart and wishlist data across the app with a simple Zustand store.",
-          meta: "Completed · Day 27",
+            "Start with a plain Node server (2 routes), then the same idea in Express, add :id params, and split into folders.",
+          meta: "Completed · Backend Days 1–4",
           details: {
             about:
-              "You used Zustand for cart and wishlist — add, update quantity, remove, and toggle likes — and compared it with Context API.",
+              "Backend stays minimal — about two routes per day. Node first, then Express, then params, then a simple folder split. No database. Day numbers restart under backend/.",
             focus: [
-              "Create a Zustand store with cart and wishlist state",
-              "Connect store actions to product and cart UI",
-              "Compare Zustand vs Context API for the same cart flow",
-              "Keep store logic simple and beginner-friendly",
+              "Plain Node HTTP server with 2 routes",
+              "Same 2 routes with Express",
+              "GET list + GET by :id",
+              "Split into routes, controllers, and constants",
             ],
-            days: ["day-27", "Zustand"],
+            days: [
+              "backend/day-1-node-server",
+              "backend/day-2-express-intro",
+              "backend/day-3-express-routes",
+              "backend/day-4-express-structure",
+            ],
           },
         },
         {
           id: 8,
-          status: "upcoming",
-          title: "Ready-made component libraries (shadcn/ui)",
-          summary:
-            "Use shadcn/ui with Tailwind tokens so you do not rebuild every button and input yourself.",
-          meta: "Completed · Days 27, 29–30",
-          details: {
-            about:
-              "You set up shadcn/ui, design tokens, and Convergence typography, then used Button, Input, and other pieces in real screens.",
-            focus: [
-              "Install and configure shadcn/ui with Vite + Tailwind",
-              "Use CSS variables for light/dark themes",
-              "Build screens with Button, Input, and related components",
-              "Know when to use a library piece vs build your own",
-            ],
-            days: ["day-27", "day-29", "shadcn/ui"],
-          },
-        },
-        {
-          id: 9,
           status: "done",
-          title: "TanStack Query — useQuery basics (Day 30)",
+          title: "TanStack Query — useQuery basics (Fullstack Day 1)",
           summary:
             "Fetch products with useQuery: isPending for loading UI, staleTime for cache freshness, and refetch on demand.",
-          meta: "Completed · Day 30",
+          meta: "Completed · Fullstack Day 1",
           details: {
             about:
-              "Day 30 focused on TanStack Query on the client — useQuery with Axios to load products, show pending state, keep data fresh with staleTime, and manually refetch.",
+              "Fullstack Day 1 focused on TanStack Query on the client — useQuery with Axios to load products from Express, show pending state, keep data fresh with staleTime, and manually refetch. The root README is the full path overview.",
             focus: [
               "useQuery with queryKey and queryFn",
               "isPending for first-load loading UI",
               "staleTime (e.g. 5 minutes) so data stays fresh",
               "refetch() to fetch again from a button",
             ],
-            days: ["day-30", "useQuery", "staleTime", "isPending", "refetch"],
+            days: [
+              "fullstack/day-1-tanstack-query",
+              "useQuery",
+              "staleTime",
+              "isPending",
+              "refetch",
+            ],
           },
         },
+
         {
-          id: 10,
-          status: "done",
+          id: 9,
+          status: "upcoming",
           title: "Project 1",
           summary:
             "Learn how to use AI (like Cursor/Codex/Claude etc.) to help you build one complete real frontend project.",
@@ -772,7 +789,7 @@
           },
         },
         {
-          id: 11,
+          id: 10,
           status: "upcoming",
           title: "Building your own custom components",
           summary:
@@ -791,7 +808,7 @@
           },
         },
         {
-          id: 12,
+          id: 11,
           status: "upcoming",
           title: "Performance optimisation",
           summary:
