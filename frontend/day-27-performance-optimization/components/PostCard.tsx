@@ -24,7 +24,7 @@ export function PostCard({ post, onRemove, onReactionClick }: PostCardProps) {
         </button>
       </div>
 
-      <p className="mt-2 whitespace-pre-wrap break-words text-sm leading-relaxed text-foreground sm:text-base">
+      <p className="mt-2 whitespace-pre-wrap wrap-break-word text-sm leading-relaxed text-foreground sm:text-base">
         {post.description}
       </p>
 
