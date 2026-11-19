@@ -1,5 +1,5 @@
-import { DUMMY_FAQ_DATA } from "./constants/accordionData";
 import { AccordionComponent } from "./components/AccordionComponent";
+import { DUMMY_FAQ_DATA } from "./constants/accordionData";
 
 const App = () => {
   return (
@@ -7,7 +7,7 @@ const App = () => {
       <section className="accordion-section">
         <div className="accordion-header">
           <h2>Accordion Section</h2>
-          <p>This is an Accordion practice section.</p>
+          <p>Accordion custom component built using react for practice</p>
         </div>
         <AccordionComponent data={DUMMY_FAQ_DATA} />
       </section>
