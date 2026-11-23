@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="dark">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,6 +11,24 @@
       rel="stylesheet"
     />
     <style>
+      :root {
+        --background: #f9fafb;
+        --foreground: #11181c;
+        --primary: #059669;
+        --primary-foreground: #022c22;
+        --card: #ffffff;
+        --glow-bg: #0596691a;
+        --muted: #e5e7eb;
+        --muted-foreground: #6b7280;
+        --border: #d1d5db;
+
+        --space-sm: 0.5rem;
+        --space-md: 1rem;
+        --space-lg: 1.5rem;
+        --space-xl: 2rem;
+        --space-2xl: 4rem;
+      }
+
       .dark {
         --background: #0f1113;
         --foreground: #e5e7eb;
@@ -21,12 +39,6 @@
         --muted: #1f2327;
         --muted-foreground: #9ca3af;
         --border: #2a2f33;
-
-        --space-sm: 0.5rem;
-        --space-md: 1rem;
-        --space-lg: 1.5rem;
-        --space-xl: 2rem;
-        --space-2xl: 4rem;
       }
 
       * {
@@ -42,6 +54,62 @@
         color: var(--foreground);
         line-height: 1.6;
         padding: var(--space-xl) var(--space-md) var(--space-2xl);
+        transition:
+          background 0.2s ease,
+          color 0.2s ease;
+      }
+
+      .theme-toggle {
+        position: fixed;
+        top: var(--space-md);
+        right: var(--space-md);
+        z-index: 40;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.45rem 0.7rem;
+        border-radius: 999px;
+        border: 1px solid var(--border);
+        background: var(--card);
+        color: var(--foreground);
+        font-family: "Merriweather", Georgia, serif;
+        font-size: 0.8rem;
+        cursor: pointer;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+      }
+
+      .theme-toggle:hover {
+        border-color: var(--primary);
+      }
+
+      .theme-toggle:focus-visible {
+        outline: 2px solid var(--primary);
+        outline-offset: 2px;
+      }
+
+      .theme-toggle-track {
+        width: 2.2rem;
+        height: 1.2rem;
+        border-radius: 999px;
+        background: var(--muted);
+        border: 1px solid var(--border);
+        position: relative;
+        flex-shrink: 0;
+      }
+
+      .theme-toggle-thumb {
+        position: absolute;
+        top: 1px;
+        left: 1px;
+        width: 0.9rem;
+        height: 0.9rem;
+        border-radius: 50%;
+        background: var(--primary);
+        transition: transform 0.2s ease;
+      }
+
+      .dark .theme-toggle-thumb {
+        transform: translateX(1rem);
       }
 
       .page {
@@ -339,6 +407,19 @@
     </style>
   </head>
   <body>
+    <button
+      type="button"
+      class="theme-toggle"
+      id="theme-toggle"
+      aria-label="Switch theme"
+      aria-pressed="false"
+    >
+      <span class="theme-toggle-track" aria-hidden="true">
+        <span class="theme-toggle-thumb"></span>
+      </span>
+      <span id="theme-toggle-label">Light</span>
+    </button>
+
     <div class="page">
       <header class="page-header">
         <h1>Web Dev Test 1</h1>
@@ -882,6 +963,23 @@
     </div>
 
     <script>
+      const root = document.documentElement;
+      const themeToggle = document.getElementById("theme-toggle");
+      const themeLabel = document.getElementById("theme-toggle-label");
+
+      function syncThemeUI() {
+        const isDark = root.classList.contains("dark");
+        themeLabel.textContent = isDark ? "Dark" : "Light";
+        themeToggle.setAttribute("aria-pressed", String(isDark));
+      }
+
+      themeToggle.addEventListener("click", () => {
+        root.classList.toggle("dark");
+        syncThemeUI();
+      });
+
+      syncThemeUI();
+
       document.querySelectorAll(".question[data-type='mcq']").forEach((question) => {
         question.querySelectorAll("input[type='checkbox']").forEach((box) => {
           box.addEventListener("change", () => {
