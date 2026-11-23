@@ -173,22 +173,25 @@
         font-size: 0.95rem;
       }
 
-      .coding-hint {
+      .coding-steps {
         color: var(--muted-foreground);
-        font-size: 0.9rem;
-        margin-bottom: var(--space-sm);
-      }
-
-      .coding-link {
-        display: inline-block;
-        color: var(--primary);
-        margin-bottom: var(--space-md);
         font-size: 0.95rem;
+        margin: 0 0 var(--space-md) 1.25rem;
+        display: grid;
+        gap: 0.4rem;
       }
 
-      .coding-link:focus-visible {
+      .coding-steps a {
+        color: var(--primary);
+      }
+
+      .coding-steps a:focus-visible {
         outline: 2px solid var(--primary);
         outline-offset: 2px;
+      }
+
+      .coding-steps code {
+        color: var(--foreground);
       }
 
       .code-block {
@@ -197,7 +200,7 @@
         border: 1px solid var(--border);
         border-radius: 8px;
         padding: var(--space-md);
-        margin: var(--space-sm) 0 var(--space-md);
+        margin: 0 0 var(--space-md);
         font-size: 0.9rem;
         overflow-x: auto;
         white-space: pre-wrap;
@@ -760,29 +763,33 @@
             <p class="question-title">
               <span>Q18.</span> Coding: sort people by age (youngest first)
             </p>
-            <p class="coding-hint">
-              Open OneCompiler. Write code. Paste your answer below. Do not
-              change the original array.
-            </p>
-            <a
-              class="coding-link"
-              href="https://onecompiler.com/javascript"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Open OneCompiler (javascript)
-            </a>
+            <ol class="coding-steps">
+              <li>Copy the code block below.</li>
+              <li>
+                Open
+                <a
+                  href="https://onecompiler.com/javascript"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >OneCompiler</a
+                >.
+              </li>
+              <li>Paste the copied code in OneCompiler.</li>
+              <li>
+                Solve it there. Sort by age (youngest first). Do not change the
+                original <code>people</code> array.
+              </li>
+              <li>Copy your final code and paste it in the box below.</li>
+            </ol>
             <code class="code-block">const people = [
   { name: "Riya", age: 25 },
   { name: "Aman", age: 19 },
   { name: "Neha", age: 22 },
-];
-// Sort by age (youngest first) without changing people.
-// Then console.log the new sorted array.</code>
+];</code>
             <textarea
               class="answer-box"
               name="q18"
-              placeholder="Paste your code here..."
+              placeholder="Paste your final code here..."
               aria-label="Answer for question 18"
             ></textarea>
           </div>
@@ -791,24 +798,26 @@
             <p class="question-title">
               <span>Q19.</span> Coding: make a new array with each number doubled
             </p>
-            <p class="coding-hint">
-              Open OneCompiler. Write code. Paste your answer below.
-            </p>
-            <a
-              class="coding-link"
-              href="https://onecompiler.com/javascript"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Open OneCompiler (javascript)
-            </a>
-            <code class="code-block">const nums = [1, 2, 3, 4];
-// Make a new array where each number is doubled.
-// Then console.log the new array.</code>
+            <ol class="coding-steps">
+              <li>Copy the code block below.</li>
+              <li>
+                Open
+                <a
+                  href="https://onecompiler.com/javascript"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >OneCompiler</a
+                >.
+              </li>
+              <li>Paste the copied code in OneCompiler.</li>
+              <li>Solve it there. Make a new array with each number doubled.</li>
+              <li>Copy your final code and paste it in the box below.</li>
+            </ol>
+            <code class="code-block">const nums = [1, 2, 3, 4];</code>
             <textarea
               class="answer-box"
               name="q19"
-              placeholder="Paste your code here..."
+              placeholder="Paste your final code here..."
               aria-label="Answer for question 19"
             ></textarea>
           </div>
@@ -817,24 +826,26 @@
             <p class="question-title">
               <span>Q20.</span> Coding: keep only the even numbers
             </p>
-            <p class="coding-hint">
-              Open OneCompiler. Write code. Paste your answer below.
-            </p>
-            <a
-              class="coding-link"
-              href="https://onecompiler.com/javascript"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Open OneCompiler (javascript)
-            </a>
-            <code class="code-block">const nums = [1, 2, 3, 4, 5, 6];
-// Keep only the even numbers in a new array.
-// Then console.log the new array.</code>
+            <ol class="coding-steps">
+              <li>Copy the code block below.</li>
+              <li>
+                Open
+                <a
+                  href="https://onecompiler.com/javascript"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >OneCompiler</a
+                >.
+              </li>
+              <li>Paste the copied code in OneCompiler.</li>
+              <li>Solve it there. Keep only the even numbers in a new array.</li>
+              <li>Copy your final code and paste it in the box below.</li>
+            </ol>
+            <code class="code-block">const nums = [1, 2, 3, 4, 5, 6];</code>
             <textarea
               class="answer-box"
               name="q20"
-              placeholder="Paste your code here..."
+              placeholder="Paste your final code here..."
               aria-label="Answer for question 20"
             ></textarea>
           </div>
