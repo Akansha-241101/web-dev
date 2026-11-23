@@ -14,7 +14,7 @@
       :root {
         --background: #f9fafb;
         --foreground: #11181c;
-        --primary: #059669;
+        --primary: #28d19b;
         --primary-foreground: #022c22;
         --card: #ffffff;
         --glow-bg: #0596691a;
@@ -32,7 +32,7 @@
       .dark {
         --background: #0f1113;
         --foreground: #e5e7eb;
-        --primary: #059669;
+        --primary: #0fb782;
         --primary-foreground: #022c22;
         --card: #17191c;
         --glow-bg: #11221abf;
@@ -192,7 +192,7 @@
         align-items: flex-start;
         gap: 0.75rem;
         padding: 0.75rem 1rem;
-        background: var(--muted);
+        background: var(--background);
         border: 1px solid var(--border);
         border-radius: 8px;
         cursor: pointer;
@@ -220,16 +220,29 @@
         border: 2px solid var(--border);
         border-radius: 4px;
         background-color: var(--card);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 0.7rem 0.7rem;
         cursor: pointer;
+        display: grid;
+        place-content: center;
       }
 
       .option input[type="checkbox"]:checked {
         background-color: var(--primary);
         border-color: var(--primary);
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M3.5 8.5L6.5 11.5L12.5 4.5' stroke='%23022c22' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      }
+
+      .option input[type="checkbox"]:checked::after {
+        content: "";
+        width: 0.7rem;
+        height: 0.7rem;
+        background-color: white;
+        -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M3.5 8.5L6.5 11.5L12.5 4.5' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+        mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M3.5 8.5L6.5 11.5L12.5 4.5' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+        -webkit-mask-size: contain;
+        mask-size: contain;
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+        mask-position: center;
       }
 
       .option input[type="checkbox"]:focus-visible {
@@ -390,9 +403,21 @@
         color: var(--foreground);
       }
 
+      .modal-message {
+        color: var(--muted-foreground);
+        font-size: 0.95rem;
+        margin-bottom: var(--space-xl);
+        line-height: 1.6;
+      }
+
+      .modal-message strong {
+        color: var(--foreground);
+      }
+
       .modal .actions {
         margin-top: 0;
         justify-content: flex-end;
+        gap: var(--space-sm);
       }
 
       @media (max-width: 520px) {
@@ -626,7 +651,9 @@
 
         <section class="section-card" aria-labelledby="sec-js">
           <h2 id="sec-js">3. JavaScript &amp; React</h2>
-          <p class="section-meta">12 questions · 60 marks · includes 3 coding tasks</p>
+          <p class="section-meta">
+            12 questions · 60 marks · includes 3 coding tasks
+          </p>
 
           <div class="question" data-type="mcq" data-correct="b">
             <p class="question-title">
@@ -862,11 +889,10 @@
               </li>
               <li>Copy your final code and paste it in the box below.</li>
             </ol>
-            <code class="code-block">const people = [
-  { name: "Riya", age: 25 },
-  { name: "Aman", age: 19 },
-  { name: "Neha", age: 22 },
-];</code>
+            <code class="code-block"
+              >const people = [ { name: "Riya", age: 25 }, { name: "Aman", age:
+              19 }, { name: "Neha", age: 22 }, ];</code
+            >
             <textarea
               class="answer-box"
               name="q18"
@@ -877,7 +903,8 @@
 
           <div class="question" data-type="coding" data-code="map">
             <p class="question-title">
-              <span>Q19.</span> Coding: make a new array with each number doubled
+              <span>Q19.</span> Coding: make a new array with each number
+              doubled
             </p>
             <ol class="coding-steps">
               <li>Copy the code block below.</li>
@@ -891,7 +918,9 @@
                 >.
               </li>
               <li>Paste the copied code in OneCompiler.</li>
-              <li>Solve it there. Make a new array with each number doubled.</li>
+              <li>
+                Solve it there. Make a new array with each number doubled.
+              </li>
               <li>Copy your final code and paste it in the box below.</li>
             </ol>
             <code class="code-block">const nums = [1, 2, 3, 4];</code>
@@ -919,7 +948,9 @@
                 >.
               </li>
               <li>Paste the copied code in OneCompiler.</li>
-              <li>Solve it there. Keep only the even numbers in a new array.</li>
+              <li>
+                Solve it there. Keep only the even numbers in a new array.
+              </li>
               <li>Copy your final code and paste it in the box below.</li>
             </ol>
             <code class="code-block">const nums = [1, 2, 3, 4, 5, 6];</code>
@@ -936,6 +967,29 @@
           <button type="submit" class="btn btn-primary">Submit Test</button>
         </div>
       </form>
+    </div>
+
+    <div
+      class="modal-overlay"
+      id="confirm-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="confirm-title"
+    >
+      <div class="modal">
+        <h2 id="confirm-title">Submit Test?</h2>
+        <p class="modal-message" id="confirm-message">
+          Are you sure you want to submit your test?
+        </p>
+        <div class="actions">
+          <button type="button" class="btn btn-secondary" id="confirm-cancel">
+            Go Back
+          </button>
+          <button type="button" class="btn btn-primary" id="confirm-yes">
+            Yes, Submit
+          </button>
+        </div>
+      </div>
     </div>
 
     <div
@@ -980,61 +1034,97 @@
 
       syncThemeUI();
 
-      document.querySelectorAll(".question[data-type='mcq']").forEach((question) => {
-        question.querySelectorAll("input[type='checkbox']").forEach((box) => {
-          box.addEventListener("change", () => {
-            if (!box.checked) return;
-            question.querySelectorAll("input[type='checkbox']").forEach((other) => {
-              if (other !== box) other.checked = false;
+      document
+        .querySelectorAll(".question[data-type='mcq']")
+        .forEach((question) => {
+          question.querySelectorAll("input[type='checkbox']").forEach((box) => {
+            box.addEventListener("change", () => {
+              if (!box.checked) return;
+              question
+                .querySelectorAll("input[type='checkbox']")
+                .forEach((other) => {
+                  if (other !== box) other.checked = false;
+                });
             });
           });
         });
-      });
 
+      const TOTAL_QUESTIONS = 20;
       const form = document.getElementById("test-form");
-      const modal = document.getElementById("result-modal");
+      const confirmModal = document.getElementById("confirm-modal");
+      const confirmMessage = document.getElementById("confirm-message");
+      const confirmCancel = document.getElementById("confirm-cancel");
+      const confirmYes = document.getElementById("confirm-yes");
+      const resultModal = document.getElementById("result-modal");
       const closeModal = document.getElementById("close-modal");
 
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
+      function countAnswered() {
+        let answered = 0;
 
+        document
+          .querySelectorAll(".question[data-type='mcq']")
+          .forEach((question) => {
+            if (question.querySelector("input[type='checkbox']:checked")) {
+              answered += 1;
+            }
+          });
+
+        document
+          .querySelectorAll(".question[data-type='coding']")
+          .forEach((question) => {
+            const value = (
+              question.querySelector("textarea")?.value || ""
+            ).trim();
+            if (value) answered += 1;
+          });
+
+        return answered;
+      }
+
+      function gradeTest() {
         let correct = 0;
         let wrong = 0;
         let skipped = 0;
 
-        document.querySelectorAll(".question[data-type='mcq']").forEach((question) => {
-          const expected = question.dataset.correct;
-          const checked = question.querySelector(
-            "input[type='checkbox']:checked",
-          );
+        document
+          .querySelectorAll(".question[data-type='mcq']")
+          .forEach((question) => {
+            const expected = question.dataset.correct;
+            const checked = question.querySelector(
+              "input[type='checkbox']:checked",
+            );
 
-          if (!checked) {
-            skipped += 1;
-            return;
-          }
+            if (!checked) {
+              skipped += 1;
+              return;
+            }
 
-          if (checked.value === expected) {
-            correct += 1;
-          } else {
-            wrong += 1;
-          }
-        });
+            if (checked.value === expected) {
+              correct += 1;
+            } else {
+              wrong += 1;
+            }
+          });
 
-        document.querySelectorAll(".question[data-type='coding']").forEach((question) => {
-          const kind = question.dataset.code;
-          const value = (question.querySelector("textarea")?.value || "").trim();
+        document
+          .querySelectorAll(".question[data-type='coding']")
+          .forEach((question) => {
+            const kind = question.dataset.code;
+            const value = (
+              question.querySelector("textarea")?.value || ""
+            ).trim();
 
-          if (!value) {
-            skipped += 1;
-            return;
-          }
+            if (!value) {
+              skipped += 1;
+              return;
+            }
 
-          if (gradeCoding(kind, value)) {
-            correct += 1;
-          } else {
-            wrong += 1;
-          }
-        });
+            if (gradeCoding(kind, value)) {
+              correct += 1;
+            } else {
+              wrong += 1;
+            }
+          });
 
         const answered = correct + wrong;
         const score = correct * 5;
@@ -1045,15 +1135,42 @@
         document.getElementById("stat-wrong").textContent = String(wrong);
         document.getElementById("stat-skipped").textContent = String(skipped);
 
-        modal.classList.add("is-open");
+        resultModal.classList.add("is-open");
+      }
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const answered = countAnswered();
+        confirmMessage.innerHTML =
+          "Are you sure you want to submit your test?<br /><br />You answered <strong>" +
+          answered +
+          "</strong> out of <strong>" +
+          TOTAL_QUESTIONS +
+          "</strong> questions.";
+
+        confirmModal.classList.add("is-open");
+      });
+
+      confirmCancel.addEventListener("click", () => {
+        confirmModal.classList.remove("is-open");
+      });
+
+      confirmYes.addEventListener("click", () => {
+        confirmModal.classList.remove("is-open");
+        gradeTest();
+      });
+
+      confirmModal.addEventListener("click", (e) => {
+        if (e.target === confirmModal) confirmModal.classList.remove("is-open");
       });
 
       closeModal.addEventListener("click", () => {
-        modal.classList.remove("is-open");
+        resultModal.classList.remove("is-open");
       });
 
-      modal.addEventListener("click", (e) => {
-        if (e.target === modal) modal.classList.remove("is-open");
+      resultModal.addEventListener("click", (e) => {
+        if (e.target === resultModal) resultModal.classList.remove("is-open");
       });
 
       function gradeCoding(kind, raw) {
@@ -1074,7 +1191,8 @@
 
         if (kind === "map") {
           return (
-            code.includes(".map") && (code.includes("* 2") || code.includes("*2"))
+            code.includes(".map") &&
+            (code.includes("* 2") || code.includes("*2"))
           );
         }
 
