@@ -1,0 +1,987 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Dev Test 1 — Akansha</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .dark {
+        --background: #0f1113;
+        --foreground: #e5e7eb;
+        --primary: #059669;
+        --primary-foreground: #022c22;
+        --card: #17191c;
+        --glow-bg: #11221abf;
+        --muted: #1f2327;
+        --muted-foreground: #9ca3af;
+        --border: #2a2f33;
+
+        --space-sm: 0.5rem;
+        --space-md: 1rem;
+        --space-lg: 1.5rem;
+        --space-xl: 2rem;
+        --space-2xl: 4rem;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        min-height: 100vh;
+        font-family: "Merriweather", Georgia, serif;
+        background: var(--background);
+        color: var(--foreground);
+        line-height: 1.6;
+        padding: var(--space-xl) var(--space-md) var(--space-2xl);
+      }
+
+      .page {
+        max-width: 720px;
+        margin: 0 auto;
+      }
+
+      .page-header {
+        margin-bottom: var(--space-xl);
+        padding: var(--space-xl) var(--space-lg);
+        border-radius: 12px;
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-top: 3px solid var(--primary);
+      }
+
+      .page-header h1 {
+        font-size: 1.75rem;
+        font-weight: 700;
+        margin-bottom: var(--space-sm);
+        letter-spacing: -0.02em;
+      }
+
+      .page-header p {
+        color: var(--muted-foreground);
+        font-size: 0.95rem;
+        max-width: 36rem;
+      }
+
+      .section-card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: var(--space-lg);
+        margin-bottom: var(--space-lg);
+      }
+
+      .section-card h2 {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-bottom: var(--space-sm);
+        color: var(--primary);
+      }
+
+      .section-meta {
+        color: var(--muted-foreground);
+        font-size: 0.85rem;
+        margin-bottom: var(--space-lg);
+      }
+
+      .question {
+        padding: var(--space-md) 0;
+        border-top: 1px solid var(--border);
+      }
+
+      .question:first-of-type {
+        border-top: none;
+        padding-top: 0;
+      }
+
+      .question-title {
+        font-size: 1rem;
+        font-weight: 700;
+        margin-bottom: var(--space-md);
+      }
+
+      .question-title span {
+        color: var(--primary);
+        margin-right: 0.35rem;
+      }
+
+      .options {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-sm);
+      }
+
+      .option {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.75rem;
+        padding: 0.75rem 1rem;
+        background: var(--muted);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        cursor: pointer;
+        transition:
+          border-color 0.15s ease,
+          background 0.15s ease;
+      }
+
+      .option:hover {
+        border-color: var(--primary);
+      }
+
+      .option:has(input:checked) {
+        border-color: var(--primary);
+        background: var(--glow-bg);
+      }
+
+      .option input[type="checkbox"] {
+        appearance: none;
+        -webkit-appearance: none;
+        width: 1.15rem;
+        height: 1.15rem;
+        margin-top: 0.15rem;
+        flex-shrink: 0;
+        border: 2px solid var(--border);
+        border-radius: 4px;
+        background-color: var(--card);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 0.7rem 0.7rem;
+        cursor: pointer;
+      }
+
+      .option input[type="checkbox"]:checked {
+        background-color: var(--primary);
+        border-color: var(--primary);
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M3.5 8.5L6.5 11.5L12.5 4.5' stroke='%23022c22' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      }
+
+      .option input[type="checkbox"]:focus-visible {
+        outline: 2px solid var(--primary);
+        outline-offset: 2px;
+      }
+
+      .option span {
+        font-size: 0.95rem;
+      }
+
+      .coding-hint {
+        color: var(--muted-foreground);
+        font-size: 0.9rem;
+        margin-bottom: var(--space-sm);
+      }
+
+      .coding-link {
+        display: inline-block;
+        color: var(--primary);
+        margin-bottom: var(--space-md);
+        font-size: 0.95rem;
+      }
+
+      .coding-link:focus-visible {
+        outline: 2px solid var(--primary);
+        outline-offset: 2px;
+      }
+
+      .code-block {
+        display: block;
+        background: var(--muted);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: var(--space-md);
+        margin: var(--space-sm) 0 var(--space-md);
+        font-size: 0.9rem;
+        overflow-x: auto;
+        white-space: pre-wrap;
+      }
+
+      textarea.answer-box {
+        width: 100%;
+        min-height: 120px;
+        resize: vertical;
+        font-family: "Merriweather", Georgia, serif;
+        font-size: 0.95rem;
+        color: var(--foreground);
+        background: var(--muted);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: var(--space-md);
+        line-height: 1.5;
+      }
+
+      textarea.answer-box:focus {
+        outline: none;
+        border-color: var(--primary);
+        box-shadow: 0 0 0 2px rgba(5, 150, 105, 0.25);
+      }
+
+      textarea.answer-box::placeholder {
+        color: var(--muted-foreground);
+      }
+
+      .actions {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: var(--space-xl);
+      }
+
+      .btn {
+        font-family: "Merriweather", Georgia, serif;
+        font-size: 1rem;
+        font-weight: 700;
+        border: none;
+        border-radius: 8px;
+        padding: 0.85rem 1.5rem;
+        cursor: pointer;
+        transition:
+          background 0.15s ease,
+          transform 0.1s ease;
+      }
+
+      .btn-primary {
+        background: var(--primary);
+        color: var(--primary-foreground);
+      }
+
+      .btn-primary:hover {
+        background: #047857;
+      }
+
+      .btn-primary:focus-visible {
+        outline: 2px solid var(--primary);
+        outline-offset: 3px;
+      }
+
+      .btn-secondary {
+        background: var(--muted);
+        color: var(--foreground);
+        border: 1px solid var(--border);
+      }
+
+      .btn-secondary:hover {
+        border-color: var(--primary);
+      }
+
+      .modal-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.65);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        padding: var(--space-md);
+        z-index: 50;
+      }
+
+      .modal-overlay.is-open {
+        display: flex;
+      }
+
+      .modal {
+        width: 100%;
+        max-width: 420px;
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: var(--space-xl);
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+      }
+
+      .modal h2 {
+        font-size: 1.35rem;
+        margin-bottom: var(--space-md);
+        color: var(--primary);
+      }
+
+      .modal-score {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: var(--space-lg);
+      }
+
+      .modal-stats {
+        display: grid;
+        gap: var(--space-sm);
+        margin-bottom: var(--space-xl);
+        color: var(--muted-foreground);
+        font-size: 0.95rem;
+      }
+
+      .modal-stats strong {
+        color: var(--foreground);
+      }
+
+      .modal .actions {
+        margin-top: 0;
+        justify-content: flex-end;
+      }
+
+      @media (max-width: 520px) {
+        .page-header h1 {
+          font-size: 1.4rem;
+        }
+
+        .section-card {
+          padding: var(--space-md);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header class="page-header">
+        <h1>Web Dev Test 1</h1>
+        <p>
+          Simple test for Akansha. 20 questions. 5 marks each. Total 100. Skip
+          is OK. Take your time.
+        </p>
+      </header>
+
+      <form id="test-form">
+        <section class="section-card" aria-labelledby="sec-html">
+          <h2 id="sec-html">1. General &amp; HTML</h2>
+          <p class="section-meta">6 questions · 30 marks</p>
+
+          <div class="question" data-type="mcq" data-correct="a">
+            <p class="question-title">
+              <span>Q1.</span> What is the full form of HTML?
+            </p>
+            <div class="options">
+              <label class="option">
+                <input type="checkbox" name="q1" value="a" />
+                <span>HyperText Markup Language</span>
+              </label>
+              <label class="option">
+                <input type="checkbox" name="q1" value="b" />
+                <span>HighText Machine Language</span>
+              </label>
+              <label class="option">
+                <input type="checkbox" name="q1" value="c" />
+                <span>HyperTool Multi Language</span>
+              </label>
+              <label class="option">
+                <input type="checkbox" name="q1" value="d" />
+                <span>Home Text Mark Language</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="question" data-type="mcq" data-correct="b">
+            <p class="question-title">
+              <span>Q2.</span> What is the full form of CSS?
+            </p>
+            <div class="options">
+              <label class="option">
+                <input type="checkbox" name="q2" value="a" />
+                <span>Computer Style Sheet</span>
+              </label>
+              <label class="option">
+                <input type="checkbox" name="q2" value="b" />
+                <span>Cascading Style Sheets</span>
+              </label>
+              <label class="option">
+                <input type="checkbox" name="q2" value="c" />
+                <span>Creative Style System</span>
+              </label>
+              <label class="option">
+                <input type="checkbox" name="q2" value="d" />
+                <span>Color Style Script</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="question" data-type="mcq" data-correct="b">
+            <p class="question-title"><span>Q3.</span> What is a domain?</p>
+            <div class="options">
+              <label class="option">
+                <input type="checkbox" name="q3" value="a" />
+                <span>A CSS color name</span>
+              </label>
+              <label class="option">
+                <input type="checkbox" name="q3" value="b" />
+                <span>A website address like google.com</span>
+              </label>
+              <label class="option">
+                <input type="checkbox" name="q3" value="c" />
+                <span>A React hook</span>
+              </label>
+              <label class="option">
+                <input type="checkbox" name="q3" value="d" />
+                <span>A JavaScript array method</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="question" data-type="mcq" data-correct="c">
+            <p class="question-title"><span>Q4.</span> What is hosting?</p>
+            <div class="options">
+              <label class="option">
+                <input type="checkbox" name="q4" value="a" />
+                <span>Writing HTML tags</span>
+              </label>
+              <label class="option">
+                <input type="checkbox" name="q4" value="b" />
+                <span>Changing font size</span>
+              </label>
+              <label class="option">
+                <input type="checkbox" name="q4" value="c" />
+                <span>Putting your website on the internet</span>
+              </label>
+              <label class="option">
+                <input type="checkbox" name="q4" value="d" />
+                <span>Deleting a file</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="question" data-type="mcq" data-correct="a">
+            <p class="question-title"><span>Q5.</span> What is Vercel?</p>
+            <div class="options">
+              <label class="option">
+                <input type="checkbox" name="q5" value="a" />
+                <span>A platform to host websites</span>
+              </label>
+              <label class="option">
+                <input type="checkbox" name="q5" value="b" />
+                <span>A CSS framework</span>
+              </label>
+              <label class="option">
+                <input type="checkbox" name="q5" value="c" />
+                <span>A JavaScript array</span>
+              </label>
+              <label class="option">
+                <input type="checkbox" name="q5" value="d" />
+                <span>A browser only for Chrome</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="question" data-type="mcq" data-correct="d">
+            <p class="question-title"><span>Q6.</span> What is the DOM?</p>
+            <div class="options">
+              <label class="option">
+                <input type="checkbox" name="q6" value="a" />
+                <span>A type of database</span>
+              </label>
+              <label class="option">
+                <input type="checkbox" name="q6" value="b" />
+                <span>A CSS color tool</span>
+              </label>
+              <label class="option">
+                <input type="checkbox" name="q6" value="c" />
+                <span>A React component</span>
+              </label>
+              <label class="option">
+                <input type="checkbox" name="q6" value="d" />
+                <span>The page structure the browser builds from HTML</span>
+              </label>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-card" aria-labelledby="sec-css">
+          <h2 id="sec-css">2. CSS</h2>
+          <p class="section-meta">2 questions · 10 marks</p>
+
+          <div class="question" data-type="mcq" data-correct="c">
+            <p class="question-title">
+              <span>Q7.</span> What do Tailwind utility classes help you do?
+            </p>
+            <div class="options">
+              <label class="option">
+                <input type="checkbox" name="q7" value="a" />
+                <span>Connect to a database</span>
+              </label>
+              <label class="option">
+                <input type="checkbox" name="q7" value="b" />
+                <span>Write server code</span>
+              </label>
+              <label class="option">
+                <input type="checkbox" name="q7" value="c" />
+                <span>Style HTML with small class names</span>
+              </label>
+              <label class="option">
+                <input type="checkbox" name="q7" value="d" />
+                <span>Install React</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="question" data-type="mcq" data-correct="a">
+            <p class="question-title">
+              <span>Q8.</span> What is <code>display: flex</code> used for?
+            </p>
+            <div class="options">
+              <label class="option">
+                <input type="checkbox" name="q8" value="a" />
+                <span>To layout items in a row or column</span>
+              </label>
+              <label class="option">
+                <input type="checkbox" name="q8" value="b" />
+                <span>To change text color</span>
+              </label>
+              <label class="option">
+                <input type="checkbox" name="q8" value="c" />
+                <span>To add a border</span>
+              </label>
+              <label class="option">
+                <input type="checkbox" name="q8" value="d" />
+                <span>To hide an image</span>
+              </label>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-card" aria-labelledby="sec-js">
+          <h2 id="sec-js">3. JavaScript &amp; React</h2>
+          <p class="section-meta">12 questions · 60 marks · includes 3 coding tasks</p>
+
+          <div class="question" data-type="mcq" data-correct="b">
+            <p class="question-title">
+              <span>Q9.</span> Which is true about <code>const</code>?
+            </p>
+            <div class="options">
+              <label class="option">
+                <input type="checkbox" name="q9" value="a" />
+                <span>You can reassign it anytime</span>
+              </label>
+              <label class="option">
+                <input type="checkbox" name="q9" value="b" />
+                <span>You cannot reassign it</span>
+              </label>
+              <label class="option">
+                <input type="checkbox" name="q9" value="c" />
+                <span>It only works in CSS</span>
+              </label>
+              <label class="option">
+                <input type="checkbox" name="q9" value="d" />
+                <span>It deletes variables</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="question" data-type="mcq" data-correct="a">
+            <p class="question-title">
+              <span>Q10.</span> What does <code>.map()</code> return?
+            </p>
+            <div class="options">
+              <label class="option">
+                <input type="checkbox" name="q10" value="a" />
+                <span>A new array</span>
+              </label>
+              <label class="option">
+                <input type="checkbox" name="q10" value="b" />
+                <span>A string only</span>
+              </label>
+              <label class="option">
+                <input type="checkbox" name="q10" value="c" />
+                <span>A number only</span>
+              </label>
+              <label class="option">
+                <input type="checkbox" name="q10" value="d" />
+                <span>undefined always</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="question" data-type="mcq" data-correct="b">
+            <p class="question-title">
+              <span>Q11.</span> What does the spread <code>[...arr]</code> do?
+            </p>
+            <div class="options">
+              <label class="option">
+                <input type="checkbox" name="q11" value="a" />
+                <span>Deletes the array</span>
+              </label>
+              <label class="option">
+                <input type="checkbox" name="q11" value="b" />
+                <span>Makes a copy of the array</span>
+              </label>
+              <label class="option">
+                <input type="checkbox" name="q11" value="c" />
+                <span>Sorts the array</span>
+              </label>
+              <label class="option">
+                <input type="checkbox" name="q11" value="d" />
+                <span>Hides the array</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="question" data-type="mcq" data-correct="a">
+            <p class="question-title">
+              <span>Q12.</span> What is <code>useState</code> used for?
+            </p>
+            <div class="options">
+              <label class="option">
+                <input type="checkbox" name="q12" value="a" />
+                <span>To store and update data in a component</span>
+              </label>
+              <label class="option">
+                <input type="checkbox" name="q12" value="b" />
+                <span>To style a button</span>
+              </label>
+              <label class="option">
+                <input type="checkbox" name="q12" value="c" />
+                <span>To host a website</span>
+              </label>
+              <label class="option">
+                <input type="checkbox" name="q12" value="d" />
+                <span>To write HTML only</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="question" data-type="mcq" data-correct="c">
+            <p class="question-title"><span>Q13.</span> What are props?</p>
+            <div class="options">
+              <label class="option">
+                <input type="checkbox" name="q13" value="a" />
+                <span>CSS files only</span>
+              </label>
+              <label class="option">
+                <input type="checkbox" name="q13" value="b" />
+                <span>Server passwords</span>
+              </label>
+              <label class="option">
+                <input type="checkbox" name="q13" value="c" />
+                <span>Data passed from parent to child</span>
+              </label>
+              <label class="option">
+                <input type="checkbox" name="q13" value="d" />
+                <span>Browser bookmarks</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="question" data-type="mcq" data-correct="a">
+            <p class="question-title"><span>Q14.</span> What is memoization?</p>
+            <div class="options">
+              <label class="option">
+                <input type="checkbox" name="q14" value="a" />
+                <span>Saving a result so you do not redo the work</span>
+              </label>
+              <label class="option">
+                <input type="checkbox" name="q14" value="b" />
+                <span>Deleting unused files</span>
+              </label>
+              <label class="option">
+                <input type="checkbox" name="q14" value="c" />
+                <span>Writing HTML comments</span>
+              </label>
+              <label class="option">
+                <input type="checkbox" name="q14" value="d" />
+                <span>Buying a domain name</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="question" data-type="mcq" data-correct="b">
+            <p class="question-title">
+              <span>Q15.</span> What does <code>React.memo</code> help with?
+            </p>
+            <div class="options">
+              <label class="option">
+                <input type="checkbox" name="q15" value="a" />
+                <span>Fetching data from an API</span>
+              </label>
+              <label class="option">
+                <input type="checkbox" name="q15" value="b" />
+                <span>Skipping re-render when props are the same</span>
+              </label>
+              <label class="option">
+                <input type="checkbox" name="q15" value="c" />
+                <span>Creating a new route</span>
+              </label>
+              <label class="option">
+                <input type="checkbox" name="q15" value="d" />
+                <span>Styling a form</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="question" data-type="mcq" data-correct="c">
+            <p class="question-title">
+              <span>Q16.</span> What does <code>useCallback</code> help with?
+            </p>
+            <div class="options">
+              <label class="option">
+                <input type="checkbox" name="q16" value="a" />
+                <span>Changing the page font</span>
+              </label>
+              <label class="option">
+                <input type="checkbox" name="q16" value="b" />
+                <span>Hosting on Vercel</span>
+              </label>
+              <label class="option">
+                <input type="checkbox" name="q16" value="c" />
+                <span>Keeping a function reference stable</span>
+              </label>
+              <label class="option">
+                <input type="checkbox" name="q16" value="d" />
+                <span>Making a checkbox</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="question" data-type="mcq" data-correct="d">
+            <p class="question-title">
+              <span>Q17.</span> What does <code>useMemo</code> help with?
+            </p>
+            <div class="options">
+              <label class="option">
+                <input type="checkbox" name="q17" value="a" />
+                <span>Opening OneCompiler</span>
+              </label>
+              <label class="option">
+                <input type="checkbox" name="q17" value="b" />
+                <span>Writing CSS only</span>
+              </label>
+              <label class="option">
+                <input type="checkbox" name="q17" value="c" />
+                <span>Deleting React components</span>
+              </label>
+              <label class="option">
+                <input type="checkbox" name="q17" value="d" />
+                <span>Caching a computed value</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="question" data-type="coding" data-code="sort">
+            <p class="question-title">
+              <span>Q18.</span> Coding: sort people by age (youngest first)
+            </p>
+            <p class="coding-hint">
+              Open OneCompiler. Write code. Paste your answer below. Do not
+              change the original array.
+            </p>
+            <a
+              class="coding-link"
+              href="https://onecompiler.com/javascript"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Open OneCompiler (javascript)
+            </a>
+            <code class="code-block">const people = [
+  { name: "Riya", age: 25 },
+  { name: "Aman", age: 19 },
+  { name: "Neha", age: 22 },
+];
+// Sort by age (youngest first) without changing people.
+// Then console.log the new sorted array.</code>
+            <textarea
+              class="answer-box"
+              name="q18"
+              placeholder="Paste your code here..."
+              aria-label="Answer for question 18"
+            ></textarea>
+          </div>
+
+          <div class="question" data-type="coding" data-code="map">
+            <p class="question-title">
+              <span>Q19.</span> Coding: make a new array with each number doubled
+            </p>
+            <p class="coding-hint">
+              Open OneCompiler. Write code. Paste your answer below.
+            </p>
+            <a
+              class="coding-link"
+              href="https://onecompiler.com/javascript"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Open OneCompiler (javascript)
+            </a>
+            <code class="code-block">const nums = [1, 2, 3, 4];
+// Make a new array where each number is doubled.
+// Then console.log the new array.</code>
+            <textarea
+              class="answer-box"
+              name="q19"
+              placeholder="Paste your code here..."
+              aria-label="Answer for question 19"
+            ></textarea>
+          </div>
+
+          <div class="question" data-type="coding" data-code="filter">
+            <p class="question-title">
+              <span>Q20.</span> Coding: keep only the even numbers
+            </p>
+            <p class="coding-hint">
+              Open OneCompiler. Write code. Paste your answer below.
+            </p>
+            <a
+              class="coding-link"
+              href="https://onecompiler.com/javascript"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Open OneCompiler (javascript)
+            </a>
+            <code class="code-block">const nums = [1, 2, 3, 4, 5, 6];
+// Keep only the even numbers in a new array.
+// Then console.log the new array.</code>
+            <textarea
+              class="answer-box"
+              name="q20"
+              placeholder="Paste your code here..."
+              aria-label="Answer for question 20"
+            ></textarea>
+          </div>
+        </section>
+
+        <div class="actions">
+          <button type="submit" class="btn btn-primary">Submit Test</button>
+        </div>
+      </form>
+    </div>
+
+    <div
+      class="modal-overlay"
+      id="result-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-title"
+    >
+      <div class="modal">
+        <h2 id="modal-title">Your Result</h2>
+        <p class="modal-score"><span id="score-value">0</span> / 100</p>
+        <div class="modal-stats">
+          <p>Answered: <strong id="stat-answered">0</strong> / 20</p>
+          <p>Correct: <strong id="stat-correct">0</strong></p>
+          <p>Wrong: <strong id="stat-wrong">0</strong></p>
+          <p>Skipped: <strong id="stat-skipped">0</strong></p>
+        </div>
+        <div class="actions">
+          <button type="button" class="btn btn-secondary" id="close-modal">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.querySelectorAll(".question[data-type='mcq']").forEach((question) => {
+        question.querySelectorAll("input[type='checkbox']").forEach((box) => {
+          box.addEventListener("change", () => {
+            if (!box.checked) return;
+            question.querySelectorAll("input[type='checkbox']").forEach((other) => {
+              if (other !== box) other.checked = false;
+            });
+          });
+        });
+      });
+
+      const form = document.getElementById("test-form");
+      const modal = document.getElementById("result-modal");
+      const closeModal = document.getElementById("close-modal");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        let correct = 0;
+        let wrong = 0;
+        let skipped = 0;
+
+        document.querySelectorAll(".question[data-type='mcq']").forEach((question) => {
+          const expected = question.dataset.correct;
+          const checked = question.querySelector(
+            "input[type='checkbox']:checked",
+          );
+
+          if (!checked) {
+            skipped += 1;
+            return;
+          }
+
+          if (checked.value === expected) {
+            correct += 1;
+          } else {
+            wrong += 1;
+          }
+        });
+
+        document.querySelectorAll(".question[data-type='coding']").forEach((question) => {
+          const kind = question.dataset.code;
+          const value = (question.querySelector("textarea")?.value || "").trim();
+
+          if (!value) {
+            skipped += 1;
+            return;
+          }
+
+          if (gradeCoding(kind, value)) {
+            correct += 1;
+          } else {
+            wrong += 1;
+          }
+        });
+
+        const answered = correct + wrong;
+        const score = correct * 5;
+
+        document.getElementById("score-value").textContent = String(score);
+        document.getElementById("stat-answered").textContent = String(answered);
+        document.getElementById("stat-correct").textContent = String(correct);
+        document.getElementById("stat-wrong").textContent = String(wrong);
+        document.getElementById("stat-skipped").textContent = String(skipped);
+
+        modal.classList.add("is-open");
+      });
+
+      closeModal.addEventListener("click", () => {
+        modal.classList.remove("is-open");
+      });
+
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) modal.classList.remove("is-open");
+      });
+
+      function gradeCoding(kind, raw) {
+        const code = raw.toLowerCase().replace(/\s+/g, " ");
+
+        if (kind === "sort") {
+          const hasSort = code.includes(".sort");
+          const hasCopy =
+            code.includes("[...") ||
+            code.includes(".slice(") ||
+            code.includes("slice()") ||
+            code.includes("array.from") ||
+            code.includes("structuredclone");
+          const sortsByAge = code.includes(".age") || code.includes("['age']");
+          const mutatesDirect = /people\.sort\s*\(/.test(code) && !hasCopy;
+          return hasSort && hasCopy && sortsByAge && !mutatesDirect;
+        }
+
+        if (kind === "map") {
+          return (
+            code.includes(".map") && (code.includes("* 2") || code.includes("*2"))
+          );
+        }
+
+        if (kind === "filter") {
+          return (
+            code.includes(".filter") &&
+            (code.includes("% 2") || code.includes("%2")) &&
+            (code.includes("=== 0") ||
+              code.includes("== 0") ||
+              code.includes("===0") ||
+              code.includes("==0"))
+          );
+        }
+
+        return false;
+      }
+    </script>
+  </body>
+</html>
